@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<!-- Page Inner -->
+<div class="page-inner no-page-title">
+
+    <div id="main-wrapper">
+        <div class="row">
+            @*<div class="col-md-4">
+                <div class="panel panel-white">
+                    <div class="panel-heading clearfix">
+                        <h4 class="panel-title">Activity</h4>
+                    </div>
+                    <div class="panel-body dashboard-panel">
+                        <div class="user-activity">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div>
+                                        <img src="~/Content/WebMaster/assets/images/avatars/avatar3.png" alt="">
+                                        <span class="notification-info">
+                                            <span class="notification-info"><b>Bob</b> sent you a friend request on Facebook</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="~/Content/WebMaster/assets/images/avatars/avatar5.png" alt="">
+                                        <span class="notification-info">
+                                            <span class="notification-info"><b>Noah</b> sent you 9 new messages</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="notification-badge bg-success"><b>T</b></span>
+                                        <span class="notification-info">
+                                            <span class="notification-info">There is a meeting with <b>Ethan</b> in 15 minutes!</span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default btn-rounded dashboard-activity-loadmore">Load more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+            <div class="col-md-4">
+                <div class="panel panel-white">
+                    <div class="panel-heading clearfix">
+                        <h4 class="panel-title">Các trang web của khách hàng<span class="panel-title-small"> @DateTime.Now.ToString("dd-MM-yyyy")</span></h4>
+                    </div>
+                    <div class="panel-body dashboard-panel">
+                        <div class="browser-stats">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-chrome"></i>Hoa tươi xanh<div class="text-success pull-right"><a href="http://hoatuoixanh.com" class="btn btn-success btn-rounded" target="_blank">Trang chủ</a><a href="http://hoatuoixanh.com/WebMaster/Index" class="btn btn-info btn-rounded" target="_blank">Trang quản lý</a></div></li>
+                                <li><i class="fa fa-chrome"></i>Natural Life<div class="text-success pull-right"><a href="http://naturallifevn.com" class="btn btn-success btn-rounded" target="_blank">Trang chủ</a><a href="http://naturallifevn.com/WebMaster/Index" class="btn btn-info btn-rounded" target="_blank">Trang quản lý</a></div></li>
+                                <li><i class="fa fa-chrome"></i>Bdeli<div class="text-success pull-right"><a href="http://bdeli.vn" class="btn btn-success btn-rounded" target="_blank">Trang chủ</a><a href="http://bdeli.vn/WebMaster/Index" class="btn btn-info btn-rounded" target="_blank">Trang quản lý</a></div></li>
+                                @*<li><i class="fa fa-safari"></i>Safari<div class="text-danger pull-right">13%<i class="fa fa-level-down"></i></div></li>*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-md-4">
+                <div class="panel panel-white">
+                    <div class="panel-heading clearfix">
+                        <h4 class="panel-title">Sales<span class="panel-title-small">in 7 days</span></h4>
+                    </div>
+                    <div class="panel-body dashboard-panel">
+                        <canvas id="chart2" height="240"></canvas>
+                    </div>
+                </div>
+            </div>*@
+        </div><!-- Row -->
+        <div class="row">
+
+        </div><!-- Row -->
+    </div><!-- Main Wrapper -->
+    </div>
