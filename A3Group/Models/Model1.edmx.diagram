@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="a3groupModel.A3Group_About" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Blogs" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Contact" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+<<<<<<< HEAD:A3Group/Models/Model1.edmx.diagram
         <EntityTypeShape EntityType="a3groupModel.A3Group_Features" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Prices" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Quotes" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
@@ -17,6 +18,17 @@
         <EntityTypeShape EntityType="a3groupModel.A3Group_Works" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Differences" Width="1.5" PointX="5.375" PointY="8.75" />
         </Diagram>
+=======
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Features" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Quotes" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Services" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Sliders" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Team" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Works" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Differences" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Prices" Width="1.5" PointX="9.375" PointY="4.75" />
+      </Diagram>
+>>>>>>> 7525484f3fc281a8e6c5bc9dd449334fbb336519:A3Group/Models/A3.edmx.diagram
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
