@@ -38,17 +38,6 @@
     <Property Name="Phone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="A3Group_Differences">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="SubTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="Differences" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="A3Group_Features">
     <Key>
       <PropertyRef Name="id" />
@@ -136,7 +125,6 @@
     <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" />
     <EntitySet Name="A3Group_Blogs" EntityType="Self.A3Group_Blogs" />
     <EntitySet Name="A3Group_Contact" EntityType="Self.A3Group_Contact" />
-    <EntitySet Name="A3Group_Differences" EntityType="Self.A3Group_Differences" />
     <EntitySet Name="A3Group_Features" EntityType="Self.A3Group_Features" />
     <EntitySet Name="A3Group_Prices" EntityType="Self.A3Group_Prices" />
     <EntitySet Name="A3Group_Quotes" EntityType="Self.A3Group_Quotes" />
@@ -144,5 +132,22 @@
     <EntitySet Name="A3Group_Sliders" EntityType="Self.A3Group_Sliders" />
     <EntitySet Name="A3Group_Team" EntityType="Self.A3Group_Team" />
     <EntitySet Name="A3Group_Works" EntityType="Self.A3Group_Works" />
+    <EntitySet Name="A3Group_Differences" EntityType="a3groupModel.A3Group_Differences" />
   </EntityContainer>
+  <EntityType Name="A3Group_Differences">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Title1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Title3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Title4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

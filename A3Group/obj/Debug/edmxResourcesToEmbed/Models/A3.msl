@@ -42,18 +42,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="A3Group_Differences">
-      <EntityTypeMapping TypeName="a3groupModel.A3Group_Differences">
-        <MappingFragment StoreEntitySet="A3Group_Differences">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
-          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
-          <ScalarProperty Name="SubDescription" ColumnName="SubDescription" />
-          <ScalarProperty Name="Differences" ColumnName="Differences" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="A3Group_Features">
       <EntityTypeMapping TypeName="a3groupModel.A3Group_Features">
         <MappingFragment StoreEntitySet="A3Group_Features">
@@ -141,6 +129,23 @@
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
           <ScalarProperty Name="Images" ColumnName="Images" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Differences">
+      <EntityTypeMapping TypeName="a3groupModel.A3Group_Differences">
+        <MappingFragment StoreEntitySet="A3Group_Differences">
+          <ScalarProperty Name="Description4" ColumnName="Description4" />
+          <ScalarProperty Name="Title4" ColumnName="Title4" />
+          <ScalarProperty Name="Description3" ColumnName="Description3" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

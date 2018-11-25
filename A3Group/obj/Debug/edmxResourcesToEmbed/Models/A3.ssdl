@@ -43,11 +43,16 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="SubTitle" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="Differences" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Title3" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Title4" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description4" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="A3Group_Features">
     <Key>
