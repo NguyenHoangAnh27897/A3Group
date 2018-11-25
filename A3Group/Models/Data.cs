@@ -11,6 +11,9 @@ namespace A3Group.Models
 	{
 		public IQueryable<A3Group_Sliders> sli { get; set; }
 		public IQueryable<A3Group_About> abo { get; set; }
+		public IQueryable<A3Group_Differences> diff { get; set; }
+		public IQueryable<A3Group_Features> fea { get; set; }
+		public IQueryable<A3Group_Services> ser { get; set; }
 	}
 
 }

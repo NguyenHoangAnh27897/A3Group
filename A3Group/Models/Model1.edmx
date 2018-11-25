@@ -50,14 +50,18 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-          <Property Name="Title1" Type="nvarchar" MaxLength="20" />
-          <Property Name="Description1" Type="nvarchar" MaxLength="500" />
-          <Property Name="Title2" Type="nvarchar" MaxLength="20" />
-          <Property Name="Description2" Type="nvarchar" MaxLength="500" />
-          <Property Name="Title3" Type="nvarchar" MaxLength="20" />
-          <Property Name="Description3" Type="nvarchar" MaxLength="500" />
-          <Property Name="Title4" Type="nvarchar" MaxLength="20" />
-          <Property Name="Description4" Type="nvarchar" MaxLength="500" />
+          <Property Name="SubTitle1" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubDescription1" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image1" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle2" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubDescription2" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image2" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle3" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubDescription3" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image3" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image4" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="A3Group_Features">
           <Key>
@@ -280,7 +284,7 @@
           <Property Name="Images" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="a3groupEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="a3groupEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" />
           <EntitySet Name="A3Group_Blogs" EntityType="Self.A3Group_Blogs" />
           <EntitySet Name="A3Group_Contact" EntityType="Self.A3Group_Contact" />
@@ -292,7 +296,7 @@
           <EntitySet Name="A3Group_Team" EntityType="Self.A3Group_Team" />
           <EntitySet Name="A3Group_Works" EntityType="Self.A3Group_Works" />
           <EntitySet Name="A3Group_Differences" EntityType="a3groupModel.A3Group_Differences" />
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="A3Group_Differences">
           <Key>
             <PropertyRef Name="id" />
@@ -300,21 +304,25 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MainTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Title1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Description1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Title2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Description2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Title3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Description3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Title4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Description4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="a3groupModelStoreContainer" CdmEntityContainer="a3groupEntities">
+        <EntityContainerMapping StorageEntityContainer="a3groupModelStoreContainer" CdmEntityContainer="a3groupEntities1">
           <EntitySetMapping Name="A3Group_About">
             <EntityTypeMapping TypeName="a3groupModel.A3Group_About">
               <MappingFragment StoreEntitySet="A3Group_About">
@@ -359,13 +367,13 @@
           <EntitySetMapping Name="A3Group_Features">
             <EntityTypeMapping TypeName="a3groupModel.A3Group_Features">
               <MappingFragment StoreEntitySet="A3Group_Features">
-                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
                 <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
                 <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
                 <ScalarProperty Name="SubDescription" ColumnName="SubDescription" />
                 <ScalarProperty Name="Strengths" ColumnName="Strengths" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -449,21 +457,25 @@
           <EntitySetMapping Name="A3Group_Differences">
             <EntityTypeMapping TypeName="a3groupModel.A3Group_Differences">
               <MappingFragment StoreEntitySet="A3Group_Differences">
-                <ScalarProperty Name="Description4" ColumnName="Description4" />
-                <ScalarProperty Name="Title4" ColumnName="Title4" />
-                <ScalarProperty Name="Description3" ColumnName="Description3" />
-                <ScalarProperty Name="Title3" ColumnName="Title3" />
-                <ScalarProperty Name="Description2" ColumnName="Description2" />
-                <ScalarProperty Name="Title2" ColumnName="Title2" />
-                <ScalarProperty Name="Description1" ColumnName="Description1" />
-                <ScalarProperty Name="Title1" ColumnName="Title1" />
+                <ScalarProperty Name="Image4" ColumnName="Image4" />
+                <ScalarProperty Name="SubDescription4" ColumnName="SubDescription4" />
+                <ScalarProperty Name="SubTitle4" ColumnName="SubTitle4" />
+                <ScalarProperty Name="Image3" ColumnName="Image3" />
+                <ScalarProperty Name="SubDescription3" ColumnName="SubDescription3" />
+                <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+                <ScalarProperty Name="Image2" ColumnName="Image2" />
+                <ScalarProperty Name="SubDescription2" ColumnName="SubDescription2" />
+                <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+                <ScalarProperty Name="Image1" ColumnName="Image1" />
+                <ScalarProperty Name="SubDescription1" ColumnName="SubDescription1" />
+                <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
                 <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

@@ -9,7 +9,7 @@ namespace A3Group.Controllers.WebMaster
 {
     public class SliderMasterController : Controller
     {
-		a3groupEntities db = new a3groupEntities();
+		a3groupEntities1 db = new a3groupEntities1();
         // GET: SliderMaster
         public ActionResult Edit()
         {

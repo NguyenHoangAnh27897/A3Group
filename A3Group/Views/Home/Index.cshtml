@@ -173,10 +173,10 @@
 <section class="about-area sec-padding" data-scroll-index="3">
     <div class="container">
         <h1 class="title-h p-relative">
-            <span class="fw-200">Đôi nét về</span> A3 Solution
+            <span class="fw-200">@Model.FirstOrDefault().fea.FirstOrDefault().MainTitle</span>
             <span class="line p-absolute bg-orange"></span>
         </h1>
-        <p class="title-p">A3 Group được thành lập năm 2018 bởi một nhóm các kỹ sư công nghệ thông tin nhằm tạo ra một liên minh về IT, tập hợp những mảng chính của công nghệ thông tin để phát triển và biến nó thành mô hình doanh nghiệp lớn mạnh. bao gồm các mảng tích hợp</p>
+        <p class="title-p">@Model.FirstOrDefault().fea.FirstOrDefault().MainDescription</p>
         <div class="row">
             <div class="col-md-6">
                 <div class="about-image mb-50px wow fadeInLeft" data-wow-delay="0.4s">
@@ -185,8 +185,8 @@
             </div>
             <div class="col-md-6">
                 <div class="about-text wow fadeInRight" data-wow-delay="0.7s">
-                    <h3 class="fw-600 mb-20px"><span class="fw-200"> Chúng tôi là </span> IT</h3>
-                    <p class="mb-20px">Có rất nhiều loại hình công việc trong ngành công nghệ thông tin từ nhân viên kinh doanh đến thiết kế web, tùy thuộc vào các điểm mạnh và sự am hiểu mà chúng tôi tìm được cho mình nhưng đối sách phù hợp. Sau đây là một vài lựa chọn tiêu biểu:</p>
+                    <h3 class="fw-600 mb-20px"><span class="fw-200">@Model.FirstOrDefault().fea.FirstOrDefault().SubTitle</span></h3>
+                    <p class="mb-20px">@Model.FirstOrDefault().fea.FirstOrDefault().SubDescription</p>
                     <div class="row">
                         <div class="col-sm-6">
                             <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích dữ liệu.</p>

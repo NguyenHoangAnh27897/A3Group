@@ -9,15 +9,21 @@ namespace A3Group.Controllers
 {
     public class HomeController : Controller
     {
-		a3groupEntities db = new a3groupEntities();
+		a3groupEntities1 db = new a3groupEntities1();
         public ActionResult Index()
         {
 			List<HomeMaster> lst = new List<HomeMaster>();
 			HomeMaster home = new HomeMaster();
 			var slider = db.A3Group_Sliders.Where(st => st.id == 1);
 			var about = db.A3Group_About.Where(st => st.id == 1);
+			var difference = db.A3Group_Differences.Where(st => st.id == 1);
+			var feature = db.A3Group_Features.Where(st => st.id == 1);
+			var service = db.A3Group_Services.Where(st => st.id == 1);
 			home.abo = about;
 			home.sli = slider;
+			home.diff = difference;
+			home.fea = feature;
+			home.ser = service;
 			lst.Add(home);
             return View(lst);
         }

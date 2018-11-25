@@ -43,22 +43,32 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="SubTitle" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="Differences" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image4" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="A3Group_Features">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MainTitle" Type="nvarchar" MaxLength="30" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="100" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="SubTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubTitle" Type="nvarchar" MaxLength="100" />
     <Property Name="SubDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="Strengths" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Strengths" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="A3Group_Prices">
     <Key>
@@ -85,20 +95,20 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MainTitle" Type="nvarchar" MaxLength="30" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="SubTitle1" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription1" Type="nvarchar" MaxLength="150" />
-    <Property Name="SubTitle2" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription2" Type="nvarchar" MaxLength="150" />
-    <Property Name="SubTitle3" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription3" Type="nvarchar" MaxLength="150" />
-    <Property Name="SubTitle4" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription4" Type="nvarchar" MaxLength="150" />
-    <Property Name="SubTitle5" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription5" Type="nvarchar" MaxLength="150" />
-    <Property Name="SubTitle6" Type="nvarchar" MaxLength="25" />
-    <Property Name="SubDescription6" Type="nvarchar" MaxLength="150" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription1" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription2" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription3" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle4" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription4" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle5" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription5" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle6" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription6" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="A3Group_Sliders">
     <Key>

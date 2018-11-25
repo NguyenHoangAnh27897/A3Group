@@ -4,19 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7e9e0b3c78f64649a553e376b1dccc6f" Name="Diagram1">
+      <Diagram DiagramId="12cf86831a2f4878a897dd912ae98239" Name="Diagram1">
         <EntityTypeShape EntityType="a3groupModel.A3Group_About" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Blogs" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Contact" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="a3groupModel.A3Group_Features" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Features" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Prices" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="a3groupModel.A3Group_Quotes" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="a3groupModel.A3Group_Services" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="a3groupModel.A3Group_Sliders" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="a3groupModel.A3Group_Team" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="a3groupModel.A3Group_Works" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="a3groupModel.A3Group_Differences" Width="1.5" PointX="9.375" PointY="0.75" />
-      </Diagram>
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Services" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Sliders" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Team" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Works" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="a3groupModel.A3Group_Differences" Width="1.5" PointX="5.375" PointY="8.75" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

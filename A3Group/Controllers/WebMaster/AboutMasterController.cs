@@ -9,7 +9,7 @@ namespace A3Group.Controllers.WebMaster
 {
     public class AboutMasterController : Controller
     {
-		a3groupEntities db = new a3groupEntities();
+		a3groupEntities1 db = new a3groupEntities1();
         // GET: AboutMaster
         public ActionResult Edit()
         {

@@ -17,13 +17,17 @@ namespace A3Group.Models
         public int id { get; set; }
         public string MainTitle { get; set; }
         public string MainDescription { get; set; }
-        public string Title1 { get; set; }
-        public string Description1 { get; set; }
-        public string Title2 { get; set; }
-        public string Description2 { get; set; }
-        public string Title3 { get; set; }
-        public string Description3 { get; set; }
-        public string Title4 { get; set; }
-        public string Description4 { get; set; }
+        public string SubTitle1 { get; set; }
+        public string SubDescription1 { get; set; }
+        public string Image1 { get; set; }
+        public string SubTitle2 { get; set; }
+        public string SubDescription2 { get; set; }
+        public string Image2 { get; set; }
+        public string SubTitle3 { get; set; }
+        public string SubDescription3 { get; set; }
+        public string Image3 { get; set; }
+        public string SubTitle4 { get; set; }
+        public string SubDescription4 { get; set; }
+        public string Image4 { get; set; }
     }
 }

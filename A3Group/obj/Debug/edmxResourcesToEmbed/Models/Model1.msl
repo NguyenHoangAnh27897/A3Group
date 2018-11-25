@@ -1,6 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="a3groupModelStoreContainer" CdmEntityContainer="a3groupEntities">
+  <EntityContainerMapping StorageEntityContainer="a3groupModelStoreContainer" CdmEntityContainer="a3groupEntities1">
+    <EntitySetMapping Name="A3Group_About">
+      <EntityTypeMapping TypeName="a3groupModel.A3Group_About">
+        <MappingFragment StoreEntitySet="A3Group_About">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+          <ScalarProperty Name="SubDescription1" ColumnName="SubDescription1" />
+          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="SubDescription2" ColumnName="SubDescription2" />
+          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="SubDescription3" ColumnName="SubDescription3" />
+          <ScalarProperty Name="SubTitle4" ColumnName="SubTitle4" />
+          <ScalarProperty Name="SubDescription4" ColumnName="SubDescription4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="A3Group_Blogs">
       <EntityTypeMapping TypeName="a3groupModel.A3Group_Blogs">
         <MappingFragment StoreEntitySet="A3Group_Blogs">
@@ -25,18 +42,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="A3Group_Differences">
-      <EntityTypeMapping TypeName="a3groupModel.A3Group_Differences">
-        <MappingFragment StoreEntitySet="A3Group_Differences">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
-          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
-          <ScalarProperty Name="SubDescription" ColumnName="SubDescription" />
-          <ScalarProperty Name="Differences" ColumnName="Differences" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="A3Group_Features">
       <EntityTypeMapping TypeName="a3groupModel.A3Group_Features">
         <MappingFragment StoreEntitySet="A3Group_Features">
@@ -46,6 +51,7 @@
           <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
           <ScalarProperty Name="SubDescription" ColumnName="SubDescription" />
           <ScalarProperty Name="Strengths" ColumnName="Strengths" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -126,15 +132,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="A3Group_About">
-      <EntityTypeMapping TypeName="a3groupModel.A3Group_About">
-        <MappingFragment StoreEntitySet="A3Group_About">
+    <EntitySetMapping Name="A3Group_Differences">
+      <EntityTypeMapping TypeName="a3groupModel.A3Group_Differences">
+        <MappingFragment StoreEntitySet="A3Group_Differences">
+          <ScalarProperty Name="Image4" ColumnName="Image4" />
           <ScalarProperty Name="SubDescription4" ColumnName="SubDescription4" />
           <ScalarProperty Name="SubTitle4" ColumnName="SubTitle4" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
           <ScalarProperty Name="SubDescription3" ColumnName="SubDescription3" />
           <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
           <ScalarProperty Name="SubDescription2" ColumnName="SubDescription2" />
           <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
           <ScalarProperty Name="SubDescription1" ColumnName="SubDescription1" />
           <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />

@@ -13,10 +13,10 @@ namespace A3Group.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class a3groupEntities : DbContext
+    public partial class a3groupEntities1 : DbContext
     {
-        public a3groupEntities()
-            : base("name=a3groupEntities")
+        public a3groupEntities1()
+            : base("name=a3groupEntities1")
         {
         }
     
