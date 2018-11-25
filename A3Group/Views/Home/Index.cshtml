@@ -5,41 +5,70 @@
 
 
 <style>
-    .hex {
-        position: relative;
-        margin: 1em auto;
-        width: 5em;
-        height: 8.5em;
-        border-radius: 1em/.5em;
-        background: #ccc;
-        transform: rotate(-90deg);
-        display: inline-block;
-        margin-right: 6.5em;
-        transition: all 150ms ease-in-out;
+    .hex_row_even {
+      display: inline-block;
+      margin: 0 auto -275px auto;
+      overflow: hidden;
     }
 
-        .hex:before, .hex:after {
-            position: absolute;
-            width: inherit;
-            height: inherit;
-            border-radius: inherit;
-            background: inherit;
-            content: '';
-        }
+    .hex_row_odd {
+      display: inline-block;
+      margin: 0 auto -275px auto;
+      overflow: hidden;
+    }
 
-        .hex:before {
-            transform: rotate(60deg);
-        }
+    .center {
+      float: left;
+      margin: 20px 10px;
+      width: 240px;
+    }
 
-        .hex:after {
-            transform: rotate(-60deg);
-        }
+    .hexagon {
+      transform: rotate(120deg);
+      cursor: pointer;
+      height: 440px;
+      overflow: hidden;
+      visibility: hidden;
+      width: 220px;
+    }
 
-        .hex:hover {
-            width: 6em;
-            height: 8.5em;
-            cursor: pointer;
-        }
+    .hex1 {
+      transform: rotate(-60deg);
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+    }
+
+
+    .hex2 {
+      transform: rotate(-60deg);
+      height: 100%;
+      position: relative;
+      visibility: visible;
+      width: 100%;
+    }
+
+    .hex1 .hex2 .hexagon .center {
+        -webkit-box-shadow: 0 28px 16px -26px black;
+        -moz-box-shadow: 0 28px 16px -26px black;
+        box-shadow: 0 28px 16px -26px black;
+        transition: all .5s ease-in-out;
+        -webkit-transition: all .6s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+    }
+    .center:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -webkit-box-shadow: 0 58px 36px -56px black;
+        -moz-box-shadow: 0 58px 36px -56px black;
+        box-shadow: 0 58px 36px -56px black;
+    }
+
+
 </style>
 <!-- ==================================================
                         welcome-video
@@ -597,7 +626,6 @@
 <!-- ==================================================
                       End price-area
 ================================================== -->
-
 <!-- ==================================================
                       team-area
 ================================================== -->
@@ -692,6 +720,121 @@
                       End team-area
 ================================================== -->
 <!-- ==================================================
+                      project-area
+================================================== -->
+<section class="work-area sec-padding" data-scroll-index="5">
+    <div class="container" style="margin-bottom: 150px">
+        <h1 class="title-h p-relative">
+            <span class="fw-200">Our</span> Project
+            <span class="line p-absolute bg-orange"></span>
+        </h1>
+        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="row">
+            <div class="hex_row_odd">
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('../../Content/A3G/images/work-8.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('../../Content/A3G/images/work-7.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('../../Content/A3G/images/work-12.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+            </div><!--/hex_row_even-->
+            <!-- End hexagon odd -->
+            <!-- Hexagon even -->
+            <div class="hex_row_even">
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('https://static.tumblr.com/6pl87f7/eVqmduuh2/22948aee82dd11e18cf91231380fd29b_7.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('http://www.rawstory.com/wp-content/uploads/2015/05/A-man-surfing-Shutterstock-800x430.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('https://img.grouponcdn.com/deal/pZW1AwwkaLpzZ16v6Sv1/kM-2048x1229/v1/c700x420.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('http://www.destination360.com/europe/portugal/images/s/portugal-surf.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+            </div><!--/hex_row_even-->
+            <!-- End Hexagon even -->
+            <!-- Hexagon odd 2 -->
+            <div class="hex_row_odd">
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('../../Content/A3G/images/work-10.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('../../Content/A3G/images/work-5.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+
+                <div class="center">
+                    <div class="hexagon">
+                        <div class="hex1">
+                            <div class="hex2" style="background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/1999_-_Surf_%C3%A0_Waikiki_Beach_Honolulu_Hawa%C3%AF.jpg') center no-repeat">
+                            </div><!--/hex2-->
+                        </div><!--/hex1-->
+                    </div><!--/hexagon-->
+                </div><!--/center-->
+            </div><!--/hex_row_even-->
+            <!-- End Hexagon odd 2 -->
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+                      End project-area
+================================================== -->
+<!-- ==================================================
                       work-area
 ================================================== -->
 <section class="work-area sec-padding" data-scroll-index="5">
@@ -709,6 +852,7 @@
                 <span data-filter='.Photoshop' class="bg-f4f4f4 mb-10px mr-15px fw-400 radius-25px">Photoshop</span>
                 <span data-filter='.Illustrator' class="bg-f4f4f4 mb-10px fw-400 radius-25px">Illustrator</span>
             </div>
+
             <!-- grid -->
             <div class="grid  width-100">
                 <!-- gallery item -->
@@ -1004,3 +1148,4 @@
 <!-- ==================================================
                       End map
 ================================================== -->
+
