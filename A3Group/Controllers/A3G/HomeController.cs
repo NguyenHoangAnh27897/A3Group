@@ -9,7 +9,7 @@ namespace A3Group.Controllers
 {
     public class HomeController : Controller
     {
-		a3groupEntities1 db = new a3groupEntities1();
+		a3groupEntities2 db = new a3groupEntities2();
         public ActionResult Index()
         {
 			List<HomeMaster> lst = new List<HomeMaster>();
@@ -19,11 +19,13 @@ namespace A3Group.Controllers
 			var difference = db.A3Group_Differences.Where(st => st.id == 1);
 			var feature = db.A3Group_Features.Where(st => st.id == 1);
 			var service = db.A3Group_Services.Where(st => st.id == 1);
+			var price = db.A3Group_Prices.Where(st => st.id == 1);
 			home.abo = about;
 			home.sli = slider;
 			home.diff = difference;
 			home.fea = feature;
 			home.ser = service;
+			home.pri = price;
 			lst.Add(home);
             return View(lst);
         }

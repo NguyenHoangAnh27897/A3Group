@@ -9,7 +9,7 @@ namespace A3Group.Controllers.WebMaster
 {
     public class PriceMasterController : Controller
     {
-        a3groupEntities db = new a3groupEntities();
+		a3groupEntities2 db = new a3groupEntities2();
         // GET: PriceMaster
         public ActionResult Edit()
         {
@@ -32,14 +32,14 @@ namespace A3Group.Controllers.WebMaster
             var home = db.A3Group_Prices.Find(1);
             home.MainTitle = maintitle;
             home.MainDescription = maindes;
-            home.Title1 = title1;
-            home.Price1 = int.Parse(price1);
+            home.SubTitle1 = title1;
+            home.Prices1 = int.Parse(price1);
             home.Description1 = des1;
-            home.Title2 = title2;
-            home.Price2 = int.Parse(price2);
+            home.SubTitle2 = title2;
+            home.Prices2 = int.Parse(price2);
             home.Description2 = des2;
-            home.Title3 = title3;
-            home.Price3 = int.Parse(price3);
+            home.SubTitle3 = title3;
+            home.Prices3 = int.Parse(price3);
             home.Description3 = des3;
             db.Entry(home).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();

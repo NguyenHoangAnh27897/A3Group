@@ -77,9 +77,15 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="SubTitle" Type="nvarchar" MaxLength="25" />
-    <Property Name="Prices" Type="nvarchar" MaxLength="20" />
-    <Property Name="Ultilities" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Prices1" Type="int" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Prices2" Type="int" />
+    <Property Name="Description2" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Prices3" Type="int" />
+    <Property Name="Description3" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="A3Group_Quotes">
     <Key>

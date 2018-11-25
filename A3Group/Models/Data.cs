@@ -14,6 +14,7 @@ namespace A3Group.Models
 		public IQueryable<A3Group_Differences> diff { get; set; }
 		public IQueryable<A3Group_Features> fea { get; set; }
 		public IQueryable<A3Group_Services> ser { get; set; }
+		public IQueryable<A3Group_Prices> pri { get; set; }
 	}
 
 }
