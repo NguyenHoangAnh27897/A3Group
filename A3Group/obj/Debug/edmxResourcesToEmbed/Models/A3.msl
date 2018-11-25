@@ -55,18 +55,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="A3Group_Prices">
-      <EntityTypeMapping TypeName="a3groupModel.A3Group_Prices">
-        <MappingFragment StoreEntitySet="A3Group_Prices">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
-          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
-          <ScalarProperty Name="Prices" ColumnName="Prices" />
-          <ScalarProperty Name="Ultilities" ColumnName="Ultilities" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="A3Group_Quotes">
       <EntityTypeMapping TypeName="a3groupModel.A3Group_Quotes">
         <MappingFragment StoreEntitySet="A3Group_Quotes">
@@ -142,6 +130,24 @@
           <ScalarProperty Name="Description2" ColumnName="Description2" />
           <ScalarProperty Name="Title2" ColumnName="Title2" />
           <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Prices">
+      <EntityTypeMapping TypeName="a3groupModel.A3Group_Prices">
+        <MappingFragment StoreEntitySet="A3Group_Prices">
+          <ScalarProperty Name="Description3" ColumnName="Description3" />
+          <ScalarProperty Name="Price3" ColumnName="Price3" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Price2" ColumnName="Price2" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
           <ScalarProperty Name="Title1" ColumnName="Title1" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />

@@ -201,6 +201,7 @@
     <Compile Include="Controllers\A3G\HomeController.cs" />
     <Compile Include="Controllers\WebMaster\DifferenceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ManageController.cs" />
+    <Compile Include="Controllers\WebMaster\PriceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ServiceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\SliderMasterController.cs" />
     <Compile Include="Controllers\WebMaster\WebMasterController.cs" />
@@ -573,6 +574,7 @@
     <Content Include="Views\AboutMaster\EditIntroduce.cshtml" />
     <Content Include="Views\ServiceMaster\Edit.cshtml" />
     <Content Include="Views\DifferenceMaster\Edit.cshtml" />
+    <Content Include="Views\PriceMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

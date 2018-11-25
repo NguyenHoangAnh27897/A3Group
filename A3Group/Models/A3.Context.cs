@@ -29,12 +29,12 @@ namespace A3Group.Models
         public virtual DbSet<A3Group_Blogs> A3Group_Blogs { get; set; }
         public virtual DbSet<A3Group_Contact> A3Group_Contact { get; set; }
         public virtual DbSet<A3Group_Features> A3Group_Features { get; set; }
-        public virtual DbSet<A3Group_Prices> A3Group_Prices { get; set; }
         public virtual DbSet<A3Group_Quotes> A3Group_Quotes { get; set; }
         public virtual DbSet<A3Group_Services> A3Group_Services { get; set; }
         public virtual DbSet<A3Group_Sliders> A3Group_Sliders { get; set; }
         public virtual DbSet<A3Group_Team> A3Group_Team { get; set; }
         public virtual DbSet<A3Group_Works> A3Group_Works { get; set; }
         public virtual DbSet<A3Group_Differences> A3Group_Differences { get; set; }
+        public virtual DbSet<A3Group_Prices> A3Group_Prices { get; set; }
     }
 }
