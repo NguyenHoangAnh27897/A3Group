@@ -1,4 +1,4 @@
-﻿@model IQueryable<A3Group.Models.A3Group_Sliders>
+﻿@model A3Group.Models.A3Group_Sliders
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
@@ -21,11 +21,11 @@
                     <form class="form-horizontal" action="/slidermaster/edit" method="post">
                         <div class="form-group">
                             <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input maxlength="30" type="text" name="title" class="form-control" placeholder="" value="@Model.FirstOrDefault().Title">
+                            <input maxlength="30" type="text" name="title" class="form-control" placeholder="" value="@Model.Title">
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Slogan (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input maxlength="30" type="text" name="slogan" class="form-control" placeholder="" value="@Model.FirstOrDefault().Slogan">
+                            <input maxlength="30" type="text" name="slogan" class="form-control" placeholder="" value="@Model.Slogan">
                         </div>
                         @*<div class="form-group">
             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 250 KÍ TỰ)</label>
@@ -33,11 +33,11 @@
         </div>*@
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 250 KÍ TỰ)</label>
-                            <textarea maxlength="250" type="text" name="description" class="form-control" placeholder="">@Model.FirstOrDefault().Description</textarea>
+                            <textarea maxlength="250" type="text" name="description" class="form-control" placeholder="">@Model.Description</textarea>
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Video (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
-                            <input maxlength="150 " type="text" name="video" class="form-control" placeholder="" @Model.FirstOrDefault().Video>
+                            <input maxlength="150 " type="text" name="video" class="form-control" placeholder="" @Model.Video>
                         </div>
                         <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
                     </form>

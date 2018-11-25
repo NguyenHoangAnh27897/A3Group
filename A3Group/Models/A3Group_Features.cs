@@ -20,5 +20,6 @@ namespace A3Group.Models
         public string SubTitle { get; set; }
         public string SubDescription { get; set; }
         public string Strengths { get; set; }
+        public string Image { get; set; }
     }
 }

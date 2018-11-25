@@ -15,7 +15,7 @@ namespace A3Group.Controllers.WebMaster
         {
 			//if (Session["Authentication"] != null)
 			//{
-			var lst = db.A3Group_About.Where(st => st.id == 1);
+			var lst = db.A3Group_About.Find(1);
 			return View(lst);
 			//}
 			//else
@@ -43,12 +43,46 @@ namespace A3Group.Controllers.WebMaster
 			home.SubTitle4 = title4;
 			db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 			db.SaveChanges();
-			return RedirectToAction("Edit", "AboutMaster");
+			return RedirectToAction("Edit");
 			//}
 			//else
 			//{
 			//	return RedirectToAction("Login", "Account");
 			//}
 		}
-	}
+
+        public ActionResult EditIntroduce()
+        {
+            //if (Session["Authentication"] != null)
+            //{
+            var lst = db.A3Group_Features.Find(1);
+            return View(lst);
+            //}
+            //else
+            //{
+            //	return RedirectToAction("Login", "Account");
+            //}
+
+        }
+
+        [HttpPost]
+        public ActionResult EditIntroduce(string maintitle, string maindes, string title, string des)
+        {
+            //if (Session["Authentication"] != null)
+            //{
+            var home = db.A3Group_Features.Find(1);
+            home.MainTitle = maintitle;
+            home.MainDescription = maindes;
+            home.SubTitle = title;
+            home.SubDescription = des;
+            db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("EditIntroduce");
+            //}
+            //else
+            //{
+            //	return RedirectToAction("Login", "Account");
+            //}
+        }
+    }
 }

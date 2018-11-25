@@ -15,7 +15,7 @@ namespace A3Group.Controllers.WebMaster
         {
 			//if (Session["Authentication"] != null)
 			//{
-				var lst = db.A3Group_Sliders.Where(st => st.id == 1);
+				var lst = db.A3Group_Sliders.Find(1);
 				return View(lst);
 			//}
 			//else

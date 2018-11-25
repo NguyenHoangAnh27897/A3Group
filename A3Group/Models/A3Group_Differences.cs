@@ -17,8 +17,13 @@ namespace A3Group.Models
         public int id { get; set; }
         public string MainTitle { get; set; }
         public string MainDescription { get; set; }
-        public string SubTitle { get; set; }
-        public string SubDescription { get; set; }
-        public string Differences { get; set; }
+        public string Title1 { get; set; }
+        public string Description1 { get; set; }
+        public string Title2 { get; set; }
+        public string Description2 { get; set; }
+        public string Title3 { get; set; }
+        public string Description3 { get; set; }
+        public string Title4 { get; set; }
+        public string Description4 { get; set; }
     }
 }
