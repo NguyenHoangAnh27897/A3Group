@@ -58,6 +58,7 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
+        [ValidateInput(false)]
         public JsonResult EditIntroduce(A3Group_Features feat)
         {
             string msg = "";

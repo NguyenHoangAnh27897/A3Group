@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
 }
 <link href="~/Content/Webmaster/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" type="text/css" />
+<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
 <div class="page-inner">
     <div class="page-title">
         <h3 class="breadcrumb-header">Quản lý Giới thiệu</h3>
@@ -59,6 +60,7 @@
         </div>
     </div>
 </div>
+
 <script>
     function ShowMessage() {
         var result = confirm("Bạn có muốn lưu thông tin?");
@@ -77,7 +79,7 @@
             const maintitle = ($('#maintitle').val());
             const maindes = ($('#maindes').val());
             const title = ($('#title').val());
-            const des = ($('#des').val());
+            var des = document.getElementsByName("des")[0].value;
             //Json
             const data = {
                 MainTitle: maintitle,
@@ -85,6 +87,7 @@
                 SubTitle: title,
                 SubDescription: des,
             };
+            console.log(des);
             if (maintitle != '' && maindes != '' && title != '' && des != '') {
                 $.ajax({
                     async: true,
@@ -107,6 +110,10 @@
         });
 
     });
+</script>
+
+<script>
+    CKEDITOR.replace('des');
 </script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>

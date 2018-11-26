@@ -186,7 +186,7 @@
             <div class="col-md-6">
                 <div class="about-text wow fadeInRight" data-wow-delay="0.7s">
                     <h3 class="fw-600 mb-20px"><span class="fw-200">@Model.FirstOrDefault().fea.FirstOrDefault().SubTitle</span></h3>
-                    <p class="mb-20px">@Model.FirstOrDefault().fea.FirstOrDefault().SubDescription</p>
+                    <p class="mb-20px">@Html.Raw(Model.FirstOrDefault().fea.FirstOrDefault().SubDescription)</p>
                     <div class="row">
                         <div class="col-sm-6">
                             <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích dữ liệu.</p>
@@ -581,42 +581,24 @@
             <div class="col-md-4">
                 <div class="price-item mb-25px mt-25px radius-5px">
                     <h4 class="mb-10px mt-40px d-inline-block fw-500 p-relative">@Model.FirstOrDefault().pri.FirstOrDefault().SubTitle1</h4>
-                    <p class="color-aaa mb-35px mt-40px radius-50px"><span class="fs-40 fw-700 color-333">$ @Model.FirstOrDefault().pri.FirstOrDefault().Prices1</span> /month</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 12 GB Capacity</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 5 Font Icons</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 8 Inner Pages</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 6 Creative Demo</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> Unlimited Support</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 8 Inner Pages</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 6 Creative Demo</p>
+                    <p class="color-aaa mb-35px mt-40px radius-50px">@Model.FirstOrDefault().pri.FirstOrDefault().Prices1</p>
+                    @Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description1)
                     <a class="main-btn btn-3 mt-25px" href="#0">Read More</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="price-item mb-25px mt-25px radius-5px">
                     <h4 class="mb-10px mt-40px d-inline-block fw-500 p-relative">@Model.FirstOrDefault().pri.FirstOrDefault().SubTitle2</h4>
-                    <p class="color-aaa mb-35px mt-40px radius-50px"><span class="fs-40 fw-700 color-333">$ @Model.FirstOrDefault().pri.FirstOrDefault().Prices2</span> /month</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 12 GB Capacity</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 5 Font Icons</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 8 Inner Pages</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 6 Creative Demo</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> Unlimited Support</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 8 Inner Pages</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 6 Creative Demo</p>
+                    <p class="color-aaa mb-35px mt-40px radius-50px">@Model.FirstOrDefault().pri.FirstOrDefault().Prices2</p>
+                    @Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description2)
                     <a class="main-btn btn-3 mt-25px" href="#0">Read More</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="price-item mb-25px mt-25px radius-5px">
                     <h4 class="mb-10px mt-40px d-inline-block fw-500 p-relative">@Model.FirstOrDefault().pri.FirstOrDefault().SubTitle3</h4>
-                    <p class="color-aaa mb-35px mt-40px radius-50px"><span class="fs-40 fw-700 color-333">$ @Model.FirstOrDefault().pri.FirstOrDefault().Prices3</span> /month</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 12 GB Capacity</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 5 Font Icons</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 8 Inner Pages</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 6 Creative Demo</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> Unlimited Support</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 8 Inner Pages</p>
-                    <p class="mb-10px"><i class="fa fa-check color-orange text-center radius-50"></i> 6 Creative Demo</p>
+                    <p class="color-aaa mb-35px mt-40px radius-50px">@Model.FirstOrDefault().pri.FirstOrDefault().Prices3</p>
+                    @Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description3)
                     <a class="main-btn btn-3 mt-25px" href="#0">Read More</a>
                 </div>
             </div>

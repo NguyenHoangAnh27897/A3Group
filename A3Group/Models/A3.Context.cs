@@ -35,12 +35,17 @@ namespace A3Group.Models
         public virtual DbSet<A3Group_Information> A3Group_Information { get; set; }
         public virtual DbSet<A3Group_Member> A3Group_Member { get; set; }
         public virtual DbSet<A3Group_Partner> A3Group_Partner { get; set; }
-        public virtual DbSet<A3Group_Prices> A3Group_Prices { get; set; }
         public virtual DbSet<A3Group_Project> A3Group_Project { get; set; }
         public virtual DbSet<A3Group_Quotes> A3Group_Quotes { get; set; }
         public virtual DbSet<A3Group_Services> A3Group_Services { get; set; }
         public virtual DbSet<A3Group_Sliders> A3Group_Sliders { get; set; }
         public virtual DbSet<A3Group_Team> A3Group_Team { get; set; }
         public virtual DbSet<A3Group_Works> A3Group_Works { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<A3Group_Prices> A3Group_Prices { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
     }
 }

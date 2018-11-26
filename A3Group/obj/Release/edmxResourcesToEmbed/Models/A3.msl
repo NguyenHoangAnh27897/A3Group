@@ -127,24 +127,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="A3Group_Prices">
-      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Prices">
-        <MappingFragment StoreEntitySet="A3Group_Prices">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
-          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
-          <ScalarProperty Name="Prices1" ColumnName="Prices1" />
-          <ScalarProperty Name="Description1" ColumnName="Description1" />
-          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
-          <ScalarProperty Name="Prices2" ColumnName="Prices2" />
-          <ScalarProperty Name="Description2" ColumnName="Description2" />
-          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
-          <ScalarProperty Name="Prices3" ColumnName="Prices3" />
-          <ScalarProperty Name="Description3" ColumnName="Description3" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="A3Group_Project">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Project">
         <MappingFragment StoreEntitySet="A3Group_Project">
@@ -215,5 +197,86 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Prices">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Prices">
+        <MappingFragment StoreEntitySet="A3Group_Prices">
+          <ScalarProperty Name="Prices3" ColumnName="Prices3" />
+          <ScalarProperty Name="Prices2" ColumnName="Prices2" />
+          <ScalarProperty Name="Prices1" ColumnName="Prices1" />
+          <ScalarProperty Name="Description3" ColumnName="Description3" />
+          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="agr07063_A3GroupModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

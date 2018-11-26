@@ -18,13 +18,13 @@ namespace A3Group.Models
         public string MainTitle { get; set; }
         public string MainDescription { get; set; }
         public string SubTitle1 { get; set; }
-        public Nullable<int> Prices1 { get; set; }
         public string Description1 { get; set; }
         public string SubTitle2 { get; set; }
-        public Nullable<int> Prices2 { get; set; }
         public string Description2 { get; set; }
         public string SubTitle3 { get; set; }
-        public Nullable<int> Prices3 { get; set; }
         public string Description3 { get; set; }
+        public string Prices1 { get; set; }
+        public string Prices2 { get; set; }
+        public string Prices3 { get; set; }
     }
 }

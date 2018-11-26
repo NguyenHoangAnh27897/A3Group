@@ -15,13 +15,21 @@
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Information" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Member" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Partner" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Prices" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Project" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Quotes" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Services" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Sliders" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Team" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Works" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="11.75" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_Prices" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.AspNetRole" Width="1.5" PointX="11.75" PointY="8.5" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.AspNetUserClaim" Width="1.5" PointX="16.25" PointY="9.625" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.AspNetUserLogin" Width="1.5" PointX="16.25" PointY="7" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.AspNetUser" Width="1.5" PointX="14" PointY="7.375" />
+        <AssociationConnector Association="agr07063_A3GroupModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="agr07063_A3GroupModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="agr07063_A3GroupModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
