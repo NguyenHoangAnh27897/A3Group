@@ -9,27 +9,19 @@ namespace A3Group.Controllers.WebMaster
 {
     public class ServiceMasterController : Controller
     {
-		a3groupEntities2 db = new a3groupEntities2();
+		a3groupEntities db = new a3groupEntities();
         // GET: Service
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit()
         {
-            //if (Session["Authentication"] != null)
-            //{
             var lst = db.A3Group_Services.Find(1);
             return View(lst);
-            //}
-            //else
-            //{
-            //	return RedirectToAction("Login", "Account");
-            //}
-
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string title4, string title5, string title6, string des1, string des2, string des3, string des4, string des5, string des6)
         {
-            //if (Session["Authentication"] != null)
-            //{
             var home = db.A3Group_Services.Find(1);
             home.MainTitle = maintitle;
             home.MainDescription = maindes;
@@ -48,11 +40,6 @@ namespace A3Group.Controllers.WebMaster
             db.Entry(home).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Edit");
-            //}
-            //else
-            //{
-            //	return RedirectToAction("Login", "Account");
-            //}
         }
     }
 }

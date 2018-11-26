@@ -13,10 +13,10 @@ namespace A3Group.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class a3groupEntities2 : DbContext
+    public partial class a3groupEntities : DbContext
     {
-        public a3groupEntities2()
-            : base("name=a3groupEntities2")
+        public a3groupEntities()
+            : base("name=a3groupEntities")
         {
         }
     
@@ -26,15 +26,21 @@ namespace A3Group.Models
         }
     
         public virtual DbSet<A3Group_About> A3Group_About { get; set; }
+        public virtual DbSet<A3Group_Blog> A3Group_Blog { get; set; }
         public virtual DbSet<A3Group_Blogs> A3Group_Blogs { get; set; }
         public virtual DbSet<A3Group_Contact> A3Group_Contact { get; set; }
+        public virtual DbSet<A3Group_Customer> A3Group_Customer { get; set; }
         public virtual DbSet<A3Group_Differences> A3Group_Differences { get; set; }
         public virtual DbSet<A3Group_Features> A3Group_Features { get; set; }
+        public virtual DbSet<A3Group_Information> A3Group_Information { get; set; }
+        public virtual DbSet<A3Group_Member> A3Group_Member { get; set; }
+        public virtual DbSet<A3Group_Partner> A3Group_Partner { get; set; }
+        public virtual DbSet<A3Group_Prices> A3Group_Prices { get; set; }
+        public virtual DbSet<A3Group_Project> A3Group_Project { get; set; }
         public virtual DbSet<A3Group_Quotes> A3Group_Quotes { get; set; }
         public virtual DbSet<A3Group_Services> A3Group_Services { get; set; }
         public virtual DbSet<A3Group_Sliders> A3Group_Sliders { get; set; }
         public virtual DbSet<A3Group_Team> A3Group_Team { get; set; }
         public virtual DbSet<A3Group_Works> A3Group_Works { get; set; }
-        public virtual DbSet<A3Group_Prices> A3Group_Prices { get; set; }
     }
 }

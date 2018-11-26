@@ -9,7 +9,7 @@ namespace A3Group.Controllers
 {
     public class HomeController : Controller
     {
-		a3groupEntities2 db = new a3groupEntities2();
+		a3groupEntities db = new a3groupEntities();
         public ActionResult Index()
         {
 			List<HomeMaster> lst = new List<HomeMaster>();

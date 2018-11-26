@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="a3groupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="agr07063_A3GroupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="A3Group_About">
           <Key>
             <PropertyRef Name="id" />
@@ -21,6 +21,17 @@
           <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
           <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="A3Group_Blog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="ContentBlog" Type="nvarchar(max)" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="A3Group_Blogs">
           <Key>
             <PropertyRef Name="id" />
@@ -28,20 +39,24 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
           <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-          <Property Name="Images" Type="nvarchar" MaxLength="300" />
-          <Property Name="Works" Type="nvarchar" MaxLength="50" />
-          <Property Name="SubTitle" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="A3Group_Contact">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
-          <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-          <Property Name="Address" Type="nvarchar" MaxLength="150" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="150" />
-          <Property Name="Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="500" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="A3Group_Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="A3Group_Differences">
           <Key>
@@ -75,6 +90,37 @@
           <Property Name="Strengths" Type="nvarchar(max)" />
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="A3Group_Information">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="A3Group_Member">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Role" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="A3Group_Partner">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PartnerName" Type="nvarchar(max)" />
+          <Property Name="PartnerIcon" Type="nvarchar" MaxLength="100" />
+          <Property Name="PartnerDescription" Type="nvarchar(max)" />
+          <Property Name="Website" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="A3Group_Prices">
           <Key>
             <PropertyRef Name="id" />
@@ -92,14 +138,23 @@
           <Property Name="Prices3" Type="int" />
           <Property Name="Description3" Type="nvarchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="A3Group_Project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="A3Group_Quotes">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Quote" Type="nvarchar" MaxLength="500" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Roles" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quote" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Roles" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="A3Group_Services">
           <Key>
@@ -138,9 +193,6 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
           <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-          <Property Name="Images" Type="nvarchar" MaxLength="300" />
-          <Property Name="Names" Type="nvarchar" MaxLength="50" />
-          <Property Name="Roles" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="A3Group_Works">
           <Key>
@@ -149,26 +201,31 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
           <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
-          <Property Name="Images" Type="nvarchar" MaxLength="300" />
-          <Property Name="Name" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <EntityContainer Name="a3groupModelStoreContainer">
+        <EntityContainer Name="agr07063_A3GroupModelStoreContainer">
           <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="A3Group_Blog" EntityType="Self.A3Group_Blog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Blogs" EntityType="Self.A3Group_Blogs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Contact" EntityType="Self.A3Group_Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="A3Group_Customer" EntityType="Self.A3Group_Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Differences" EntityType="Self.A3Group_Differences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Features" EntityType="Self.A3Group_Features" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="A3Group_Information" EntityType="Self.A3Group_Information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="A3Group_Member" EntityType="Self.A3Group_Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="A3Group_Partner" EntityType="Self.A3Group_Partner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Prices" EntityType="Self.A3Group_Prices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="A3Group_Project" EntityType="Self.A3Group_Project" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Quotes" EntityType="Self.A3Group_Quotes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Services" EntityType="Self.A3Group_Services" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Sliders" EntityType="Self.A3Group_Sliders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Team" EntityType="Self.A3Group_Team" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Works" EntityType="Self.A3Group_Works" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="a3groupModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="agr07063_A3GroupModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="A3Group_About">
           <Key>
             <PropertyRef Name="id" />
@@ -185,6 +242,17 @@
           <Property Name="SubTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SubDescription4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="A3Group_Blog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContentBlog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="A3Group_Blogs">
           <Key>
             <PropertyRef Name="id" />
@@ -192,20 +260,24 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Images" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="Works" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SubTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Contact">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="Phone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="A3Group_Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Differences">
           <Key>
@@ -239,14 +311,71 @@
           <Property Name="Strengths" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="A3Group_Information">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="A3Group_Member">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="A3Group_Partner">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="A3Group_Prices">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Prices1" Type="Int32" />
+          <Property Name="Description1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Prices2" Type="Int32" />
+          <Property Name="Description2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle3" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Prices3" Type="Int32" />
+          <Property Name="Description3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="A3Group_Project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="A3Group_Quotes">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Quote" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Roles" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Roles" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Services">
           <Key>
@@ -285,9 +414,6 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Images" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="Names" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Roles" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Works">
           <Key>
@@ -296,47 +422,34 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Images" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="a3groupEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="a3groupEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" />
+          <EntitySet Name="A3Group_Blog" EntityType="Self.A3Group_Blog" />
           <EntitySet Name="A3Group_Blogs" EntityType="Self.A3Group_Blogs" />
           <EntitySet Name="A3Group_Contact" EntityType="Self.A3Group_Contact" />
+          <EntitySet Name="A3Group_Customer" EntityType="Self.A3Group_Customer" />
           <EntitySet Name="A3Group_Differences" EntityType="Self.A3Group_Differences" />
           <EntitySet Name="A3Group_Features" EntityType="Self.A3Group_Features" />
+          <EntitySet Name="A3Group_Information" EntityType="Self.A3Group_Information" />
+          <EntitySet Name="A3Group_Member" EntityType="Self.A3Group_Member" />
+          <EntitySet Name="A3Group_Partner" EntityType="Self.A3Group_Partner" />
+          <EntitySet Name="A3Group_Prices" EntityType="Self.A3Group_Prices" />
+          <EntitySet Name="A3Group_Project" EntityType="Self.A3Group_Project" />
           <EntitySet Name="A3Group_Quotes" EntityType="Self.A3Group_Quotes" />
           <EntitySet Name="A3Group_Services" EntityType="Self.A3Group_Services" />
           <EntitySet Name="A3Group_Sliders" EntityType="Self.A3Group_Sliders" />
           <EntitySet Name="A3Group_Team" EntityType="Self.A3Group_Team" />
           <EntitySet Name="A3Group_Works" EntityType="Self.A3Group_Works" />
-          <EntitySet Name="A3Group_Prices" EntityType="a3groupModel.A3Group_Prices" />
         </EntityContainer>
-        <EntityType Name="A3Group_Prices">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="SubTitle1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Prices1" Type="Int32" />
-          <Property Name="Description1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="SubTitle2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Prices2" Type="Int32" />
-          <Property Name="Description2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="SubTitle3" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Prices3" Type="Int32" />
-          <Property Name="Description3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="a3groupModelStoreContainer" CdmEntityContainer="a3groupEntities2">
+        <EntityContainerMapping StorageEntityContainer="agr07063_A3GroupModelStoreContainer" CdmEntityContainer="a3groupEntities">
           <EntitySetMapping Name="A3Group_About">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_About">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_About">
               <MappingFragment StoreEntitySet="A3Group_About">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
@@ -352,32 +465,49 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Blog">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blog">
+              <MappingFragment StoreEntitySet="A3Group_Blog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ContentBlog" ColumnName="ContentBlog" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Blogs">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Blogs">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blogs">
               <MappingFragment StoreEntitySet="A3Group_Blogs">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
                 <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-                <ScalarProperty Name="Images" ColumnName="Images" />
-                <ScalarProperty Name="Works" ColumnName="Works" />
-                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Contact">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Contact">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Contact">
               <MappingFragment StoreEntitySet="A3Group_Contact">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
-                <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Customer">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Customer">
+              <MappingFragment StoreEntitySet="A3Group_Customer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Differences">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Differences">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Differences">
               <MappingFragment StoreEntitySet="A3Group_Differences">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
@@ -398,7 +528,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Features">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Features">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Features">
               <MappingFragment StoreEntitySet="A3Group_Features">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
@@ -410,8 +540,70 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Information">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Information">
+              <MappingFragment StoreEntitySet="A3Group_Information">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Member">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Member">
+              <MappingFragment StoreEntitySet="A3Group_Member">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Partner">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Partner">
+              <MappingFragment StoreEntitySet="A3Group_Partner">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+                <ScalarProperty Name="PartnerIcon" ColumnName="PartnerIcon" />
+                <ScalarProperty Name="PartnerDescription" ColumnName="PartnerDescription" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Prices">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Prices">
+              <MappingFragment StoreEntitySet="A3Group_Prices">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+                <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+                <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+                <ScalarProperty Name="Prices1" ColumnName="Prices1" />
+                <ScalarProperty Name="Description1" ColumnName="Description1" />
+                <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+                <ScalarProperty Name="Prices2" ColumnName="Prices2" />
+                <ScalarProperty Name="Description2" ColumnName="Description2" />
+                <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+                <ScalarProperty Name="Prices3" ColumnName="Prices3" />
+                <ScalarProperty Name="Description3" ColumnName="Description3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="A3Group_Project">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Project">
+              <MappingFragment StoreEntitySet="A3Group_Project">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Quotes">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Quotes">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Quotes">
               <MappingFragment StoreEntitySet="A3Group_Quotes">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Quote" ColumnName="Quote" />
@@ -421,7 +613,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Services">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Services">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Services">
               <MappingFragment StoreEntitySet="A3Group_Services">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
@@ -442,7 +634,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Sliders">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Sliders">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Sliders">
               <MappingFragment StoreEntitySet="A3Group_Sliders">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -453,43 +645,20 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Team">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Team">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Team">
               <MappingFragment StoreEntitySet="A3Group_Team">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
                 <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-                <ScalarProperty Name="Images" ColumnName="Images" />
-                <ScalarProperty Name="Names" ColumnName="Names" />
-                <ScalarProperty Name="Roles" ColumnName="Roles" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="A3Group_Works">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Works">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Works">
               <MappingFragment StoreEntitySet="A3Group_Works">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
                 <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-                <ScalarProperty Name="Images" ColumnName="Images" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="A3Group_Prices">
-            <EntityTypeMapping TypeName="a3groupModel.A3Group_Prices">
-              <MappingFragment StoreEntitySet="A3Group_Prices">
-                <ScalarProperty Name="Description3" ColumnName="Description3" />
-                <ScalarProperty Name="Prices3" ColumnName="Prices3" />
-                <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
-                <ScalarProperty Name="Description2" ColumnName="Description2" />
-                <ScalarProperty Name="Prices2" ColumnName="Prices2" />
-                <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
-                <ScalarProperty Name="Description1" ColumnName="Description1" />
-                <ScalarProperty Name="Prices1" ColumnName="Prices1" />
-                <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
-                <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
-                <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

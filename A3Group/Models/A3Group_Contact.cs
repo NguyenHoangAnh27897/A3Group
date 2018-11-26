@@ -15,10 +15,9 @@ namespace A3Group.Models
     public partial class A3Group_Contact
     {
         public int id { get; set; }
-        public string MainTitle { get; set; }
-        public string MainDescription { get; set; }
-        public string Address { get; set; }
-        public string Phone { get; set; }
+        public string Name { get; set; }
+        public string Subject { get; set; }
+        public string Message { get; set; }
         public string Email { get; set; }
     }
 }

@@ -1,0 +1,60 @@
+﻿@model A3Group.Models.A3Group_Information
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Liên hệ</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="panel panel-white">
+                <div class="panel-heading clearfix">
+                    <h3>Chỉnh sửa Liên hệ</h3>
+                    <hr />
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="/contactmaster/edit" method="post">
+                        <div class="form-group">
+                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                            <input type="text" class="form-control" name="maintitle" value="@Model.Title" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" class="form-control" placeholder="">@Model.Description</textarea>
+                        </div>
+
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="panel-title">Địa chỉ (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" class="form-control" name="address" value="@Model.Address">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="panel-title">Số điện thoại (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" class="form-control" name="phone" value="@Model.Phone">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="panel-title">Email (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" class="form-control" name="email" value="@Model.Email">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
