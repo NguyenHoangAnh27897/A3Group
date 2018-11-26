@@ -4,72 +4,7 @@
 }
 
 
-<style>
-    .hex_row_even {
-      display: inline-block;
-      margin: 0 auto -275px auto;
-      overflow: hidden;
-    }
 
-    .hex_row_odd {
-      display: inline-block;
-      margin: 0 auto -275px auto;
-      overflow: hidden;
-    }
-
-    .center {
-      float: left;
-      margin: 20px 10px;
-      width: 240px;
-    }
-
-    .hexagon {
-      transform: rotate(120deg);
-      cursor: pointer;
-      height: 440px;
-      overflow: hidden;
-      visibility: hidden;
-      width: 220px;
-    }
-
-    .hex1 {
-      transform: rotate(-60deg);
-      height: 100%;
-      overflow: hidden;
-      width: 100%;
-    }
-
-
-    .hex2 {
-      transform: rotate(-60deg);
-      height: 100%;
-      position: relative;
-      visibility: visible;
-      width: 100%;
-    }
-
-    .hex1 .hex2 .hexagon .center {
-        -webkit-box-shadow: 0 28px 16px -26px black;
-        -moz-box-shadow: 0 28px 16px -26px black;
-        box-shadow: 0 28px 16px -26px black;
-        transition: all .5s ease-in-out;
-        -webkit-transition: all .6s ease-in-out;
-        -moz-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-    }
-    .center:hover {
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        -webkit-box-shadow: 0 58px 36px -56px black;
-        -moz-box-shadow: 0 58px 36px -56px black;
-        box-shadow: 0 58px 36px -56px black;
-    }
-
-
-</style>
 <!-- ==================================================
                         welcome-video
   ================================================== -->
@@ -188,18 +123,18 @@
                     <h3 class="fw-600 mb-20px"><span class="fw-200">@Model.FirstOrDefault().fea.FirstOrDefault().SubTitle</span></h3>
                     <p class="mb-20px">@Html.Raw(Model.FirstOrDefault().fea.FirstOrDefault().SubDescription)</p>
                     @*<div class="row">
-                        <div class="col-sm-6">
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích dữ liệu.</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Quản trị hệ thống.</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Lập trình viên.</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Kỹ sư phần mềm.</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích hệ thống.</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Thiết kế web/ dịch vụ Internet.</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Chuyên viên hỗ trợ kỹ thuật/ người sử dụng cuối cùng.</p>
-                        </div>
-                    </div>*@
+                            <div class="col-sm-6">
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích dữ liệu.</p>
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Quản trị hệ thống.</p>
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Lập trình viên.</p>
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Kỹ sư phần mềm.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích hệ thống.</p>
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Thiết kế web/ dịch vụ Internet.</p>
+                                <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Chuyên viên hỗ trợ kỹ thuật/ người sử dụng cuối cùng.</p>
+                            </div>
+                        </div>*@
                     <a href="#0" class="main-btn btn-3 mt-15px">Tìm hiểu thêm</a>
                 </div>
             </div>
@@ -689,112 +624,167 @@
                       project-area
 ================================================== -->
 <section class="work-area sec-padding" data-scroll-index="5">
-    <div class="container" style="margin-bottom: 150px">
+    <div class="container">
         <h1 class="title-h p-relative">
             <span class="fw-200">Our</span> Project
             <span class="line p-absolute bg-orange"></span>
         </h1>
         <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="row">
-            <div class="hex_row_odd">
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('../../Content/A3G/images/work-8.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('../../Content/A3G/images/work-7.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('../../Content/A3G/images/work-12.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-            </div><!--/hex_row_even-->
-            <!-- End hexagon odd -->
-            <!-- Hexagon even -->
-            <div class="hex_row_even">
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('https://static.tumblr.com/6pl87f7/eVqmduuh2/22948aee82dd11e18cf91231380fd29b_7.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('http://www.rawstory.com/wp-content/uploads/2015/05/A-man-surfing-Shutterstock-800x430.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('https://img.grouponcdn.com/deal/pZW1AwwkaLpzZ16v6Sv1/kM-2048x1229/v1/c700x420.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('http://www.destination360.com/europe/portugal/images/s/portugal-surf.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-            </div><!--/hex_row_even-->
-            <!-- End Hexagon even -->
-            <!-- Hexagon odd 2 -->
-            <div class="hex_row_odd">
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('../../Content/A3G/images/work-10.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('../../Content/A3G/images/work-5.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-
-                <div class="center">
-                    <div class="hexagon">
-                        <div class="hex1">
-                            <div class="hex2" style="background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/1999_-_Surf_%C3%A0_Waikiki_Beach_Honolulu_Hawa%C3%AF.jpg') center no-repeat">
-                            </div><!--/hex2-->
-                        </div><!--/hex1-->
-                    </div><!--/hexagon-->
-                </div><!--/center-->
-            </div><!--/hex_row_even-->
-            <!-- End Hexagon odd 2 -->
-        </div>
+        <ul id="hexGrid">
+                <li class="hex">
+                    <div class="hexIn">
+                        <a class="hexLink" href="#">
+                            <img src="~/Content/A3G/images/work-7.jpg" alt="">
+                            <h1>This is a title</h1>
+                            <p>Some sample text about the article this hexagon leads to</p>
+                        </a>
+                    </div>
+                </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-8.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-5.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-11.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-10.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-10.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-5.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-7.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-11.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-10.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-5.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-7.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-11.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="#">
+                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
+                        <h1>This is a title</h1>
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
     </div>
 </section>
 <!-- ==================================================
@@ -1114,4 +1104,3 @@
 <!-- ==================================================
                       End map
 ================================================== -->
-
