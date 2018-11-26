@@ -213,6 +213,7 @@
     <Compile Include="Controllers\WebMaster\ManageController.cs" />
     <Compile Include="Controllers\WebMaster\MemberMasterController.cs" />
     <Compile Include="Controllers\WebMaster\PriceMasterController.cs" />
+    <Compile Include="Controllers\WebMaster\ProjectMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ServiceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\SliderMasterController.cs" />
     <Compile Include="Controllers\WebMaster\WebMasterController.cs" />
@@ -958,6 +959,9 @@
     <Content Include="Views\MemberMaster\List.cshtml" />
     <Content Include="Views\MemberMaster\Create.cshtml" />
     <Content Include="Views\MemberMaster\Edit.cshtml" />
+    <Content Include="Views\ProjectMaster\List.cshtml" />
+    <Content Include="Views\ProjectMaster\Create.cshtml" />
+    <Content Include="Views\ProjectMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

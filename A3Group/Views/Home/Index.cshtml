@@ -187,7 +187,7 @@
                 <div class="about-text wow fadeInRight" data-wow-delay="0.7s">
                     <h3 class="fw-600 mb-20px"><span class="fw-200">@Model.FirstOrDefault().fea.FirstOrDefault().SubTitle</span></h3>
                     <p class="mb-20px">@Html.Raw(Model.FirstOrDefault().fea.FirstOrDefault().SubDescription)</p>
-                    <div class="row">
+                    @*<div class="row">
                         <div class="col-sm-6">
                             <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Nhân viên phân tích dữ liệu.</p>
                             <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Quản trị hệ thống.</p>
@@ -199,7 +199,7 @@
                             <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Thiết kế web/ dịch vụ Internet.</p>
                             <p class="mb-10px"><i class="fa fa-check color-orange mr-5px"></i> Chuyên viên hỗ trợ kỹ thuật/ người sử dụng cuối cùng.</p>
                         </div>
-                    </div>
+                    </div>*@
                     <a href="#0" class="main-btn btn-3 mt-15px">Tìm hiểu thêm</a>
                 </div>
             </div>
@@ -384,11 +384,7 @@
                     <div class="col-md-6">
                         <div class="mt-25px mb-25px">
                             <h4 class="fw-600 mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubTitle1</h4>
-                            <p class="mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubDescription1</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> minim veniam, quis nostrud exercitation ullamco</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> Lorem ipsum dolor sit amet, consectetur</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> dolore magna aliqua. enim minim veniam</p>
-                            <p class="mb-25px"><i class="fa fa-check color-orange"></i> eiusmod tempor incididunt ut labore</p>
+                            <p class="mb-15px">@Html.Raw(Model.FirstOrDefault().diff.FirstOrDefault().SubDescription1)</p>
                             <a class="main-btn btn-3" href="#0">Read More</a>
                         </div>
                     </div>
@@ -404,11 +400,7 @@
                     <div class="col-md-6">
                         <div class="mt-25px mb-25px">
                             <h4 class="fw-600 mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubTitle2</h4>
-                            <p class="mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubDescription2</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> minim veniam, quis nostrud exercitation ullamco</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> Lorem ipsum dolor sit amet, consectetur</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> dolore magna aliqua. enim minim veniam</p>
-                            <p class="mb-25px"><i class="fa fa-check color-orange"></i> eiusmod tempor incididunt ut labore</p>
+                            <p class="mb-15px">@Html.Raw(Model.FirstOrDefault().diff.FirstOrDefault().SubDescription2)</p>
                             <a class="main-btn btn-3" href="#0">Read More</a>
                         </div>
                     </div>
@@ -424,11 +416,7 @@
                     <div class="col-md-6">
                         <div class="mt-25px mb-25px">
                             <h4 class="fw-600 mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubTitle3</h4>
-                            <p class="mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubDescription3</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> minim veniam, quis nostrud exercitation ullamco</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> Lorem ipsum dolor sit amet, consectetur</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> dolore magna aliqua. enim minim veniam</p>
-                            <p class="mb-25px"><i class="fa fa-check color-orange"></i> eiusmod tempor incididunt ut labore</p>
+                            <p class="mb-15px">@Html.Raw(Model.FirstOrDefault().diff.FirstOrDefault().SubDescription3)</p>
                             <a class="main-btn btn-3" href="#0">Read More</a>
                         </div>
                     </div>
@@ -444,11 +432,7 @@
                     <div class="col-md-6">
                         <div class="mt-25px mb-25px">
                             <h4 class="fw-600 mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubTitle4</h4>
-                            <p class="mb-15px">@Model.FirstOrDefault().diff.FirstOrDefault().SubDescription4</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> minim veniam, quis nostrud exercitation ullamco</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> Lorem ipsum dolor sit amet, consectetur</p>
-                            <p class="mb-10px"><i class="fa fa-check color-orange"></i> dolore magna aliqua. enim minim veniam</p>
-                            <p class="mb-25px"><i class="fa fa-check color-orange"></i> eiusmod tempor incididunt ut labore</p>
+                            <p class="mb-15px">@Html.Raw(Model.FirstOrDefault().diff.FirstOrDefault().SubDescription4)</p>
                             <a class="main-btn btn-3" href="#0">Read More</a>
                         </div>
                     </div>
