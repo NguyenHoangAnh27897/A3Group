@@ -363,3 +363,5 @@ D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.csproj.GenerateResource.ca
 D:\LapTrinh\A3Group\A3Group\A3Group\bin\GridMvc.dll
 D:\LapTrinh\A3Group\A3Group\A3Group\bin\PagedList.dll
 D:\LapTrinh\A3Group\A3Group\A3Group\bin\PagedList.Mvc.dll
+C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\A3Group\A3Group\obj\Debug\A3Group.Migrations.InitialCreate.resources
+C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\A3Group\A3Group\obj\Debug\A3Group.csproj.GenerateResource.cache
