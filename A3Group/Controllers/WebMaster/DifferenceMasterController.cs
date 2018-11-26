@@ -9,7 +9,7 @@ namespace A3Group.Controllers.WebMaster
 {
 	public class DifferenceMasterController : Controller
 	{
-		a3groupEntities2 db = new a3groupEntities2();
+		a3groupEntities db = new a3groupEntities();
 		// GET: DifferenceMaster
 		public ActionResult Edit()
 		{

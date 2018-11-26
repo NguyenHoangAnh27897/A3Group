@@ -61,12 +61,14 @@
                                 <i class="menu-icon icon-flash_on"></i><span>Quản lý A3</span><i class="accordion-icon fa fa-angle-left"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="/slidermaster/edit">Chỉnh sửa Slider</a></li>
-                                <li><a href="/aboutmaster/edit">Chỉnh sửa Câu chào</a></li>
-                                <li><a href="/aboutmaster/editintroduce">Chỉnh sửa Giới thiệu</a></li>
-                                <li><a href="/servicemaster/edit">Chỉnh sửa Dịch vụ</a></li>
-                                <li><a href="/differencemaster/edit">Chỉnh sửa khác biệt</a></li>
+                                <li><a href="/slidermaster/edit">Quản lý Slider</a></li>
+                                <li><a href="/aboutmaster/edit">Quản lý Câu chào</a></li>
+                                <li><a href="/aboutmaster/editintroduce">Quản lý Giới thiệu</a></li>
+                                <li><a href="/servicemaster/edit">Quản lý Dịch vụ</a></li>
+                                <li><a href="/differencemaster/edit">Quản lý khác biệt</a></li>
                                 <li><a href="/pricemaster/edit">Quản lý Bảng giá</a></li>
+                                <li><a href="/contactmaster/edit">Quản lý Liên hệ</a></li>
+                                <li><a href="/contactmaster/editslogan">Quản lý Slogan</a></li>
                             </ul>
                         </li>
                         @*<li>
@@ -176,7 +178,7 @@
                                 <li><a href="javascript:void(0)" id="search-button"><i class="fa fa-search"></i></a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="javascript:void(0)" class="right-sidebar-toggle" data-sidebar-id="main-right-sidebar"><i class="fa fa-envelope"></i></a></li>
+                                @*<li><a href="javascript:void(0)" class="right-sidebar-toggle" data-sidebar-id="main-right-sidebar"><i class="fa fa-envelope"></i></a></li>
                                 <li class="dropdown">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i></a>
                                     <ul class="dropdown-menu dropdown-lg dropdown-content">
@@ -213,16 +215,16 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>*@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="~/Content/WebMaster/assets/images/avatars/avatar1.png" alt="" class="img-circle"></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Profile</a></li>
+                                        @*<li><a href="#">Profile</a></li>
                                         <li><a href="#">Calendar</a></li>
                                         <li><a href="#"><span class="badge pull-right badge-info">64</span>Messages</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#">Account Settings</a></li>
-                                        <li><a href="#">Log Out</a></li>
+                                        <li><a href="#">Account Settings</a></li>*@
+                                        <li><a href="@Url.Action("LogOff","Account")">Log Out</a></li>
                                     </ul>
                                 </li>
                             </ul>

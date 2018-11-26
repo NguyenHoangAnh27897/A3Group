@@ -12,12 +12,11 @@ namespace A3Group.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class A3Group_Contact
+    public partial class A3Group_Project
     {
-        public int id { get; set; }
-        public string Name { get; set; }
-        public string Subject { get; set; }
-        public string Message { get; set; }
-        public string Email { get; set; }
+        public int ID { get; set; }
+        public string ProjectName { get; set; }
+        public string Image { get; set; }
+        public string Type { get; set; }
     }
 }

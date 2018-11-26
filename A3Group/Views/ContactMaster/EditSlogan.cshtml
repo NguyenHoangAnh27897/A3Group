@@ -1,0 +1,40 @@
+﻿@model A3Group.Models.A3Group_Quotes
+@{
+    ViewBag.Title = "EditSlogan";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Slogan</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="panel panel-white">
+                <div class="panel-heading clearfix">
+                    <h3>Chỉnh sửa Slogan</h3>
+                    <hr />
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="/contactmaster/editslogan" method="post">
+                        <div class="form-group">
+                            <label class="panel-title">Slogan</label>
+                            <input type="text" class="form-control" name="slogan" value="@Model.Quote">
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Chủ sở hữu</label>
+                            <input type="text" class="form-control" name="name" value="@Model.Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="panel-title">Vị trí công việc</label>
+                            <input type="text" class="form-control" name="role" value="@Model.Roles">
+                        </div>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
