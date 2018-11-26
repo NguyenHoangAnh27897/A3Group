@@ -20,17 +20,27 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public ActionResult Edit(string maintitle, string maindes, string address, string phone, string email)
+        public JsonResult Edit(A3Group_Information info)
         {
-            var home = db.A3Group_Information.Find(1);
-            home.Title = maintitle;
-            home.Description = maindes;
-            home.Address = address;
-            home.Phone = phone;
-            home.Email = email;
-            db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("Edit");
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Information.Find(1);
+                home.Title = info.Title;
+                home.Description = info.Description;
+                home.Address = info.Address;
+                home.Phone = info.Phone;
+                home.Email = info.Email;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                msg = "Lưu thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
         }
 
         [Authorize(Roles = "Admin")]

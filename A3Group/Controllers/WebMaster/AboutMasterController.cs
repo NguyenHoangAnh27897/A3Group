@@ -21,23 +21,33 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-		public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string title4, string des1, string des2, string des3, string des4)
+		public JsonResult Edit(A3Group_About ab)
 		{
-			var home = db.A3Group_About.Find(1);
-			home.MainTitle = maintitle;
-			home.MainDescription = maindes;
-			home.SubDescription1 = des1;
-			home.SubDescription2 = des2;
-			home.SubDescription3 = des3;
-			home.SubDescription4 = des4;
-			home.SubTitle1 = title1;
-			home.SubTitle2 = title2;
-			home.SubTitle3 = title3;
-			home.SubTitle4 = title4;
-			db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-			db.SaveChanges();
-			return RedirectToAction("Edit");
-		}
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_About.Find(1);
+                home.MainTitle = ab.MainTitle;
+                home.MainDescription = ab.MainDescription;
+                home.SubDescription1 = ab.SubDescription1;
+                home.SubDescription2 = ab.SubDescription2;
+                home.SubDescription3 = ab.SubDescription3;
+                home.SubDescription4 = ab.SubDescription4;
+                home.SubTitle1 = ab.SubTitle1;
+                home.SubTitle2 = ab.SubTitle2;
+                home.SubTitle3 = ab.SubTitle3;
+                home.SubTitle4 = ab.SubTitle4;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                msg = "Lưu thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
+        }
 
         [Authorize(Roles = "Admin")]
         public ActionResult EditIntroduce()

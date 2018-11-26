@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="bin/A3Group.dll">
-      <publishTime>11/26/2018 11:16:02</publishTime>
+      <publishTime>11/26/2018 17:23:01</publishTime>
     </File>
     <File Include="bin/A3Group.pdb">
-      <publishTime>11/26/2018 11:16:02</publishTime>
+      <publishTime>11/26/2018 17:23:01</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/26/2018 10:11:56</publishTime>
@@ -32,6 +32,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
       <publishTime>11/26/2018 10:11:56</publishTime>
+    </File>
+    <File Include="bin/GridMvc.dll">
+      <publishTime>09/19/2018 11:37:13</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/26/2018 10:11:57</publishTime>
@@ -104,6 +107,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/26/2018 10:11:58</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>09/19/2018 11:37:13</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>09/19/2018 11:37:13</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/26/2018 10:11:57</publishTime>
@@ -634,7 +643,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/js/pages/form-file-upload.js">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 14:51:50</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/js/pages/form-image-crop.js">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -892,10 +901,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 11:35:43</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 14:20:11</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/plugins/summernote-master/summernote.css">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -1030,10 +1039,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/AboutMaster/Edit.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 16:49:17</publishTime>
     </File>
     <File Include="Views/AboutMaster/EditIntroduce.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 16:20:19</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -1072,7 +1081,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/ContactMaster/Edit.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 16:58:42</publishTime>
     </File>
     <File Include="Views/ContactMaster/EditSlogan.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -1087,7 +1096,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 14:52:02</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -1107,6 +1116,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
+    <File Include="Views/MemberMaster/Create.cshtml">
+      <publishTime>11/26/2018 16:20:23</publishTime>
+    </File>
+    <File Include="Views/MemberMaster/Edit.cshtml">
+      <publishTime>11/26/2018 16:35:38</publishTime>
+    </File>
+    <File Include="Views/MemberMaster/List.cshtml">
+      <publishTime>11/26/2018 17:22:28</publishTime>
+    </File>
     <File Include="Views/PriceMaster/Edit.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
@@ -1123,13 +1141,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>11/26/2018 11:10:57</publishTime>
+      <publishTime>11/26/2018 15:17:46</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/SliderMaster/Edit.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 15:19:36</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/26/2018 10:11:54</publishTime>

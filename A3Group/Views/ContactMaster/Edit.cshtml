@@ -16,14 +16,14 @@
                     <hr />
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="/contactmaster/edit" method="post">
+                    <form class="form-horizontal">
                         <div class="form-group">
                             <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                            <input type="text" class="form-control" name="maintitle" value="@Model.Title" maxlength="50">
+                            <input type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.Title" maxlength="50">
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" class="form-control" placeholder="">@Model.Description</textarea>
+                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" id="maindes" class="form-control" placeholder="">@Model.Description</textarea>
                         </div>
 
                         <hr />
@@ -32,29 +32,79 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="panel-title">Địa chỉ (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <input maxlength="200" type="text" class="form-control" name="address" value="@Model.Address">
+                                    <input maxlength="200" type="text" class="form-control" name="address" id="address" value="@Model.Address">
                                 </div>
                             </div>
 
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="panel-title">Số điện thoại (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <input maxlength="200" type="text" class="form-control" name="phone" value="@Model.Phone">
+                                    <input maxlength="200" type="text" class="form-control" name="phone" id="phone" value="@Model.Phone">
                                 </div>
                             </div>
 
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="panel-title">Email (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <input maxlength="200" type="text" class="form-control" name="email" value="@Model.Email">
+                                    <input maxlength="200" type="text" class="form-control" name="email" id="email" value="@Model.Email">
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript:return ShowMessage();">LƯU</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn lưu thông tin?");
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    $(document).ready(function () {
+
+        $('.panel-body form').on('submit', function (event) {
+            event.preventDefault();
+            //Get data
+            const maintitle = ($('#maintitle').val());
+            const maindes = ($('#maindes').val());
+            const address = ($('#address').val());
+            const email = ($('#email').val());
+            const phone = ($('#phone').val());
+            //Json
+            const data = {
+                Title: maintitle,
+                Description: maindes,
+                Address: address,
+                Phone: phone,
+                Email: email,
+            };
+            if (maintitle != '' && maindes != '' && address != '' && phone != '' && email != '') {
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/ContactMaster/Edit',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        window.location.href = "/ContactMaster/Edit"
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>

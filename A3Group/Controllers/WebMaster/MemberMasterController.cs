@@ -31,7 +31,7 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public ActionResult Create(A3Group_Member mem)
+        public JsonResult Create(A3Group_Member mem)
         {
             string msg = "";
             try
@@ -42,12 +42,62 @@ namespace A3Group.Controllers.WebMaster
                 home.Description = mem.Description;
                 db.A3Group_Member.Add(home);
                 db.SaveChanges();
+                msg = "Tạo thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Tạo không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Edit(int id)
+        {
+            var rs = db.A3Group_Member.Find(id);
+            return View(rs);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public JsonResult Edit(A3Group_Member mem)
+        {
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Member.Find(mem.ID);
+                home.Name = mem.Name;
+                home.Role = mem.Role;
+                home.Description = mem.Description;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
                 msg = "Lưu thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)
             {
                 msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public JsonResult Delete(A3Group_Member mem)
+        {
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Member.Find(mem.ID);
+                db.Entry(home).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+                msg = "Xóa thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Xóa không thành công, vui lòng kiểm tra lại";
                 return Json(new { Message = msg });
             }
         }

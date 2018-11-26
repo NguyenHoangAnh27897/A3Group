@@ -240,3 +240,6 @@ D:\LapTrinh\A3Group\A3Group\A3Group\obj\Release\A3Group.csproj.CoreCompileInputs
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Release\A3Group.csproj.CopyComplete
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Release\A3Group.dll
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Release\A3Group.pdb
+D:\LapTrinh\A3Group\A3Group\A3Group\bin\GridMvc.dll
+D:\LapTrinh\A3Group\A3Group\A3Group\bin\PagedList.dll
+D:\LapTrinh\A3Group\A3Group\A3Group\bin\PagedList.Mvc.dll

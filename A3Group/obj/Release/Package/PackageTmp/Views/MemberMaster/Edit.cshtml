@@ -1,32 +1,35 @@
-﻿@model A3Group.Models.A3Group_Features
+﻿@model A3Group.Models.A3Group_Member
 @{
-    ViewBag.Title = "EditIntroduce";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
 }
+
 <link href="~/Content/Webmaster/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" type="text/css" />
 <div class="page-inner">
     <div class="page-title">
-        <h3 class="breadcrumb-header">Quản lý Giới thiệu</h3>
+        <h3 class="breadcrumb-header">Quản lý Thành viên</h3>
     </div>
     <div id="main-wrapper">
         <div class="row">
             <div class="panel panel-white">
                 <div class="panel-heading clearfix">
-                    <h3>Chỉnh sửa Giới thiệu</h3>
+                    <h3>Chỉnh sửa thành viên</h3>
                     <hr />
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="#">
+                    <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
-                            <input type="text" class="form-control" id="maintitle" name="maintitle" value="@Model.MainTitle" maxlength="50">
+                            <label class="panel-title">Họ tên (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                            <input maxlength="200" type="text" name="name" id="name" class="form-control" placeholder="" value="@Model.Name">
+                            <input type="hidden" id="ID" value="@Model.ID">
                         </div>
-                        <div class="form-group">
-                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                            <textarea rows="20" cols="50" style="height: 200px" type="text" id="maindes" name="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
-                        </div>
-
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Chức vụ (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                    <input maxlength="100" type="text" name="role" id="role" class="form-control" placeholder="" value="@Model.Role">
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="panel panel-white">
                                     <div class="panel-heading clearfix">
@@ -39,19 +42,14 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="panel-title">Tiêu đề nhỏ (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
-                                    <input maxlength="100" type="text" id="title" class="form-control" name="title" value="@Model.SubTitle">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="panel-title">Mô tả nhỏ (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea rows="20" cols="50" style="height: 200px" type="text" id="des" name="des" class="form-control" placeholder="">@Model.SubDescription</textarea>
-                                </div>
-                            </div>
                         </div>
+
+
+                        <div class="form-group">
+                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 250 KÍ TỰ)</label>
+                            <textarea type="text" cols="50" style="height: 200px" name="description" id="description" class="form-control" placeholder="">@Model.Description</textarea>
+                        </div>
+
                         <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript:return ShowMessage();">LƯU</button>
                     </form>
                 </div>
@@ -74,23 +72,23 @@
         $('.panel-body form').on('submit', function (event) {
             event.preventDefault();
             //Get data
-            const maintitle = ($('#maintitle').val());
-            const maindes = ($('#maindes').val());
-            const title = ($('#title').val());
-            const des = ($('#des').val());
+            const Id = $('input[type="hidden"]').val();
+            const name = ($('#name').val());
+            const role = ($('#role').val());
+            const description = ($('#description').val());
             //Json
             const data = {
-                MainTitle: maintitle,
-                MainDescription: maindes,
-                SubTitle: title,
-                SubDescription: des,
+                ID : Id,
+                Name: name,
+                Role: role,
+                Description: description,
             };
-            if (maintitle != '' && maindes != '' && title != '' && des != '') {
+            if (Id != '' && name != '' && role != '' && description != '') {
                 $.ajax({
                     async: true,
                     data: JSON.stringify(data),
                     type: 'POST',
-                    url: '/aboutmaster/editintroduce',
+                    url: '/MemberMaster/Edit',
                     dataType: "json",
                     contentType: "application/json",
                     cache: false,
@@ -99,7 +97,7 @@
                     },
                     success: function (data) {
                         alert(data.Message);
-                        window.location.href = "/AboutMaster/editintroduce"
+                        window.location.href = "/MemberMaster/List"
                     }
                 });
             }
@@ -111,3 +109,5 @@
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>
 <script src="~/Content/WebMaster/assets/js/pages/form-file-upload.js"></script>
+
+

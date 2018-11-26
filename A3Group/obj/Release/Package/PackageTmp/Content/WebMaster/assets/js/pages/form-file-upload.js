@@ -6,7 +6,7 @@ $(document).ready(function() {
     $("#uploader").pluploadQueue({
         // General settings
         runtimes : 'html5,flash,silverlight,html4',
-        url : "/examples/upload",
+        url : "/aboutmaster/upload",
          
         chunk_size : '1mb',
         rename : true,
@@ -24,8 +24,8 @@ $(document).ready(function() {
  
         // Resize images on clientside if we can
         resize: {
-            width : 200,
-            height : 200,
+            width : 705,
+            height : 396,
             quality : 90,
             crop: true // crop to exact dimensions
         },

@@ -613,6 +613,7 @@
     <Content Include="Views\ContactMaster\EditSlogan.cshtml" />
     <Content Include="Views\MemberMaster\List.cshtml" />
     <Content Include="Views\MemberMaster\Create.cshtml" />
+    <Content Include="Views\MemberMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
