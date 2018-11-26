@@ -6,7 +6,7 @@ $(document).ready(function() {
     $("#uploader").pluploadQueue({
         // General settings
         runtimes : 'html5,flash,silverlight,html4',
-        url : "/examples/upload",
+        url : "/aboutmaster/upload",
          
         chunk_size : '1mb',
         rename : true,

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -57,6 +58,24 @@ namespace A3Group.Controllers.WebMaster
             db.Entry(home).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("EditIntroduce");
+        }
+
+        [HttpPost]
+        public JsonResult Upload(HttpPostedFileBase uploader_count)
+        {
+            string Image = "";
+            if (uploader_count != null)
+            {
+                if (uploader_count.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(uploader_count.FileName);
+                    var fname = filename.Replace(" ", "_");
+                    var path = Path.Combine(Server.MapPath("~/Images/imageIntroduce"), fname);
+                    uploader_count.SaveAs(path);
+                    Image += fname;
+                }
+            }
+            return Json(new { status = 201, type = "Success" }, JsonRequestBehavior.AllowGet);
         }
     }
 }
