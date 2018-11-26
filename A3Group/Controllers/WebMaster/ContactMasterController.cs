@@ -14,23 +14,14 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         public ActionResult Edit()
         {
-            //if (Session["Authentication"] != null)
-            //{
             var lst = db.A3Group_Information.Find(1);
             return View(lst);
-            //}
-            //else
-            //{
-            //	return RedirectToAction("Login", "Account");
-            //}
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Edit(string maintitle, string maindes, string address, string phone, string email)
         {
-            //if (Session["Authentication"] != null)
-            //{
             var home = db.A3Group_Information.Find(1);
             home.Title = maintitle;
             home.Description = maindes;
@@ -40,33 +31,19 @@ namespace A3Group.Controllers.WebMaster
             db.Entry(home).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Edit");
-            //}
-            //else
-            //{
-            //	return RedirectToAction("Login", "Account");
-            //}
         }
 
         [Authorize(Roles = "Admin")]
         public ActionResult EditSlogan()
         {
-            //if (Session["Authentication"] != null)
-            //{
             var lst = db.A3Group_Quotes.Find(1);
             return View(lst);
-            //}
-            //else
-            //{
-            //	return RedirectToAction("Login", "Account");
-            //}
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult EditSlogan(string slogan, string name, string role)
         {
-            //if (Session["Authentication"] != null)
-            //{
             var home = db.A3Group_Quotes.Find(1);
             home.Quote = slogan;
             home.Name = name;
@@ -74,11 +51,6 @@ namespace A3Group.Controllers.WebMaster
             db.Entry(home).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Edit");
-            //}
-            //else
-            //{
-            //	return RedirectToAction("Login", "Account");
-            //}
         }
     }
 }

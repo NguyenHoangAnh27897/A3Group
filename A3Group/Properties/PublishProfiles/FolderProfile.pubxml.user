@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="bin/A3Group.dll">
-      <publishTime>11/26/2018 10:36:16</publishTime>
+      <publishTime>11/26/2018 11:16:02</publishTime>
     </File>
     <File Include="bin/A3Group.pdb">
-      <publishTime>11/26/2018 10:36:16</publishTime>
+      <publishTime>11/26/2018 11:16:02</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/26/2018 10:11:56</publishTime>
@@ -532,7 +532,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/css/metrotheme.min.css">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 10:45:20</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/images/avatars/avatar1.png">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -1123,7 +1123,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 11:10:57</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>

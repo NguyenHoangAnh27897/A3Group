@@ -14,23 +14,14 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         public ActionResult Edit()
         {
-			//if (Session["Authentication"] != null)
-			//{
 				var lst = db.A3Group_Sliders.Find(1);
 				return View(lst);
-			//}
-			//else
-			//{
-			//	return RedirectToAction("Login", "Account");
-			//}
 		}
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
 		public ActionResult Edit(string title, string slogan, string description, string video)
 		{
-			//if(Session["Authentication"] != null)
-			//{
 				var home = db.A3Group_Sliders.Find(1);
 				home.Title = title;
 				home.Slogan = slogan;
@@ -39,11 +30,6 @@ namespace A3Group.Controllers.WebMaster
 				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 				db.SaveChanges();
 				return RedirectToAction("Edit", "SliderMaster");
-			//}
-			//else
-			//{
-			//	return RedirectToAction("Login", "Account");
-			//}
 		}
     }
 }
