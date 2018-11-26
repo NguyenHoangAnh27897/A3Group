@@ -45,7 +45,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GridMvc">
+      <HintPath>C:\Users\hoang\source\repos\MNPOST\MNPOSTWEBSITE\bin\GridMvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>C:\Users\hoang\source\repos\MNPOST\MNPOSTWEBSITE\bin\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>C:\Users\hoang\source\repos\MNPOST\MNPOSTWEBSITE\bin\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -202,6 +211,7 @@
     <Compile Include="Controllers\WebMaster\ContactMasterController.cs" />
     <Compile Include="Controllers\WebMaster\DifferenceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ManageController.cs" />
+    <Compile Include="Controllers\WebMaster\MemberMasterController.cs" />
     <Compile Include="Controllers\WebMaster\PriceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ServiceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\SliderMasterController.cs" />
@@ -601,6 +611,8 @@
     <Content Include="Views\PriceMaster\Edit.cshtml" />
     <Content Include="Views\ContactMaster\Edit.cshtml" />
     <Content Include="Views\ContactMaster\EditSlogan.cshtml" />
+    <Content Include="Views\MemberMaster\List.cshtml" />
+    <Content Include="Views\MemberMaster\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

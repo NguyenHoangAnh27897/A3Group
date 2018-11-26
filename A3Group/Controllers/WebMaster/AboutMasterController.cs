@@ -48,34 +48,72 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public ActionResult EditIntroduce(string maintitle, string maindes, string title, string des)
+        public JsonResult EditIntroduce(A3Group_Features feat)
         {
-            var home = db.A3Group_Features.Find(1);
-            home.MainTitle = maintitle;
-            home.MainDescription = maindes;
-            home.SubTitle = title;
-            home.SubDescription = des;
-            db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("EditIntroduce");
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Features.Find(1);
+                home.MainTitle = feat.MainTitle;
+                home.MainDescription = feat.MainDescription;
+                home.SubTitle = feat.SubTitle;
+                home.SubDescription = feat.SubDescription;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                msg = "Lưu thành công";
+                return Json(new { Message = msg });
+            }
+            catch(Exception ex)
+            {
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }          
+           
         }
 
+        //public JsonResult Upload(HttpPostedFileBase fileupload)
+        //{
+        //    string Image = "";
+        //    if (fileupload != null)
+        //    {
+        //        if (fileupload.ContentLength > 0)
+        //        {
+        //            var filename = Path.GetFileName(fileupload.FileName);
+        //            var fname = filename.Replace(" ", "_");
+        //            var path = Path.Combine(Server.MapPath("~/Images/imageIntroduce"), fname);
+        //            fileupload.SaveAs(path);
+        //            Image += fname;
+        //        }
+        //    }
+        //    var home = db.A3Group_Features.Find(1);
+        //    if (Image != "")
+        //    {
+        //        home.Image = Image;
+        //    }
+        //    db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+        //    db.SaveChanges();
+        //    return Json(new { status = 201, type = "Success" }, JsonRequestBehavior.AllowGet);
+        //}
         [HttpPost]
-        public JsonResult Upload(HttpPostedFileBase uploader_count)
+        public ActionResult Upload(int? chunk, string name = "")
         {
-            string Image = "";
-            if (uploader_count != null)
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageIntroduce");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
             {
-                if (uploader_count.ContentLength > 0)
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                var home = db.A3Group_Features.Find(1);
+                if (name != "")
                 {
-                    var filename = Path.GetFileName(uploader_count.FileName);
-                    var fname = filename.Replace(" ", "_");
-                    var path = Path.Combine(Server.MapPath("~/Images/imageIntroduce"), fname);
-                    uploader_count.SaveAs(path);
-                    Image += fname;
+                    home.Image = name;
                 }
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
             }
-            return Json(new { status = 201, type = "Success" }, JsonRequestBehavior.AllowGet);
+            return Content("chunk uploaded", "text/plain");
         }
     }
 }

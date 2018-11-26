@@ -360,3 +360,6 @@ D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.dll
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.pdb
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.Migrations.InitialCreate.resources
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.csproj.GenerateResource.cache
+D:\LapTrinh\A3Group\A3Group\A3Group\bin\GridMvc.dll
+D:\LapTrinh\A3Group\A3Group\A3Group\bin\PagedList.dll
+D:\LapTrinh\A3Group\A3Group\A3Group\bin\PagedList.Mvc.dll

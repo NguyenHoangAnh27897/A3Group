@@ -24,8 +24,8 @@ $(document).ready(function() {
  
         // Resize images on clientside if we can
         resize: {
-            width : 200,
-            height : 200,
+            width : 705,
+            height : 396,
             quality : 90,
             crop: true // crop to exact dimensions
         },
