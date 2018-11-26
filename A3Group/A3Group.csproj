@@ -212,6 +212,7 @@
     <Compile Include="Controllers\WebMaster\DifferenceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ManageController.cs" />
     <Compile Include="Controllers\WebMaster\MemberMasterController.cs" />
+    <Compile Include="Controllers\WebMaster\PartnerMasterController.cs" />
     <Compile Include="Controllers\WebMaster\PriceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ProjectMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ServiceMasterController.cs" />
@@ -962,6 +963,9 @@
     <Content Include="Views\ProjectMaster\List.cshtml" />
     <Content Include="Views\ProjectMaster\Create.cshtml" />
     <Content Include="Views\ProjectMaster\Edit.cshtml" />
+    <Content Include="Views\PartnerMaster\List.cshtml" />
+    <Content Include="Views\PartnerMaster\Create.cshtml" />
+    <Content Include="Views\PartnerMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
