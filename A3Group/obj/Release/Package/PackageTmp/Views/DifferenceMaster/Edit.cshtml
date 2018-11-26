@@ -1,0 +1,151 @@
+﻿@model A3Group.Models.A3Group_Differences
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<link href="~/Content/Webmaster/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" type="text/css" />
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Khác biệt</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="panel panel-white">
+                <div class="panel-heading clearfix">
+                    <h3>Chỉnh sửa Khác biệt</h3>
+                    <hr />
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="/differencemaster/edit" method="post">
+                        <div class="form-group">
+                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                            <input maxlength="50" type="text" class="form-control" name="maintitle" value="@Model.MainTitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
+                        </div>
+
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề nhỏ 1 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input maxlength="350" type="text" class="form-control" name="title1" value="@Model.SubTitle1">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="panel-title">Mô tả nhỏ 1 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des1" class="form-control" placeholder="">@Model.SubDescription1</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">Hình ảnh 1 (VUI LÒNG ĐĂNG HÌNH VỚI KÍCH THƯỚC)</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="uploader">
+                                            <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề nhỏ 2 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input maxlength="350" type="text" class="form-control" name="title2" value="@Model.SubTitle2">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="panel-title">Mô tả nhỏ 2 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des2" class="form-control" placeholder="">@Model.SubDescription2</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">Hình ảnh 2 (VUI LÒNG ĐĂNG HÌNH VỚI KÍCH THƯỚC)</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="uploader">
+                                            <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề nhỏ 3 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input maxlength="350" type="text" class="form-control" name="title3" value="@Model.SubTitle3">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="panel-title">Mô tả nhỏ 3 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des3" class="form-control" placeholder="">@Model.SubDescription3</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">Hình ảnh 3 (VUI LÒNG ĐĂNG HÌNH VỚI KÍCH THƯỚC)</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="uploader">
+                                            <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề nhỏ 4 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input maxlength="350" type="text" class="form-control" name="title4" value="@Model.SubTitle4">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="panel-title">Mô tả nhỏ 4 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des4" class="form-control" placeholder="">@Model.SubDescription4</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">Hình ảnh 4 (VUI LÒNG ĐĂNG HÌNH VỚI KÍCH THƯỚC)</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="uploader">
+                                            <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/WebMaster/assets/plugins/dropzone/dropzone.min.js"></script>
+<script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
+<script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>
+<script src="~/Content/WebMaster/assets/js/pages/form-file-upload.js"></script>
+
+
+

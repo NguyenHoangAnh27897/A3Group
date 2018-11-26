@@ -358,3 +358,5 @@ D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.csproj.CoreCompileInputs.c
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.csproj.CopyComplete
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.dll
 D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.pdb
+D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.Migrations.InitialCreate.resources
+D:\LapTrinh\A3Group\A3Group\A3Group\obj\Debug\A3Group.csproj.GenerateResource.cache

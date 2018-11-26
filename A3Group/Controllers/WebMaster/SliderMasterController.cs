@@ -11,6 +11,7 @@ namespace A3Group.Controllers.WebMaster
     {
 		a3groupEntities db = new a3groupEntities();
         // GET: SliderMaster
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit()
         {
 			//if (Session["Authentication"] != null)
@@ -24,7 +25,8 @@ namespace A3Group.Controllers.WebMaster
 			//}
 		}
 
-		[HttpPost]
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
 		public ActionResult Edit(string title, string slogan, string description, string video)
 		{
 			//if(Session["Authentication"] != null)

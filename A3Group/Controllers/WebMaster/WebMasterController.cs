@@ -9,6 +9,7 @@ namespace A3Group.Controllers.WebMaster
     public class WebMasterController : Controller
     {
         // GET: WebMaster
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View();

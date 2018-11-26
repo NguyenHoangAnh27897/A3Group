@@ -11,6 +11,7 @@ namespace A3Group.Controllers.WebMaster
     {
         a3groupEntities db = new a3groupEntities();
         // GET: ContactMaster
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit()
         {
             //if (Session["Authentication"] != null)
@@ -24,6 +25,7 @@ namespace A3Group.Controllers.WebMaster
             //}
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Edit(string maintitle, string maindes, string address, string phone, string email)
         {
@@ -45,6 +47,7 @@ namespace A3Group.Controllers.WebMaster
             //}
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult EditSlogan()
         {
             //if (Session["Authentication"] != null)
@@ -58,6 +61,7 @@ namespace A3Group.Controllers.WebMaster
             //}
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult EditSlogan(string slogan, string name, string role)
         {

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="agr07063_A3GroupModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="A3Group_About">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Blog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContentBlog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Blogs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Differences">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Features">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Strengths" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Information">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Member">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Partner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PartnerIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PartnerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Prices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Prices1" Type="Int32" />
+    <Property Name="Description1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Prices2" Type="Int32" />
+    <Property Name="Description2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle3" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Prices3" Type="Int32" />
+    <Property Name="Description3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Quotes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Roles" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle3" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle4" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle5" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubTitle6" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Sliders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Slogan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Video" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Team">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="A3Group_Works">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="a3groupEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" />
+    <EntitySet Name="A3Group_Blog" EntityType="Self.A3Group_Blog" />
+    <EntitySet Name="A3Group_Blogs" EntityType="Self.A3Group_Blogs" />
+    <EntitySet Name="A3Group_Contact" EntityType="Self.A3Group_Contact" />
+    <EntitySet Name="A3Group_Customer" EntityType="Self.A3Group_Customer" />
+    <EntitySet Name="A3Group_Differences" EntityType="Self.A3Group_Differences" />
+    <EntitySet Name="A3Group_Features" EntityType="Self.A3Group_Features" />
+    <EntitySet Name="A3Group_Information" EntityType="Self.A3Group_Information" />
+    <EntitySet Name="A3Group_Member" EntityType="Self.A3Group_Member" />
+    <EntitySet Name="A3Group_Partner" EntityType="Self.A3Group_Partner" />
+    <EntitySet Name="A3Group_Prices" EntityType="Self.A3Group_Prices" />
+    <EntitySet Name="A3Group_Project" EntityType="Self.A3Group_Project" />
+    <EntitySet Name="A3Group_Quotes" EntityType="Self.A3Group_Quotes" />
+    <EntitySet Name="A3Group_Services" EntityType="Self.A3Group_Services" />
+    <EntitySet Name="A3Group_Sliders" EntityType="Self.A3Group_Sliders" />
+    <EntitySet Name="A3Group_Team" EntityType="Self.A3Group_Team" />
+    <EntitySet Name="A3Group_Works" EntityType="Self.A3Group_Works" />
+  </EntityContainer>
+</Schema>

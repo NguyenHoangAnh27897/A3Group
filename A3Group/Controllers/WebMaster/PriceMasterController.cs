@@ -11,6 +11,7 @@ namespace A3Group.Controllers.WebMaster
     {
 		a3groupEntities db = new a3groupEntities();
         // GET: PriceMaster
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit()
         {
             //if (Session["Authentication"] != null)
@@ -24,6 +25,7 @@ namespace A3Group.Controllers.WebMaster
             //}
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string des1, string des2, string des3, string price1, string price2, string price3)
         {

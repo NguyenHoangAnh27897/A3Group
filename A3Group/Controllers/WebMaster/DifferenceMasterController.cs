@@ -10,8 +10,9 @@ namespace A3Group.Controllers.WebMaster
 	public class DifferenceMasterController : Controller
 	{
 		a3groupEntities db = new a3groupEntities();
-		// GET: DifferenceMaster
-		public ActionResult Edit()
+        // GET: DifferenceMaster
+        [Authorize(Roles = "Admin")]
+        public ActionResult Edit()
 		{
 			//if (Session["Authentication"] != null)
 			//{
@@ -24,7 +25,8 @@ namespace A3Group.Controllers.WebMaster
 			//}
 		}
 
-		[HttpPost]
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
 		public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string title4, string des1, string des2, string des3, string des4)
 		{
 			//if (Session["Authentication"] != null)

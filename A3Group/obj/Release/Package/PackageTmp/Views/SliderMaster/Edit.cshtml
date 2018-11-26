@@ -1,0 +1,46 @@
+﻿@model A3Group.Models.A3Group_Sliders
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+
+
+
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Slider</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="panel panel-white">
+                <div class="panel-heading clearfix">
+                    <h3>Chỉnh sửa Slider</h3>
+                    <hr />
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="/slidermaster/edit" method="post">
+                        <div class="form-group">
+                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                            <input maxlength="30" type="text" name="title" class="form-control" placeholder="" value="@Model.Title">
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Slogan (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                            <input maxlength="30" type="text" name="slogan" class="form-control" placeholder="" value="@Model.Slogan">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 250 KÍ TỰ)</label>
+                            <textarea maxlength="250" type="text" name="description" class="form-control" placeholder="">@Model.Description</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Video (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
+                            <input maxlength="150 " type="text" name="video" class="form-control" placeholder="" @Model.Video>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

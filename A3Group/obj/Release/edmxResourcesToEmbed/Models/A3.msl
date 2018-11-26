@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="agr07063_A3GroupModelStoreContainer" CdmEntityContainer="a3groupEntities">
+    <EntitySetMapping Name="A3Group_About">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_About">
+        <MappingFragment StoreEntitySet="A3Group_About">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+          <ScalarProperty Name="SubDescription1" ColumnName="SubDescription1" />
+          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="SubDescription2" ColumnName="SubDescription2" />
+          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="SubDescription3" ColumnName="SubDescription3" />
+          <ScalarProperty Name="SubTitle4" ColumnName="SubTitle4" />
+          <ScalarProperty Name="SubDescription4" ColumnName="SubDescription4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Blog">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blog">
+        <MappingFragment StoreEntitySet="A3Group_Blog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ContentBlog" ColumnName="ContentBlog" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Blogs">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blogs">
+        <MappingFragment StoreEntitySet="A3Group_Blogs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Contact">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Contact">
+        <MappingFragment StoreEntitySet="A3Group_Contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Customer">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Customer">
+        <MappingFragment StoreEntitySet="A3Group_Customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Differences">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Differences">
+        <MappingFragment StoreEntitySet="A3Group_Differences">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+          <ScalarProperty Name="SubDescription1" ColumnName="SubDescription1" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="SubDescription2" ColumnName="SubDescription2" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="SubDescription3" ColumnName="SubDescription3" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="SubTitle4" ColumnName="SubTitle4" />
+          <ScalarProperty Name="SubDescription4" ColumnName="SubDescription4" />
+          <ScalarProperty Name="Image4" ColumnName="Image4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Features">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Features">
+        <MappingFragment StoreEntitySet="A3Group_Features">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="SubDescription" ColumnName="SubDescription" />
+          <ScalarProperty Name="Strengths" ColumnName="Strengths" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Information">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Information">
+        <MappingFragment StoreEntitySet="A3Group_Information">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Member">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Member">
+        <MappingFragment StoreEntitySet="A3Group_Member">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Partner">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Partner">
+        <MappingFragment StoreEntitySet="A3Group_Partner">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PartnerIcon" ColumnName="PartnerIcon" />
+          <ScalarProperty Name="PartnerDescription" ColumnName="PartnerDescription" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Prices">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Prices">
+        <MappingFragment StoreEntitySet="A3Group_Prices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+          <ScalarProperty Name="Prices1" ColumnName="Prices1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="Prices2" ColumnName="Prices2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="Prices3" ColumnName="Prices3" />
+          <ScalarProperty Name="Description3" ColumnName="Description3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Project">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Project">
+        <MappingFragment StoreEntitySet="A3Group_Project">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Quotes">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Quotes">
+        <MappingFragment StoreEntitySet="A3Group_Quotes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Roles" ColumnName="Roles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Services">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Services">
+        <MappingFragment StoreEntitySet="A3Group_Services">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+          <ScalarProperty Name="SubTitle1" ColumnName="SubTitle1" />
+          <ScalarProperty Name="SubDescription1" ColumnName="SubDescription1" />
+          <ScalarProperty Name="SubTitle2" ColumnName="SubTitle2" />
+          <ScalarProperty Name="SubDescription2" ColumnName="SubDescription2" />
+          <ScalarProperty Name="SubTitle3" ColumnName="SubTitle3" />
+          <ScalarProperty Name="SubDescription3" ColumnName="SubDescription3" />
+          <ScalarProperty Name="SubTitle4" ColumnName="SubTitle4" />
+          <ScalarProperty Name="SubDescription4" ColumnName="SubDescription4" />
+          <ScalarProperty Name="SubTitle5" ColumnName="SubTitle5" />
+          <ScalarProperty Name="SubDescription5" ColumnName="SubDescription5" />
+          <ScalarProperty Name="SubTitle6" ColumnName="SubTitle6" />
+          <ScalarProperty Name="SubDescription6" ColumnName="SubDescription6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Sliders">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Sliders">
+        <MappingFragment StoreEntitySet="A3Group_Sliders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Slogan" ColumnName="Slogan" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Team">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Team">
+        <MappingFragment StoreEntitySet="A3Group_Team">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="A3Group_Works">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Works">
+        <MappingFragment StoreEntitySet="A3Group_Works">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+          <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

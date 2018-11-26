@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="agr07063_A3GroupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="A3Group_About">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="30" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription1" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription2" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription3" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="A3Group_Blog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="ContentBlog" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Blogs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="A3Group_Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="500" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="A3Group_Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar(max)" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Differences">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image4" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Features">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Strengths" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Information">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="A3Group_Member">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Role" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Partner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartnerName" Type="nvarchar(max)" />
+    <Property Name="PartnerIcon" Type="nvarchar" MaxLength="100" />
+    <Property Name="PartnerDescription" Type="nvarchar(max)" />
+    <Property Name="Website" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="A3Group_Prices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Prices1" Type="int" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Prices2" Type="int" />
+    <Property Name="Description2" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Prices3" Type="int" />
+    <Property Name="Description3" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="A3Group_Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Quotes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quote" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Roles" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="A3Group_Services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubTitle1" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription1" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle2" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription2" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle3" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription3" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle4" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription4" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle5" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription5" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubTitle6" Type="nvarchar" MaxLength="30" />
+    <Property Name="SubDescription6" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="A3Group_Sliders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="30" />
+    <Property Name="Slogan" Type="nvarchar" MaxLength="30" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Video" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="A3Group_Team">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="A3Group_Works">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
+    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="agr07063_A3GroupModelStoreContainer">
+    <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Blog" EntityType="Self.A3Group_Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Blogs" EntityType="Self.A3Group_Blogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Contact" EntityType="Self.A3Group_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Customer" EntityType="Self.A3Group_Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Differences" EntityType="Self.A3Group_Differences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Features" EntityType="Self.A3Group_Features" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Information" EntityType="Self.A3Group_Information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Member" EntityType="Self.A3Group_Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Partner" EntityType="Self.A3Group_Partner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Prices" EntityType="Self.A3Group_Prices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Project" EntityType="Self.A3Group_Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Quotes" EntityType="Self.A3Group_Quotes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Services" EntityType="Self.A3Group_Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Sliders" EntityType="Self.A3Group_Sliders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Team" EntityType="Self.A3Group_Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="A3Group_Works" EntityType="Self.A3Group_Works" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

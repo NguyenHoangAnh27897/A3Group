@@ -1,0 +1,69 @@
+﻿@model A3Group.Models.A3Group_Features
+@{
+    ViewBag.Title = "EditIntroduce";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<link href="~/Content/Webmaster/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" type="text/css" />
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Giới thiệu</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="panel panel-white">
+                <div class="panel-heading clearfix">
+                    <h3>Chỉnh sửa Giới thiệu</h3>
+                    <hr />
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="/aboutmaster/editintroduce" method="post">
+                        <div class="form-group">
+                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                            <input type="text" class="form-control" name="maintitle" value="@Model.MainTitle" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                            <textarea rows="20" cols="50" style="height: 200px" type="text" name="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">Hình ảnh (VUI LÒNG ĐĂNG HÌNH VỚI KÍCH THƯỚC)</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="uploader">
+                                            <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề nhỏ (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
+                                    <input maxlength="100" type="text" class="form-control" name="title" value="@Model.SubTitle">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="panel-title">Mô tả nhỏ (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                                    <textarea rows="20" cols="50" style="height: 200px" type="text" name="des" class="form-control" placeholder="">@Model.SubDescription</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="panel-title">Những lựa chọn tiêu biểu</label>
+                                    <textarea rows="20" cols="50" style="height: 200px" type="text" name="des" class="form-control" placeholder="">@Model.Strengths</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/WebMaster/assets/plugins/dropzone/dropzone.min.js"></script>
+<script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
+<script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>
+<script src="~/Content/WebMaster/assets/js/pages/form-file-upload.js"></script>
