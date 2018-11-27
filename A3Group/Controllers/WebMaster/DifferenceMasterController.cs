@@ -20,8 +20,7 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        [ValidateInput(false)]
-		public ActionResult Edit(A3Group_Differences diff)
+		public JsonResult Edit(A3Group_Differences diff)
 		{
 			string message = "";
 			try 
@@ -30,12 +29,12 @@ namespace A3Group.Controllers.WebMaster
 				home.MainDescription = diff.MainDescription;
 				home.MainTitle = diff.MainTitle;
 				home.SubTitle1 = diff.SubTitle1;
-				home.SubTitle2 = diff.SubTitle2;
-				home.SubTitle3 = diff.SubTitle3;
-				home.SubTitle4 = diff.SubTitle4;
 				home.SubDescription1 = diff.SubDescription1;
+				home.SubTitle2 = diff.SubTitle2;
 				home.SubDescription2 = diff.SubDescription2;
+				home.SubTitle3 = diff.SubTitle3;
 				home.SubDescription3 = diff.SubDescription3;
+				home.SubTitle4 = diff.SubTitle4;
 				home.SubDescription4 = diff.SubDescription4;
 				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 				db.SaveChanges();

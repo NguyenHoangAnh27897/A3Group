@@ -18,25 +18,75 @@
                     <form class="form-horizontal" action="/slidermaster/edit" method="post">
                         <div class="form-group">
                             <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input maxlength="30" type="text" name="title" class="form-control" placeholder="" value="@Model.Title">
+                            <input maxlength="30" type="text" name="title" id="title" class="form-control" placeholder="" value="@Model.Title">
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Slogan (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input maxlength="30" type="text" name="slogan" class="form-control" placeholder="" value="@Model.Slogan">
+                            <input maxlength="30" type="text" name="slogan" id="slogan" class="form-control" placeholder="" value="@Model.Slogan">
                         </div>
 
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 250 KÍ TỰ)</label>
-                            <textarea maxlength="250" type="text" name="description" class="form-control" placeholder="">@Model.Description</textarea>
+                            <textarea maxlength="250" type="text" name="description" id="description" class="form-control" placeholder="">@Model.Description</textarea>
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Video (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
-                            <input maxlength="150 " type="text" name="video" class="form-control" placeholder="" @Model.Video>
+                            <input maxlength="150 " type="text" name="video" id="video" class="form-control" placeholder="" value="@Model.Video">
                         </div>
-                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript: return ShowMessage();">LƯU</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn lưu thông tin?");
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $(document).ready(function () {
+
+        $('.panel-body form').on('submit', function (event) {
+            event.preventDefault();
+            //Get data
+            const title = ($('#title').val());
+            const slogan = ($('#slogan').val());
+            const description = ($('#description').val());
+            const video = ($('#video').val());
+            //Json
+            const data = {
+                Title: title,
+                Slogan: slogan,
+                Description: description,
+                Video: video,
+            };
+            if (title != '' && slogan != '' && description != '' && video != '') {
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/SliderMaster/Edit',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        window.location.href = "/SliderMaster/Edit"
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>

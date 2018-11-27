@@ -21,23 +21,33 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string des1, string des2, string des3, string price1, string price2, string price3)
+        public JsonResult Edit(A3Group_Prices pri)
         {
-            var home = db.A3Group_Prices.Find(1);
-            home.MainTitle = maintitle;
-            home.MainDescription = maindes;
-            home.SubTitle1 = title1;
-            home.Prices1 = price1;
-            home.Description1 = des1;
-            home.SubTitle2 = title2;
-            home.Prices2 = price2;
-            home.Description2 = des2;
-            home.SubTitle3 = title3;
-            home.Prices3 = price3;
-            home.Description3 = des3;
-            db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("Edit");
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Prices.Find(1);
+                home.MainTitle = pri.MainTitle;
+                home.MainDescription = pri.MainDescription;
+                home.SubTitle1 = pri.SubTitle1;
+                home.Prices1 = pri.Prices1;
+                home.Description1 = pri.Description1;
+                home.SubTitle2 = pri.SubTitle2;
+                home.Prices2 = pri.Prices2;
+                home.Description2 = pri.Description2;
+                home.SubTitle3 = pri.SubTitle3;
+                home.Prices3 = pri.Prices3;
+                home.Description3 = pri.Description3;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                msg = "Lưu thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
         }
     }
 }

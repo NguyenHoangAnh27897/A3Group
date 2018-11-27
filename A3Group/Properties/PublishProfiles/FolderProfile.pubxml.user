@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="bin/A3Group.dll">
-      <publishTime>11/26/2018 20:47:33</publishTime>
+      <publishTime>11/26/2018 23:41:18</publishTime>
     </File>
     <File Include="bin/A3Group.pdb">
-      <publishTime>11/26/2018 20:47:33</publishTime>
+      <publishTime>11/26/2018 23:41:18</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/26/2018 10:11:56</publishTime>
@@ -298,7 +298,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/A3G/css/main.css">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 23:01:53</publishTime>
     </File>
     <File Include="Content/A3G/css/owl.carousel.min.css">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2067,11 +2067,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
+    <File Include="Views/BlogMaster/Create.cshtml">
+      <publishTime>11/26/2018 23:34:31</publishTime>
+    </File>
+    <File Include="Views/BlogMaster/Edit.cshtml">
+      <publishTime>11/27/2018 00:04:30</publishTime>
+    </File>
+    <File Include="Views/BlogMaster/List.cshtml">
+      <publishTime>11/26/2018 23:23:35</publishTime>
+    </File>
     <File Include="Views/ContactMaster/Edit.cshtml">
       <publishTime>11/26/2018 16:58:42</publishTime>
     </File>
     <File Include="Views/ContactMaster/EditSlogan.cshtml">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/26/2018 22:45:00</publishTime>
     </File>
     <File Include="Views/DifferenceMaster/Edit.cshtml">
       <publishTime>11/26/2018 21:25:45</publishTime>
@@ -2083,7 +2092,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/26/2018 21:27:18</publishTime>
+      <publishTime>11/26/2018 23:01:53</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2112,8 +2121,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/MemberMaster/List.cshtml">
       <publishTime>11/26/2018 17:22:28</publishTime>
     </File>
+    <File Include="Views/PartnerMaster/Create.cshtml">
+      <publishTime>11/26/2018 22:35:24</publishTime>
+    </File>
+    <File Include="Views/PartnerMaster/Edit.cshtml">
+      <publishTime>11/26/2018 23:35:53</publishTime>
+    </File>
+    <File Include="Views/PartnerMaster/List.cshtml">
+      <publishTime>11/26/2018 22:25:22</publishTime>
+    </File>
     <File Include="Views/PriceMaster/Edit.cshtml">
-      <publishTime>11/26/2018 17:58:41</publishTime>
+      <publishTime>11/26/2018 22:58:10</publishTime>
+    </File>
+    <File Include="Views/ProjectMaster/Create.cshtml">
+      <publishTime>11/26/2018 21:57:22</publishTime>
+    </File>
+    <File Include="Views/ProjectMaster/Edit.cshtml">
+      <publishTime>11/26/2018 23:36:07</publishTime>
+    </File>
+    <File Include="Views/ProjectMaster/List.cshtml">
+      <publishTime>11/26/2018 21:56:41</publishTime>
     </File>
     <File Include="Views/ServiceMaster/Edit.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2128,7 +2155,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>11/26/2018 17:33:01</publishTime>
+      <publishTime>11/27/2018 00:05:06</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>

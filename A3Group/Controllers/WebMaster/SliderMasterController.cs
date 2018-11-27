@@ -20,16 +20,27 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-		public ActionResult Edit(string title, string slogan, string description, string video)
+		public JsonResult Edit(A3Group_Sliders sli)
 		{
+			string msg = "";
+			try
+			{
 				var home = db.A3Group_Sliders.Find(1);
-				home.Title = title;
-				home.Slogan = slogan;
-				home.Description = description;
-				home.Video = video;
+				home.Title = sli.Title;
+				home.Slogan = sli.Slogan;
+				home.Description = sli.Description;
+				home.Video = sli.Video;
 				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 				db.SaveChanges();
-				return RedirectToAction("Edit", "SliderMaster");
+				msg = "Lưu thành công";
+				return Json(new { Message = msg });
+			}
+			catch (Exception ex)
+			{
+				msg = "Lưu không thành công, vui lòng kiểm tra lại";
+				return Json(new { Message = msg });
+			}
+				
 		}
     }
 }

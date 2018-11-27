@@ -52,15 +52,25 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public ActionResult EditSlogan(string slogan, string name, string role)
+        public JsonResult EditSlogan(A3Group_Quotes qu)
         {
-            var home = db.A3Group_Quotes.Find(1);
-            home.Quote = slogan;
-            home.Name = name;
-            home.Roles = role;
-            db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("Edit");
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Quotes.Find(1);
+                home.Quote = qu.Quote;
+                home.Name = qu.Name;
+                home.Roles = qu.Roles;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                msg = "Lưu thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
         }
     }
 }

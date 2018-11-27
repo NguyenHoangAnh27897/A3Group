@@ -16,25 +16,71 @@
                     <hr />
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="/contactmaster/editslogan" method="post">
+                    <form class="form-horizontal">
                         <div class="form-group">
                             <label class="panel-title">Slogan</label>
-                            <input type="text" class="form-control" name="slogan" value="@Model.Quote">
+                            <input type="text" class="form-control" name="slogan" id="slogan" value="@Model.Quote">
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Chủ sở hữu</label>
-                            <input type="text" class="form-control" name="name" value="@Model.Name">
+                            <input type="text" class="form-control" name="name" id="name" value="@Model.Name">
                         </div>
 
                         <div class="form-group">
                             <label class="panel-title">Vị trí công việc</label>
-                            <input type="text" class="form-control" name="role" value="@Model.Roles">
+                            <input type="text" class="form-control" name="role" id="role" value="@Model.Roles">
                         </div>
-                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript:return ShowMessage();">LƯU</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn lưu thông tin?");
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    $(document).ready(function () {
+
+        $('.panel-body form').on('submit', function (event) {
+            event.preventDefault();
+            //Get data
+            const slogan = ($('#slogan').val());
+            const name = ($('#name').val());
+            const role = ($('#role').val());
+            //Json
+            const data = {
+                Quote: slogan,
+                Name: name,
+                Roles: role,
+            };
+            if (slogan != '' && name != '' && role != '') {
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/contactmaster/editslogan',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        window.location.href = "/contactmaster/editslogan"
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
