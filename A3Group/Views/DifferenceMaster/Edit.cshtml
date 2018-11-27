@@ -20,11 +20,11 @@
                     <form class="form-horizontal" action="/differencemaster/edit" method="post">
                         <div class="form-group">
                             <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                            <input maxlength="50" type="text" class="form-control" name="maintitle" value="@Model.MainTitle">
+                            <input maxlength="50" type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.MainTitle">
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
+                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" id="maindes" class="form-control" placeholder="@Model.MainDescription"></textarea>
                         </div>
 
                         <hr />
@@ -33,12 +33,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 1 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                                    <input maxlength="350" type="text" class="form-control" name="title1" value="@Model.SubTitle1">
+                                    <input maxlength="350" type="text" class="form-control" name="title1" id="title1" value="@Model.SubTitle1">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 1 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des1" class="form-control" placeholder="">@Model.SubDescription1</textarea>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des1" id="des1" class="form-control" placeholder="@Model.SubDescription1"></textarea>
                                 </div>
                             </div>
 
@@ -60,12 +60,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 2 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                                    <input maxlength="350" type="text" class="form-control" name="title2" value="@Model.SubTitle2">
+                                    <input maxlength="350" type="text" class="form-control" name="title2" id="title2" value="@Model.SubTitle2">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 2 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des2" class="form-control" placeholder="">@Model.SubDescription2</textarea>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des2" id="des2" class="form-control" placeholder="@Model.SubDescription2"></textarea>
                                 </div>
                             </div>
 
@@ -87,12 +87,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 3 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                                    <input maxlength="350" type="text" class="form-control" name="title3" value="@Model.SubTitle3">
+                                    <input maxlength="350" type="text" class="form-control" name="title3" id="title3" value="@Model.SubTitle3">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 3 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des3" class="form-control" placeholder="">@Model.SubDescription3</textarea>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" id="des3" name="des3" class="form-control" placeholder="@Model.SubDescription3"></textarea>
                                 </div>
                             </div>
 
@@ -113,12 +113,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 4 (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                                    <input maxlength="350" type="text" class="form-control" name="title4" value="@Model.SubTitle4">
+                                    <input maxlength="350" type="text" class="form-control" name="title4" id="title4" value="@Model.SubTitle4">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 4 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des4" class="form-control" placeholder="">@Model.SubDescription4</textarea>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des4" id="des4" class="form-control" placeholder="@Model.SubDescription4"></textarea>
                                 </div>
                             </div>
 
@@ -142,12 +142,7 @@
         </div>
     </div>
 </div>
-<script src="~/Content/WebMaster/assets/plugins/dropzone/dropzone.min.js"></script>
-<script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
-<script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>
-<script src="~/Content/WebMaster/assets/js/pages/form-file-upload.js"></script>
-<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
-<script src="~/Content/Webmaster/assets/js/ckeditor/samples/js/sample.js"></script>
+
 <script>
     CKEDITOR.replace('des1');
     CKEDITOR.replace('des2');
@@ -155,4 +150,70 @@
     CKEDITOR.replace('des4');
 </script>
 
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn lưu thông tin");
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+
+    $(document).ready(function () {
+        $('.panel-body form').on('submit', function (event) {
+            event.preventDefault();
+            const maintitle = ($('#maintitle').val());
+            const maindescription = ($('.maindescription').val());
+            const title1 = ($('#title1').val());
+            const title2 = ($('#title2').val());
+            const title3 = ($('#title3').val());
+            const title4 = ($('#title4').val());
+            var des1 = document.getElementsByName("des1")[0].value;
+            var des2 = document.getElementsByName("des2")[1].value;
+            var des3 = document.getElementsByName("des3")[2].value;
+            var des4 = document.getElementsByName("des4")[3].value;
+
+            //
+            const data = {
+                MainTitle: maintitle,
+                MainDescription: maindescription,
+                Title1: title1,
+                Title2: title2,
+                Title3: title3,
+                Title4: title4,
+                Description1: des1,
+                Description2: des2,
+                Description3: des3,
+                Description4: des4,
+            };
+
+            if (maintitle != "" && maindescription != "" && title1 != "" && title2 != "" && title3 != "" && title4 != "" && des1 != "" && des2 != "" && des3 != "" && des4 != "") {
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/differencemaster/edit',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        Window.location.href = "/differencemaster/edit"
+                    }
+                });
+            }
+        })
+    })
+
+</script>
+<script src="~/Content/WebMaster/assets/plugins/dropzone/dropzone.min.js"></script>
+<script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
+<script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>
+<script src="~/Content/WebMaster/assets/js/pages/form-file-upload.js"></script>
+<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/assets/js/ckeditor/samples/js/sample.js"></script>
