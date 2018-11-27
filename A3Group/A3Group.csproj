@@ -208,6 +208,7 @@
     <Compile Include="Controllers\WebMaster\AboutMasterController.cs" />
     <Compile Include="Controllers\WebMaster\AccountController.cs" />
     <Compile Include="Controllers\A3G\HomeController.cs" />
+    <Compile Include="Controllers\WebMaster\BlogMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ContactMasterController.cs" />
     <Compile Include="Controllers\WebMaster\DifferenceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ManageController.cs" />
@@ -966,11 +967,16 @@
     <Content Include="Views\PartnerMaster\List.cshtml" />
     <Content Include="Views\PartnerMaster\Create.cshtml" />
     <Content Include="Views\PartnerMaster\Edit.cshtml" />
+    <Content Include="Views\BlogMaster\List.cshtml" />
+    <Content Include="Views\BlogMaster\Create.cshtml" />
+    <Content Include="Views\BlogMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\imageHome\" />
+    <Folder Include="Images\imageIcon\" />
     <Folder Include="Images\imageIntroduce\" />
+    <Folder Include="Images\imageMember\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
