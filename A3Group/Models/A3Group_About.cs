@@ -25,5 +25,6 @@ namespace A3Group.Models
         public string SubDescription3 { get; set; }
         public string SubTitle4 { get; set; }
         public string SubDescription4 { get; set; }
+        public string BoldText { get; set; }
     }
 }

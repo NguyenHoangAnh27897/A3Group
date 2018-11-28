@@ -23,10 +23,21 @@
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.MainTitle">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.MainTitle" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Phần in đậm (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="bold" id="bold" value="@Model.BoldText" maxlength="30">
+                                </div>
+                            </div>
                         </div>
+                     
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
                             <textarea maxlength="30" rows="20" cols="50" style="height: 200px" type="text" name="maindes" id="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
@@ -126,6 +137,7 @@
             const des3 = ($('#des3').val());
             const title4 = ($('#title4').val());
             const des4 = ($('#des4').val());
+            const bold = ($('#bold').val());
             //Json
             const data = {
                 MainTitle: maintitle,
@@ -138,8 +150,9 @@
                 SubDescription3: des3,
                 SubTitle4: title4,
                 SubDescription4: des4,
+                BoldText: bold
             };
-            if (maintitle != '' && maindes != '' && title1 != '' && des1 != '' && title2 != '' && des2 != '' && title3 != '' && des3 != '' && title4 != '' && des4 != '') {
+            if (maintitle != '' && maindes != '' && title1 != '' && des1 != '' && title2 != '' && des2 != '' && title3 != '' && des3 != '' && title4 != '' && des4 != '' && bold != '') {
                 $.ajax({
                     async: true,
                     data: JSON.stringify(data),

@@ -1,4 +1,4 @@
-﻿using System;
+﻿	using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,9 +37,10 @@ namespace A3Group.Controllers.WebMaster
                 home.SubTitle2 = ab.SubTitle2;
                 home.SubTitle3 = ab.SubTitle3;
                 home.SubTitle4 = ab.SubTitle4;
+                home.BoldText = ab.BoldText;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)
@@ -69,9 +70,10 @@ namespace A3Group.Controllers.WebMaster
                 home.MainDescription = feat.MainDescription;
                 home.SubTitle = feat.SubTitle;
                 home.SubDescription = feat.SubDescription;
+                home.BoldText = feat.BoldText;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch(Exception ex)

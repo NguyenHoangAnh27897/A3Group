@@ -20,26 +20,37 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string title4, string title5, string title6, string des1, string des2, string des3, string des4, string des5, string des6)
+		public JsonResult Edit(A3Group_Services ser)
         {
-            var home = db.A3Group_Services.Find(1);
-            home.MainTitle = maintitle;
-            home.MainDescription = maindes;
-            home.SubTitle1 = title1;
-            home.SubDescription1 = des1;
-            home.SubTitle2 = title2;
-            home.SubDescription2 = des2;
-            home.SubTitle3 = title3;
-            home.SubDescription3 = des3;
-            home.SubTitle4 = title4;
-            home.SubDescription4 = des4;
-            home.SubTitle5 = title5;
-            home.SubDescription5 = des5;
-            home.SubTitle6 = title6;
-            home.SubDescription6 = des6;
-            db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("Edit");
+			string message = "";
+			try
+			{
+				var home = db.A3Group_Services.Find(1);
+				home.MainTitle = ser.MainTitle;
+				home.MainDescription = ser.MainDescription;
+				home.SubTitle1 = ser.SubTitle1;
+				home.SubDescription1 = ser.SubDescription1;
+				home.SubTitle2 = ser.SubTitle2;
+				home.SubDescription2 = ser.SubDescription2;
+				home.SubTitle3 = ser.SubTitle3;
+				home.SubDescription3 = ser.SubDescription3;
+				home.SubTitle4 = ser.SubTitle4;
+				home.SubDescription4 = ser.SubDescription4;
+				home.SubTitle5 = ser.SubTitle5;
+				home.SubDescription5 = ser.SubDescription5;
+				home.SubTitle6 = ser.SubTitle6;
+				home.SubDescription6 = ser.SubDescription6;
+                home.BoldText = ser.BoldText;
+				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+				db.SaveChanges();
+				message = "Chỉnh sửa thành công!";
+				return Json(new { Message = message });
+			}
+			catch (Exception)
+			{
+				message = "Lưu không thành công, vui lòng kiểm tra lại";
+				return Json(new { Message = message });
+			}
         }
     }
 }

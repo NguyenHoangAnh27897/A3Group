@@ -20,23 +20,35 @@ namespace A3Group.Controllers.WebMaster
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        [ValidateInput(false)]
-		public ActionResult Edit(string maintitle, string maindes, string title1, string title2, string title3, string title4, string des1, string des2, string des3, string des4)
+		public JsonResult Edit(A3Group_Differences diff)
 		{
-			var home = db.A3Group_Differences.Find(1);
-			home.MainDescription = maindes;
-			home.MainTitle = maintitle;
-			home.SubTitle1 = title1;
-			home.SubTitle2 = title2;
-			home.SubTitle3 = title3;
-			home.SubTitle4 = title4;
-			home.SubDescription1 = des1;
-			home.SubDescription2 = des2;
-			home.SubDescription3 = des3;
-			home.SubDescription4 = des4;
-			db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-			db.SaveChanges();
-			return RedirectToAction("Edit");
+			string message = "";
+			try 
+			{
+				var home = db.A3Group_Differences.Find(1);
+				home.MainDescription = diff.MainDescription;
+				home.MainTitle = diff.MainTitle;
+				home.SubTitle1 = diff.SubTitle1;
+				home.SubDescription1 = diff.SubDescription1;
+				home.SubTitle2 = diff.SubTitle2;
+				home.SubDescription2 = diff.SubDescription2;
+				home.SubTitle3 = diff.SubTitle3;
+				home.SubDescription3 = diff.SubDescription3;
+				home.SubTitle4 = diff.SubTitle4;
+				home.SubDescription4 = diff.SubDescription4;
+                home.BoldText = diff.BoldText;
+				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+				db.SaveChanges();
+				message = "Chỉnh sửa thành công!";
+				return Json(new { Message = message });
+
+			}
+			catch (Exception)
+			{
+				message = "Lưu không thành công, vui lòng kiểm tra lại";
+				return Json(new { Message = message });
+			}
+			
 		}
 	}
 }

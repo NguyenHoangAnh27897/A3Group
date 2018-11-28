@@ -25,6 +25,7 @@
     <Property Name="SubDescription3" Type="nvarchar" MaxLength="500" />
     <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
     <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Blog">
     <Key>
@@ -44,6 +45,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Contact">
     <Key>
@@ -82,6 +84,7 @@
     <Property Name="SubTitle4" Type="nvarchar" MaxLength="50" />
     <Property Name="SubDescription4" Type="nvarchar" MaxLength="500" />
     <Property Name="Image4" Type="nvarchar" MaxLength="100" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Features">
     <Key>
@@ -94,6 +97,7 @@
     <Property Name="SubDescription" Type="nvarchar(max)" />
     <Property Name="Strengths" Type="nvarchar(max)" />
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Information">
     <Key>
@@ -105,6 +109,7 @@
     <Property Name="Address" Type="nvarchar" MaxLength="200" />
     <Property Name="Phone" Type="nvarchar" MaxLength="200" />
     <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Member">
     <Key>
@@ -142,6 +147,10 @@
     <Property Name="Prices1" Type="nvarchar" MaxLength="100" />
     <Property Name="Prices2" Type="nvarchar" MaxLength="100" />
     <Property Name="Prices3" Type="nvarchar" MaxLength="100" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit3" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Project">
     <Key>
@@ -180,6 +189,7 @@
     <Property Name="SubDescription5" Type="nvarchar" MaxLength="200" />
     <Property Name="SubTitle6" Type="nvarchar" MaxLength="30" />
     <Property Name="SubDescription6" Type="nvarchar" MaxLength="200" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Sliders">
     <Key>
@@ -190,6 +200,7 @@
     <Property Name="Slogan" Type="nvarchar" MaxLength="30" />
     <Property Name="Description" Type="nvarchar" MaxLength="250" />
     <Property Name="Video" Type="nvarchar" MaxLength="150" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Team">
     <Key>
@@ -198,6 +209,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Works">
     <Key>
@@ -206,6 +218,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MainTitle" Type="nvarchar" MaxLength="25" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="AspNetRoles">
     <Key>

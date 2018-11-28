@@ -31,9 +31,10 @@ namespace A3Group.Controllers.WebMaster
                 home.Address = info.Address;
                 home.Phone = info.Phone;
                 home.Email = info.Email;
+                home.BoldText = info.BoldText;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)
@@ -63,7 +64,7 @@ namespace A3Group.Controllers.WebMaster
                 home.Roles = qu.Roles;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)

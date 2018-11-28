@@ -5,7 +5,7 @@
 }
 
 <style>
-    .col-md-3{
+    .col-md-3 {
         margin-right: 50px;
     }
 </style>
@@ -21,50 +21,60 @@
                     <hr />
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="/servicemaster/edit" method="post">
-                        <div class="form-group">
-                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
-                            <input type="text" class="form-control" name="maintitle" value="@Model.MainTitle" maxlength="50">
+                    <form class="form-horizontal">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.MainTitle" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Phần in đậm (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="bold" id="bold" value="@Model.BoldText" maxlength="30">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
+                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" id="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
                         </div>
 
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 1 (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                                    <input maxlength="30" type="text" class="form-control" name="title1" value="@Model.SubTitle1">
+                                    <input maxlength="30" type="text" class="form-control" name="title1" id="title1" value="@Model.SubTitle1">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 1 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des1" class="form-control" placeholder="">@Model.SubDescription1</textarea>
+                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des1" id="des1" class="form-control" placeholder="">@Model.SubDescription1</textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 2 (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                                    <input maxlength="30" type="text" class="form-control" name="title2" value="@Model.SubTitle2">
+                                    <input maxlength="30" type="text" class="form-control" name="title2" id="title2" value="@Model.SubTitle2">
                                 </div>
- 
+
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 2 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des2" class="form-control" placeholder="">@Model.SubDescription2</textarea>
+                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des2" id="des2" class="form-control" placeholder="">@Model.SubDescription2</textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 3 (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                                    <input maxlength="30" type="text" class="form-control" name="title3" value="@Model.SubTitle3">
+                                    <input maxlength="30" type="text" class="form-control" name="title3" id="title3" value="@Model.SubTitle3">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 3 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des3" class="form-control" placeholder="">@Model.SubDescription3</textarea>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des3" id="des3" class="form-control" placeholder="">@Model.SubDescription3</textarea>
                                 </div>
                             </div>
                         </div>
@@ -73,45 +83,125 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 4 (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                                    <input maxlength="30" type="text" class="form-control" name="title4" value="@Model.SubTitle4">
+                                    <input maxlength="30" type="text" class="form-control" name="title4" id="title4" value="@Model.SubTitle4">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 4 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des4" class="form-control" placeholder="">@Model.SubDescription4</textarea>
+                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des4" id="des4" class="form-control" placeholder="">@Model.SubDescription4</textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 5 (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                                    <input maxlength="30" type="text" class="form-control" name="title5" value="@Model.SubTitle5">
+                                    <input maxlength="30" type="text" class="form-control" name="title5" id="title5" value="@Model.SubTitle5">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 5 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
-                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des5" class="form-control" placeholder="">@Model.SubDescription5</textarea>
+                                    <textarea maxlength="200" rows="20" cols="50" style="height: 200px" type="text" name="des5" id="des5" class="form-control" placeholder="">@Model.SubDescription5</textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="panel-title">Tiêu đề nhỏ 6 (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                                    <input maxlength="30" type="text" class="form-control" name="title6" value="@Model.SubTitle6">
+                                    <input maxlength="30" type="text" class="form-control" name="title6" id="title6" value="@Model.SubTitle6">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ 6 (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des6" class="form-control" placeholder="">@Model.SubDescription6</textarea>
+                                    <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="des6" id="des6" class="form-control" placeholder="">@Model.SubDescription6</textarea>
                                 </div>
                             </div>
 
                         </div>
-                        <button type="submit" class="btn btn-info btn-adon m-b-xxs">LƯU</button>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript: return ShowMessage();">LƯU</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/assets/js/ckeditor/samples/js/sample.js"></script>
+<script>
+    CKEDITOR.replace('des1');
+    CKEDITOR.replace('des2');
+    CKEDITOR.replace('des3');
+    CKEDITOR.replace('des4');
+    CKEDITOR.replace('des5');
+    CKEDITOR.replace('des6');
+    </script>
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn lưu thông tin");
+        if (result) {
+            return true;
+        } else {    
+            return false;
+        }
+    }
 
+    $(document).ready(function () {
+        $('.panel-body form').on('submit', function (event) {
+            event.preventDefault();
+
+            const maintitle = ($('#maintitle').val());
+            const maindes = ($('#maindes').val());
+            const title1 = ($('#title1').val());
+            var des1 = document.getElementsByName('des1')[0].value;
+            const title2 = ($('#title2').val());
+            var des2 = document.getElementsByName('des2')[0].value;
+            const title3 = ($('#title3').val());
+            var des3 = document.getElementsByName('des3')[0].value;
+            const title4 = ($('#title4').val());
+            var des4 = document.getElementsByName('des4')[0].value;
+            const title5 = ($('#title5').val());
+            var des5 = document.getElementsByName('des5')[0].value;
+            const title6 = ($('#title6').val());
+            var des6 = document.getElementsByName('des6')[0].value;
+            const bold = ($('#bold').val());
+
+            const data = {
+                MainTitle: maintitle,
+                MainDescription: maindes,
+                SubTitle1: title1,
+                SubDescription1: des1,
+                SubTitle2: title2,
+                SubDescription2: des2,
+                SubTitle3: title3,
+                SubDescription3: des3,
+                SubTitle4: title4,
+                SubDescription4: des4,
+                SubTitle5: title5,
+                SubDescription5: des5,
+                SubTitle6: title6,
+                SubDescription6: des6,
+                BoldText: bold
+            };
+
+            if (bold != '' && maintitle != '' && maindes != '' && title1 != '' && title2 != '' && title3 != '' && title4 != '' && title5 != '' && title6 != '' && des1 != '' && des2 != '' && des3 != '' && des4 != '' && des5 != '' && des6 != '' ){
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/ServiceMaster/edit',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        Window.location.href = "/ServiceMaster/edit"
+                    }
+                });
+            }
+
+        });
+    })
+
+</script>

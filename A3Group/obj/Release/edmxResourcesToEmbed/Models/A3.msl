@@ -4,6 +4,7 @@
     <EntitySetMapping Name="A3Group_About">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_About">
         <MappingFragment StoreEntitySet="A3Group_About">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -33,6 +34,7 @@
     <EntitySetMapping Name="A3Group_Blogs">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blogs">
         <MappingFragment StoreEntitySet="A3Group_Blogs">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -62,6 +64,7 @@
     <EntitySetMapping Name="A3Group_Differences">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Differences">
         <MappingFragment StoreEntitySet="A3Group_Differences">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -83,6 +86,7 @@
     <EntitySetMapping Name="A3Group_Features">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Features">
         <MappingFragment StoreEntitySet="A3Group_Features">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -96,6 +100,7 @@
     <EntitySetMapping Name="A3Group_Information">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Information">
         <MappingFragment StoreEntitySet="A3Group_Information">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Description" ColumnName="Description" />
@@ -150,6 +155,7 @@
     <EntitySetMapping Name="A3Group_Services">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Services">
         <MappingFragment StoreEntitySet="A3Group_Services">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -171,6 +177,7 @@
     <EntitySetMapping Name="A3Group_Sliders">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Sliders">
         <MappingFragment StoreEntitySet="A3Group_Sliders">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Slogan" ColumnName="Slogan" />
@@ -182,6 +189,7 @@
     <EntitySetMapping Name="A3Group_Team">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Team">
         <MappingFragment StoreEntitySet="A3Group_Team">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -191,6 +199,7 @@
     <EntitySetMapping Name="A3Group_Works">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Works">
         <MappingFragment StoreEntitySet="A3Group_Works">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
           <ScalarProperty Name="MainDescription" ColumnName="MainDescription" />
@@ -210,6 +219,10 @@
     <EntitySetMapping Name="A3Group_Prices">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Prices">
         <MappingFragment StoreEntitySet="A3Group_Prices">
+          <ScalarProperty Name="Unit3" ColumnName="Unit3" />
+          <ScalarProperty Name="Unit2" ColumnName="Unit2" />
+          <ScalarProperty Name="Unit1" ColumnName="Unit1" />
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
           <ScalarProperty Name="Prices3" ColumnName="Prices3" />
           <ScalarProperty Name="Prices2" ColumnName="Prices2" />
           <ScalarProperty Name="Prices1" ColumnName="Prices1" />
