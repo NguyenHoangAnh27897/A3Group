@@ -96,7 +96,7 @@
           <Property Name="MainTitle" Type="nvarchar" MaxLength="100" />
           <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
           <Property Name="SubTitle" Type="nvarchar" MaxLength="100" />
-          <Property Name="SubDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="SubDescription" Type="nvarchar(max)" />
           <Property Name="Strengths" Type="nvarchar(max)" />
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
         </EntityType>
@@ -445,7 +445,7 @@
           <Property Name="MainTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Strengths" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>

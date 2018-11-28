@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
 }
 <link href="~/Content/Webmaster/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" type="text/css" />
-<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+
 <div class="page-inner">
     <div class="page-title">
         <h3 class="breadcrumb-header">Quản lý Giới thiệu</h3>
@@ -60,7 +60,11 @@
         </div>
     </div>
 </div>
-
+<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/assets/js/ckeditor/samples/js/sample.js"></script>
+<script>
+    CKEDITOR.replace('des');
+</script>
 <script>
     function ShowMessage() {
         var result = confirm("Bạn có muốn lưu thông tin?");
@@ -80,6 +84,7 @@
             const maindes = ($('#maindes').val());
             const title = ($('#title').val());
             var des = document.getElementsByName("des")[0].value;
+            console.log(des);
             //Json
             const data = {
                 MainTitle: maintitle,
@@ -109,10 +114,6 @@
         });
 
     });
-</script>
-
-<script>
-    CKEDITOR.replace('des');
 </script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>

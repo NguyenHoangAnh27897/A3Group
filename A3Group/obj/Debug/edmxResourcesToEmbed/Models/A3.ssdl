@@ -91,7 +91,7 @@
     <Property Name="MainTitle" Type="nvarchar" MaxLength="100" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
     <Property Name="SubTitle" Type="nvarchar" MaxLength="100" />
-    <Property Name="SubDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SubDescription" Type="nvarchar(max)" />
     <Property Name="Strengths" Type="nvarchar(max)" />
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
   </EntityType>

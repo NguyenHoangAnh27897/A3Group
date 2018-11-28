@@ -56,6 +56,7 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
+            Session["PartnerID"] = id;
             var rs = db.A3Group_Partner.Find(id);
             return View(rs);
         }
@@ -114,7 +115,9 @@ namespace A3Group.Controllers.WebMaster
                 var buffer = new byte[fileUpload.InputStream.Length];
                 fileUpload.InputStream.Read(buffer, 0, buffer.Length);
                 fs.Write(buffer, 0, buffer.Length);
-                var home = db.A3Group_Partner.Find(1);
+                string Id = Session["PartnerID"].ToString();
+                int id = int.Parse(Id);
+                var home = db.A3Group_Partner.Find(id);
                 if (name != "")
                 {
                     home.PartnerIcon = name;

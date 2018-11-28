@@ -977,6 +977,7 @@
     <Folder Include="Images\imageIcon\" />
     <Folder Include="Images\imageIntroduce\" />
     <Folder Include="Images\imageMember\" />
+    <Folder Include="Images\imageProject\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

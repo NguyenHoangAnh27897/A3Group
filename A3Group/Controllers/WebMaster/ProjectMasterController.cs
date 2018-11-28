@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -55,6 +56,7 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
+            Session["ProjectID"] = id;
             var rs = db.A3Group_Project.Find(id);
             return View(rs);
         }
@@ -100,6 +102,30 @@ namespace A3Group.Controllers.WebMaster
                 msg = "Xóa không thành công, vui lòng kiểm tra lại";
                 return Json(new { Message = msg });
             }
+        }
+
+        [HttpPost]
+        public ActionResult Upload(int? chunk, string name = "")
+        {
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageProject");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
+            {
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                string Id = Session["ProjectID"].ToString();
+                int id = int.Parse(Id);
+                var home = db.A3Group_Project.Find(id);
+                if (name != "")
+                {
+                    home.Image = name;
+                }
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Content("chunk uploaded", "text/plain");
         }
     }
 }
