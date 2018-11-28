@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="bin/A3Group.dll">
-      <publishTime>11/28/2018 17:01:15</publishTime>
+      <publishTime>11/28/2018 22:38:28</publishTime>
     </File>
     <File Include="bin/A3Group.pdb">
-      <publishTime>11/28/2018 17:01:15</publishTime>
+      <publishTime>11/28/2018 22:38:28</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/26/2018 10:11:56</publishTime>
@@ -2335,7 +2335,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/js/pages/form-file-upload.js">
-      <publishTime>11/27/2018 23:33:54</publishTime>
+      <publishTime>11/28/2018 22:59:12</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/js/pages/form-image-crop.js">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2734,7 +2734,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 16:16:39</publishTime>
     </File>
     <File Include="Views/AboutMaster/EditIntroduce.cshtml">
-      <publishTime>11/28/2018 16:18:25</publishTime>
+      <publishTime>11/28/2018 22:31:59</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2788,7 +2788,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 22:45:00</publishTime>
     </File>
     <File Include="Views/DifferenceMaster/Edit.cshtml">
-      <publishTime>11/28/2018 16:22:22</publishTime>
+      <publishTime>11/28/2018 23:02:36</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2836,7 +2836,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 22:25:22</publishTime>
     </File>
     <File Include="Views/PriceMaster/Edit.cshtml">
-      <publishTime>11/28/2018 16:56:44</publishTime>
+      <publishTime>11/28/2018 22:35:38</publishTime>
     </File>
     <File Include="Views/ProjectMaster/Create.cshtml">
       <publishTime>11/27/2018 12:48:50</publishTime>
@@ -2848,7 +2848,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 21:56:41</publishTime>
     </File>
     <File Include="Views/ServiceMaster/Edit.cshtml">
-      <publishTime>11/28/2018 16:19:20</publishTime>
+      <publishTime>11/28/2018 22:36:10</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>

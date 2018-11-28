@@ -41,6 +41,10 @@ namespace A3Group.Controllers.WebMaster
                 home.Name = mem.Name;
                 home.Role = mem.Role;
                 home.Description = mem.Description;
+                if(Session["Image"] != null)
+                {
+                    home.Image = Session["Image"].ToString();
+                }
                 db.A3Group_Member.Add(home);
                 db.SaveChanges();
                 msg = "Tạo thành công";
@@ -115,15 +119,23 @@ namespace A3Group.Controllers.WebMaster
                 var buffer = new byte[fileUpload.InputStream.Length];
                 fileUpload.InputStream.Read(buffer, 0, buffer.Length);
                 fs.Write(buffer, 0, buffer.Length);
-                string Id = Session["MemberID"].ToString();
-                int id = int.Parse(Id);
-                var home = db.A3Group_Member.Find(id);
-                if (name != "")
+                if(Session["MemberID"] != null)
                 {
-                    home.Image = name;
+                    string Id = Session["MemberID"].ToString();
+                    int id = int.Parse(Id);
+                    var home = db.A3Group_Member.Find(id);
+                    if (name != "")
+                    {
+                        home.Image = name;
+                    }
+                    db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    Session["MemberID"] = null;
                 }
-                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
+                else
+                {
+                    Session["Image"] = name;
+                }            
             }
             return Content("chunk uploaded", "text/plain");
         }

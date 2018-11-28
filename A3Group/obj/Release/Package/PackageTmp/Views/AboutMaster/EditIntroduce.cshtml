@@ -59,11 +59,11 @@
 
                                 <div class="form-group">
                                     <label class="panel-title">Mô tả nhỏ (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
-                                    <textarea rows="20" cols="50" style="height: 200px" type="text" id="des" name="des" class="form-control" placeholder="@Model.SubDescription"></textarea>
+                                    <textarea rows="20" cols="50" style="height: 200px" type="text" id="des" name="des" class="form-control" placeholder="">@Model.SubDescription</textarea>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript:return ShowMessage();">LƯU</button>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs des" onclick="javascript:return ShowMessage();">LƯU</button>
                     </form>
                 </div>
             </div>
@@ -94,7 +94,7 @@
             const maindes = ($('#maindes').val());
             const title = ($('#title').val());
             const bold = ($('#bold').val());
-            var des = document.getElementsByName("des")[0].value;
+            var des = CKEDITOR.instances['des'].getData();
             console.log(des);
             //Json
             const data = {
