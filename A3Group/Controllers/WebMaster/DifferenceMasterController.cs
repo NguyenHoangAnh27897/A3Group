@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -36,6 +37,7 @@ namespace A3Group.Controllers.WebMaster
 				home.SubDescription3 = diff.SubDescription3;
 				home.SubTitle4 = diff.SubTitle4;
 				home.SubDescription4 = diff.SubDescription4;
+                home.BoldText = diff.BoldText;
 				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 				db.SaveChanges();
 				message = "Chỉnh sửa thành công!";
@@ -44,10 +46,98 @@ namespace A3Group.Controllers.WebMaster
 			}
 			catch (Exception)
 			{
-				message = "Chỉnh sửa không thành công, vui lòng kiểm tra lại";
+				message = "Lưu không thành công, vui lòng kiểm tra lại";
 				return Json(new { Message = message });
 			}
 			
 		}
-	}
+
+        [HttpPost]
+        public ActionResult Upload1(int? chunk, string name = "")
+        {
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageDifference");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
+            {
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                var home = db.A3Group_Differences.Find(1);
+                if (name != "")
+                {
+                    home.Image1 = name;
+                }
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Content("chunk uploaded", "text/plain");
+        }
+
+        [HttpPost]
+        public ActionResult Upload2(int? chunk, string name = "")
+        {
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageDifference");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
+            {
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                var home = db.A3Group_Differences.Find(1);
+                if (name != "")
+                {
+                    home.Image2 = name;
+                }
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Content("chunk uploaded", "text/plain");
+        }
+
+        [HttpPost]
+        public ActionResult Upload3(int? chunk, string name = "")
+        {
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageDifference");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
+            {
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                var home = db.A3Group_Differences.Find(1);
+                if (name != "")
+                {
+                    home.Image3 = name;
+                }
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Content("chunk uploaded", "text/plain");
+        }
+
+        [HttpPost]
+        public ActionResult Upload4(int? chunk, string name = "")
+        {
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageDifference");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
+            {
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                var home = db.A3Group_Differences.Find(1);
+                if (name != "")
+                {
+                    home.Image4 = name;
+                }
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Content("chunk uploaded", "text/plain");
+        }
+    }
 }

@@ -37,10 +37,14 @@ namespace A3Group.Controllers.WebMaster
                 home.Description2 = pri.Description2;
                 home.SubTitle3 = pri.SubTitle3;
                 home.Prices3 = pri.Prices3;
+                home.BoldText = pri.BoldText;
                 home.Description3 = pri.Description3;
+                home.Unit1 = pri.Unit1;
+                home.Unit2 = pri.Unit2;
+                home.Unit3 = pri.Unit3;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)

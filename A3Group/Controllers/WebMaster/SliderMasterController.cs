@@ -30,9 +30,10 @@ namespace A3Group.Controllers.WebMaster
 				home.Slogan = sli.Slogan;
 				home.Description = sli.Description;
 				home.Video = sli.Video;
+                home.BoldText = sli.BoldText;
 				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 				db.SaveChanges();
-				msg = "Lưu thành công";
+				msg = "Chỉnh sửa thành công";
 				return Json(new { Message = msg });
 			}
 			catch (Exception ex)

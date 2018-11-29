@@ -40,6 +40,7 @@ namespace A3Group.Controllers.WebMaster
 				home.SubDescription5 = ser.SubDescription5;
 				home.SubTitle6 = ser.SubTitle6;
 				home.SubDescription6 = ser.SubDescription6;
+                home.BoldText = ser.BoldText;
 				db.Entry(home).State = System.Data.Entity.EntityState.Modified;
 				db.SaveChanges();
 				message = "Chỉnh sửa thành công!";
@@ -47,7 +48,7 @@ namespace A3Group.Controllers.WebMaster
 			}
 			catch (Exception)
 			{
-				message = "Chỉnh sửa không thành công, vui lòng kiểm tra lại";
+				message = "Lưu không thành công, vui lòng kiểm tra lại";
 				return Json(new { Message = message });
 			}
         }

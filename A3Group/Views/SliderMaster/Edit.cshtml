@@ -15,15 +15,26 @@
                     <hr />
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="/slidermaster/edit" method="post">
+                    <form class="form-horizontal" action="#">
                         <div class="form-group">
-                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input maxlength="30" type="text" name="title" id="title" class="form-control" placeholder="" value="@Model.Title">
+                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                            <input maxlength="50" type="text" name="title" id="title" class="form-control" placeholder="" value="@Model.Title">
                         </div>
-                        <div class="form-group">
-                            <label class="panel-title">Slogan (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
-                            <input maxlength="30" type="text" name="slogan" id="slogan" class="form-control" placeholder="" value="@Model.Slogan">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Slogan (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                                    <input maxlength="30" type="text" name="slogan" id="slogan" class="form-control" placeholder="" value="@Model.Slogan">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Phần chữ đậm (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                                    <input maxlength="30" type="text" name="bold" id="bold" class="form-control" placeholder="" value="@Model.BoldText">
+                                </div>
+                            </div>
                         </div>
+                      
 
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 250 KÍ TỰ)</label>
@@ -40,7 +51,6 @@
         </div>
     </div>
 </div>
-
 <script>
     function ShowMessage() {
         var result = confirm("Bạn có muốn lưu thông tin?");
@@ -60,19 +70,21 @@
             const slogan = ($('#slogan').val());
             const description = ($('#description').val());
             const video = ($('#video').val());
+            const bold = ($('#bold').val());
             //Json
             const data = {
                 Title: title,
                 Slogan: slogan,
                 Description: description,
                 Video: video,
+                BoldText: bold
             };
-            if (title != '' && slogan != '' && description != '' && video != '') {
+            if (title != '' && slogan != '' && description != '' && bold != '') {
                 $.ajax({
                     async: true,
                     data: JSON.stringify(data),
                     type: 'POST',
-                    url: '/SliderMaster/Edit',
+                    url: '/SliderMaster/edit',
                     dataType: "json",
                     contentType: "application/json",
                     cache: false,
@@ -81,7 +93,7 @@
                     },
                     success: function (data) {
                         alert(data.Message);
-                        window.location.href = "/SliderMaster/Edit"
+                        window.location.href = "/SliderMaster/edit"
                     }
                 });
             }

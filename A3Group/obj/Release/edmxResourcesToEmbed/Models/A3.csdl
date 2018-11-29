@@ -15,6 +15,7 @@
     <Property Name="SubDescription3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SubDescription4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Blog">
     <Key>
@@ -34,6 +35,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Contact">
     <Key>
@@ -72,6 +74,7 @@
     <Property Name="SubTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SubDescription4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="Image4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Features">
     <Key>
@@ -81,9 +84,10 @@
     <Property Name="MainTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Strengths" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Information">
     <Key>
@@ -95,6 +99,7 @@
     <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Member">
     <Key>
@@ -153,6 +158,7 @@
     <Property Name="SubDescription5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle6" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="SubDescription6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Sliders">
     <Key>
@@ -163,6 +169,7 @@
     <Property Name="Slogan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Video" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Team">
     <Key>
@@ -171,6 +178,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Works">
     <Key>
@@ -179,6 +187,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MainTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="a3groupEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" />
@@ -242,6 +251,10 @@
     <Property Name="Prices1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Prices2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Prices3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="AspNetRole">
     <Key>

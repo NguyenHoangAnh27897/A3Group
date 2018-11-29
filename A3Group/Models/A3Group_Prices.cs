@@ -26,5 +26,9 @@ namespace A3Group.Models
         public string Prices1 { get; set; }
         public string Prices2 { get; set; }
         public string Prices3 { get; set; }
+        public string BoldText { get; set; }
+        public string Unit1 { get; set; }
+        public string Unit2 { get; set; }
+        public string Unit3 { get; set; }
     }
 }

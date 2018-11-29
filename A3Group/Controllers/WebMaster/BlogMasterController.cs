@@ -49,7 +49,7 @@ namespace A3Group.Controllers.WebMaster
             }
             catch (Exception ex)
             {
-                msg = "Tạo không thành công, vui lòng kiểm tra lại";
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
                 return Json(new { Message = msg });
             }
         }
@@ -75,7 +75,7 @@ namespace A3Group.Controllers.WebMaster
                 home.CreatedBy = mem.CreatedBy;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)

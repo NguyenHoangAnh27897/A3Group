@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,7 +40,10 @@ namespace A3Group.Controllers.WebMaster
                 var home = new A3Group_Project();
                 home.ProjectName = mem.ProjectName;
                 home.Type = mem.Type;
-                home.Image = mem.Image;
+                if (Session["ImagePJ"] != null)
+                {
+                    home.Image = Session["ImagePJ"].ToString();
+                }
                 db.A3Group_Project.Add(home);
                 db.SaveChanges();
                 msg = "Tạo thành công";
@@ -47,7 +51,7 @@ namespace A3Group.Controllers.WebMaster
             }
             catch (Exception ex)
             {
-                msg = "Tạo không thành công, vui lòng kiểm tra lại";
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
                 return Json(new { Message = msg });
             }
         }
@@ -55,6 +59,7 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
+            Session["ProjectID"] = id;
             var rs = db.A3Group_Project.Find(id);
             return View(rs);
         }
@@ -69,10 +74,9 @@ namespace A3Group.Controllers.WebMaster
                 var home = db.A3Group_Project.Find(mem.ID);
                 home.ProjectName = mem.ProjectName;
                 home.Type = mem.Type;
-                home.Image = mem.Image;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)
@@ -100,6 +104,39 @@ namespace A3Group.Controllers.WebMaster
                 msg = "Xóa không thành công, vui lòng kiểm tra lại";
                 return Json(new { Message = msg });
             }
+        }
+
+        [HttpPost]
+        public ActionResult Upload(int? chunk, string name = "")
+        {
+            var fileUpload = Request.Files[0];
+            var uploadPath = Server.MapPath("~/Images/imageProject");
+            chunk = chunk ?? 0;
+            using (var fs = new FileStream(Path.Combine(uploadPath, name), chunk == 0 ? FileMode.Create : FileMode.Append))
+            {
+                var buffer = new byte[fileUpload.InputStream.Length];
+                fileUpload.InputStream.Read(buffer, 0, buffer.Length);
+                fs.Write(buffer, 0, buffer.Length);
+                if(Session["ProjectID"] != null)
+                {
+                    string Id = Session["ProjectID"].ToString();
+                    int id = int.Parse(Id);
+                    var home = db.A3Group_Project.Find(id);
+                    if (name != "")
+                    {
+                        home.Image = name;
+                    }
+                    db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    Session["ProjectID"] = null;
+                }
+                else
+                {
+                    Session["ImagePJ"] = name;
+                }
+              
+            }
+            return Content("chunk uploaded", "text/plain");
         }
     }
 }

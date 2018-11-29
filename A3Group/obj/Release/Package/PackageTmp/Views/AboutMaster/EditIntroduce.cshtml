@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
 }
 <link href="~/Content/Webmaster/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" type="text/css" />
-<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+
 <div class="page-inner">
     <div class="page-title">
         <h3 class="breadcrumb-header">Quản lý Giới thiệu</h3>
@@ -18,9 +18,19 @@
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" action="#">
-                        <div class="form-group">
-                            <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
-                            <input type="text" class="form-control" id="maintitle" name="maintitle" value="@Model.MainTitle" maxlength="50">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.MainTitle" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Phần in đậm (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="bold" id="bold" value="@Model.BoldText" maxlength="30">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
@@ -53,14 +63,18 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript:return ShowMessage();">LƯU</button>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs des" onclick="javascript:return ShowMessage();">LƯU</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/assets/js/ckeditor/samples/js/sample.js"></script>
+<script>
+    CKEDITOR.replace('des');
+</script>
 <script>
     function ShowMessage() {
         var result = confirm("Bạn có muốn lưu thông tin?");
@@ -79,15 +93,18 @@
             const maintitle = ($('#maintitle').val());
             const maindes = ($('#maindes').val());
             const title = ($('#title').val());
-            var des = document.getElementsByName("des")[0].value;
+            const bold = ($('#bold').val());
+            var des = CKEDITOR.instances['des'].getData();
+            console.log(des);
             //Json
             const data = {
                 MainTitle: maintitle,
                 MainDescription: maindes,
                 SubTitle: title,
                 SubDescription: des,
+                BoldText: bold
             };
-            if (maintitle != '' && maindes != '' && title != '' && des != '') {
+            if (maintitle != '' && maindes != '' && title != '' && des != '' && bold != '') {
                 $.ajax({
                     async: true,
                     data: JSON.stringify(data),
@@ -109,10 +126,6 @@
         });
 
     });
-</script>
-
-<script>
-    CKEDITOR.replace('des');
 </script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/plupload.full.min.js"></script>
 <script src="~/Content/WebMaster/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js"></script>

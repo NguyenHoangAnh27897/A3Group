@@ -17,5 +17,6 @@ namespace A3Group.Models
         public int id { get; set; }
         public string MainTitle { get; set; }
         public string MainDescription { get; set; }
+        public string BoldText { get; set; }
     }
 }

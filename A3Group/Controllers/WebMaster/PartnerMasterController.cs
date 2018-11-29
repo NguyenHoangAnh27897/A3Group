@@ -41,6 +41,10 @@ namespace A3Group.Controllers.WebMaster
                 home.PartnerName = mem.PartnerName;
                 home.Website = mem.Website;
                 home.PartnerDescription = mem.PartnerDescription;
+                if (Session["Icon"] != null)
+                {
+                    home.PartnerIcon = Session["Icon"].ToString();
+                }
                 db.A3Group_Partner.Add(home);
                 db.SaveChanges();
                 msg = "Tạo thành công";
@@ -48,7 +52,7 @@ namespace A3Group.Controllers.WebMaster
             }
             catch (Exception ex)
             {
-                msg = "Tạo không thành công, vui lòng kiểm tra lại";
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
                 return Json(new { Message = msg });
             }
         }
@@ -56,6 +60,7 @@ namespace A3Group.Controllers.WebMaster
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
+            Session["PartnerID"] = id;
             var rs = db.A3Group_Partner.Find(id);
             return View(rs);
         }
@@ -73,7 +78,7 @@ namespace A3Group.Controllers.WebMaster
                 home.PartnerDescription = mem.PartnerDescription;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                msg = "Lưu thành công";
+                msg = "Chỉnh sửa thành công";
                 return Json(new { Message = msg });
             }
             catch (Exception ex)
@@ -114,13 +119,23 @@ namespace A3Group.Controllers.WebMaster
                 var buffer = new byte[fileUpload.InputStream.Length];
                 fileUpload.InputStream.Read(buffer, 0, buffer.Length);
                 fs.Write(buffer, 0, buffer.Length);
-                var home = db.A3Group_Partner.Find(1);
-                if (name != "")
+                if (Session["PartnerID"] != null)
                 {
-                    home.PartnerIcon = name;
+                    string Id = Session["PartnerID"].ToString();
+                    int id = int.Parse(Id);
+                    var home = db.A3Group_Partner.Find(id);
+                    if (name != "")
+                    {
+                        home.PartnerIcon = name;
+                    }
+                    db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    Session["PartnerID"] = null;
                 }
-                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
+                else
+                {
+                    Session["Icon"] = name;
+                }
             }
             return Content("chunk uploaded", "text/plain");
         }
