@@ -66,7 +66,7 @@ namespace A3Group.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl = "/webmaster/index")
+        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl = "/trang-quan-li")
         {
             if (!ModelState.IsValid)
             {
