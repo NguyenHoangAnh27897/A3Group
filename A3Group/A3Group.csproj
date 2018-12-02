@@ -210,6 +210,7 @@
     <Compile Include="Controllers\A3G\HomeController.cs" />
     <Compile Include="Controllers\WebMaster\BlogMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ContactMasterController.cs" />
+    <Compile Include="Controllers\WebMaster\CustomerMasterController.cs" />
     <Compile Include="Controllers\WebMaster\DifferenceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ManageController.cs" />
     <Compile Include="Controllers\WebMaster\MemberMasterController.cs" />
@@ -272,6 +273,9 @@
     <Compile Include="Models\A3Group_Partner.cs">
       <DependentUpon>A3.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\A3Group_PartnerInfo.cs">
+      <DependentUpon>A3.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\A3Group_Prices.cs">
       <DependentUpon>A3.tt</DependentUpon>
     </Compile>
@@ -316,6 +320,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\A3G\images\123.png" />
     <Content Include="Content\WebMaster\assets\images\bg\Datacenter.jpg" />
     <Content Include="Content\WebMaster\assets\images\Teamwork.JPG" />
     <Content Include="Content\A3G\css\animate.css" />
@@ -1205,9 +1210,18 @@
     <Content Include="Views\BlogMaster\List.cshtml" />
     <Content Include="Views\BlogMaster\Create.cshtml" />
     <Content Include="Views\BlogMaster\Edit.cshtml" />
+    <Content Include="Views\MemberMaster\EditMain.cshtml" />
+    <Content Include="Views\ProjectMaster\EditMain.cshtml" />
+    <Content Include="Views\PartnerMaster\EditMain.cshtml" />
+    <Content Include="Views\BlogMaster\EditMain.cshtml" />
+    <Content Include="Views\CustomerMaster\List.cshtml" />
+    <Content Include="Views\CustomerMaster\Create.cshtml" />
+    <Content Include="Views\CustomerMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\imageBlog\" />
+    <Folder Include="Images\imageCustomer\" />
     <Folder Include="Images\imageDifference\" />
     <Folder Include="Images\imageHome\" />
     <Folder Include="Images\imageIcon\" />

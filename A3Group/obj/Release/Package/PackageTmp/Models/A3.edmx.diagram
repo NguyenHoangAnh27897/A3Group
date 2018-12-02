@@ -30,6 +30,7 @@
         <AssociationConnector Association="agr07063_A3GroupModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="agr07063_A3GroupModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="agr07063_A3GroupModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="agr07063_A3GroupModel.A3Group_PartnerInfo" Width="1.5" PointX="11.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

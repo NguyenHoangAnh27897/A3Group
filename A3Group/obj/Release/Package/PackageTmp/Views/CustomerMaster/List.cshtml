@@ -1,0 +1,101 @@
+﻿@using PagedList.Mvc;
+@using GridMvc.Html;
+@model PagedList.IPagedList<A3Group.Models.A3Group_Customer>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    int i = 1;
+}
+
+<!-- Page Inner -->
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Khách hàng A3 GROUP</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-heading clearfix">
+                        <h4 class="panel-title">Danh sách Khách hàng A3 GROUP</h4>
+                    </div>
+                    <div class="panel-body">
+                        <a href="/customermaster/create" class="btn btn-success m-b-sm">Thêm mới</a>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Tên khách hàng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Chỉnh sửa</th>
+                                        <th>Xóa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <th scope="row">@i</th>
+                                            <td>@item.CustomerName</td>
+                                            <td>@item.Avatar</td>
+                                            <td><a href="/customermaster/edit/@item.ID" class="btn btn-success">Chỉnh sửa</a></td>
+                                            <td><a href="javascript:void(0)" data-id="@item.ID" class="btn btn-danger delete" onclick="javascript:return ShowMessage();">Xóa</a></td>
+                                        </tr>
+                                        i++;
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Row -->
+    </div><!-- Main Wrapper -->
+</div>
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn xóa?");
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $(document).ready(function () {
+
+        $('.delete').on('click', function (event) {
+            event.preventDefault();
+            //Get data
+            var usersid = $(this).data("id");
+            //Json
+            const data = {
+                ID : usersid
+            };
+            console.log(data);
+            if (usersid != '') {
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/customermaster/Delete',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        window.location.href = "/customermaster/List"
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
+

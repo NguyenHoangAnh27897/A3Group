@@ -21,6 +21,7 @@
                     </div>
                     <div class="panel-body">
                         <a href="/BlogMaster/create" class="btn btn-success m-b-sm">Thêm mới</a>
+                        <a href="/BlogMaster/editmain" class="btn btn-success m-b-sm">Chỉnh sửa nội dung</a>
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
@@ -29,6 +30,7 @@
                                         <th>Tiêu đề</th>
                                         <th>Loại bài</th>
                                         <th>Người đăng</th>
+                                        <th>Hình ảnh</th>
                                         <th>Nội dung</th>
                                         <th>Ngày đăng</th>
                                         <th>Chỉnh sửa</th>
@@ -38,23 +40,24 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                    <tr>
-                                        <th scope="row">@i</th>
-                                        <td>@item.Title</td>
-                                        <td>@item.Type</td>
-                                        <td>@item.CreatedBy</td>
-                                        @if (item.ContentBlog.Count() > 50)
-                                        {
-                                            <td>@item.ContentBlog.Substring(0, 50)</td>
-                                        }
-                                        else
-                                        {
-                                            <td>@item.ContentBlog</td>
-                                        }
-                                        <td>@item.CreatedDate.Value.ToString("dd-MM-yyyy")</td>
-                                        <td><a href="/BlogMaster/edit/@item.ID" class="btn btn-success">Chỉnh sửa</a></td>
-                                        <td><a href="javascript:void(0)" data-id="@item.ID" class="btn btn-danger delete" onclick="javascript:return ShowMessage();">Xóa</a></td>
-                                    </tr>
+                                        <tr>
+                                            <th scope="row">@i</th>
+                                            <td>@item.Title</td>
+                                            <td>@item.Type</td>
+                                            <td>@item.CreatedBy</td>
+                                            <td>@item.Avatar</td>
+                                            @if (item.ContentBlog.Count() > 50)
+                                            {
+                                                <td>@item.ContentBlog.Substring(0, 50)</td>
+                                            }
+                                            else
+                                            {
+                                                <td>@item.ContentBlog</td>
+                                            }
+                                            <td>@item.CreatedDate.Value.ToString("dd-MM-yyyy")</td>
+                                            <td><a href="/BlogMaster/edit/@item.ID" class="btn btn-success">Chỉnh sửa</a></td>
+                                            <td><a href="javascript:void(0)" data-id="@item.ID" class="btn btn-danger delete" onclick="javascript:return ShowMessage();">Xóa</a></td>
+                                        </tr>
                                         i++;
                                     }
 

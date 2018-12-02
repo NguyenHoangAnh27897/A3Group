@@ -17,5 +17,6 @@ namespace A3Group.Models
         public int ID { get; set; }
         public string CustomerName { get; set; }
         public string Avatar { get; set; }
+        public string URL { get; set; }
     }
 }

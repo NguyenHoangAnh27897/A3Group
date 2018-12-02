@@ -20,5 +20,6 @@ namespace A3Group.Models
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string Type { get; set; }
+        public string Avatar { get; set; }
     }
 }

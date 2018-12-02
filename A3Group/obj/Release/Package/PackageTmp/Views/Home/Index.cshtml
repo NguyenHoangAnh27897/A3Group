@@ -16,7 +16,7 @@
         <div class="container">
             <div class="welcome-text">
                 <h4 class="color-eee fw-300 mb-20px">@Model.FirstOrDefault().sli.FirstOrDefault().Title</h4>
-                <h1 class="mb-20px color-fff fw-100">@Model.FirstOrDefault().sli.FirstOrDefault().Slogan <span class="color-orange fw-700">@Model.FirstOrDefault().sli.FirstOrDefault().BoldText</span></h1>
+                <h1 class="mb-20px color-fff fw-100" style="font-size:45px">@Model.FirstOrDefault().sli.FirstOrDefault().Slogan <span class="color-orange fw-700">@Model.FirstOrDefault().sli.FirstOrDefault().BoldText</span></h1>
                 <p class="color-ddd">@Model.FirstOrDefault().sli.FirstOrDefault().Description</p>
                 <a class="main-btn btn-1 mt-30px mr-5px ml-5px" href="#" data-scroll-nav="2">Bắt đầu nào!</a>
                 <a class="main-btn btn-2 mt-10px ml-5px mr-5px" href="#" data-scroll-nav="8">Liên lạc với chúng tôi</a>
@@ -501,7 +501,7 @@
                 <div class="price-item mb-25px mt-25px radius-5px">
                     <h4 class="mb-10px mt-40px d-inline-block fw-500 p-relative">@Model.FirstOrDefault().pri.FirstOrDefault().SubTitle1</h4>
                     <p class="color-aaa mb-35px mt-40px radius-50px"><span class="fs-40 fw-700 color-333">@Model.FirstOrDefault().pri.FirstOrDefault().Prices1</span> / @Model.FirstOrDefault().pri.FirstOrDefault().Unit1</p>
-                    @Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description1)
+                    <p class="text-left">@Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description1)</p>
                     <a class="main-btn btn-3 mt-25px" href="#0">Read More</a>
                 </div>
             </div>
@@ -509,7 +509,7 @@
                 <div class="price-item mb-25px mt-25px radius-5px">
                     <h4 class="mb-10px mt-40px d-inline-block fw-500 p-relative">@Model.FirstOrDefault().pri.FirstOrDefault().SubTitle2</h4>
                     <p class="color-aaa mb-35px mt-40px radius-50px"><span class="fs-40 fw-700 color-333">@Model.FirstOrDefault().pri.FirstOrDefault().Prices2</span> / @Model.FirstOrDefault().pri.FirstOrDefault().Unit2</p>
-                    @Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description2)
+                    <p class="text-left">@Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description2)</p>
                     <a class="main-btn btn-3 mt-25px" href="#0">Read More</a>
                 </div>
             </div>
@@ -517,7 +517,7 @@
                 <div class="price-item mb-25px mt-25px radius-5px">
                     <h4 class="mb-10px mt-40px d-inline-block fw-500 p-relative">@Model.FirstOrDefault().pri.FirstOrDefault().SubTitle3</h4>
                     <p class="color-aaa mb-35px mt-40px radius-50px"><span class="fs-40 fw-700 color-333">@Model.FirstOrDefault().pri.FirstOrDefault().Prices3</span> / @Model.FirstOrDefault().pri.FirstOrDefault().Unit3</p>
-                    @Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description3)
+                    <p class="text-left">@Html.Raw(Model.FirstOrDefault().pri.FirstOrDefault().Description3)</p>
                     <a class="main-btn btn-3 mt-25px" href="#0">Read More</a>
                 </div>
             </div>
@@ -533,28 +533,32 @@
 <section class="team-area sec-padding text-center" data-scroll-index="6">
     <div class="container">
         <h1 class="title-h p-relative">
-            Đội ngũ <span class="fw-200">của chúng tôi</span>
+            <span class="fw-200">@Model.FirstOrDefault().team.MainTitle</span> @Model.FirstOrDefault().team.BoldText
             <span class="line p-absolute bg-orange"></span>
         </h1>
-        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="title-p">@Model.FirstOrDefault().team.MainDescription</p>
         <div class="owl-carousel owl-theme">
-            <div class="team-text">
-                <div class="o-hidden mb-20px p-relative">
-                    <img alt="team" src="~/Content/A3G/images/tt4.jpg" class="transition-5">
-                    <div class="social-icons p-absolute flex-center transition-4">
-                        <div class="icons transition-5">
-                            <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-facebook"></i></a>
-                            <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-rss"></i></a>
-                            <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-twitter"></i></a>
-                            <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-instagram"></i></a>
+            @foreach (var item in Model.FirstOrDefault().mem)
+            {
+                <div class="team-text">
+                    <div class="o-hidden mb-20px p-relative">
+                        <img alt="team" src="~/Images/imageMember/@item.Image" class="transition-5">
+                        <div class="social-icons p-absolute flex-center transition-4">
+                            <div class="icons transition-5">
+                                <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-facebook"></i></a>
+                                <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-rss"></i></a>
+                                <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-twitter"></i></a>
+                                <a href="#0" class="mr-2px ml-2px mb-10px"><i class="fa color-fff  bg-orange-hvr radius-50 fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <h5 class="mb-0px mt-10px fw-600">Daniel Edward</h5>
-                <p class="color-aaa mb-10px">Web Designer</p>
+                    <h5 class="mb-0px mt-10px fw-600">@item.Name</h5>
+                    <p class="color-aaa mb-10px">@item.Role</p>
 
-            </div>
-            <div class="team-text">
+                </div>
+            }
+
+            @*<div class="team-text">
                 <div class="o-hidden mb-20px p-relative">
                     <img alt="team" src="~/Content/A3G/images/tt3.jpg" class="transition-5">
                     <div class="social-icons p-absolute flex-center transition-4">
@@ -613,7 +617,7 @@
                 </div>
                 <h5 class="mb-0px mt-10px fw-600">Jone Kean</h5>
                 <p class="color-aaa mb-5px">Photographer</p>
-            </div>
+            </div>*@
         </div>
     </div>
 </section>
@@ -626,164 +630,199 @@
 <section class="work-area sec-padding" data-scroll-index="5">
     <div class="container">
         <h1 class="title-h p-relative">
-            <span class="fw-200">Our</span> Project
+            <span class="fw-200">@Model.FirstOrDefault().partinfo.Title</span> @Model.FirstOrDefault().partinfo.BoldText
             <span class="line p-absolute bg-orange"></span>
         </h1>
-        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="title-p">@Model.FirstOrDefault().partinfo.Description</p>
         <ul id="hexGrid">
+            @foreach (var item in Model.FirstOrDefault().part)
+            {
+            <li class="hex">
+                <div class="hexIn">
+                    <a class="hexLink" href="@item.Website">
+                        <img src="~/Images/imageIcon/@item.PartnerIcon" alt="" class="image-brand">
+                        <div class="overlay-brand">
+                            <div class="text-brand">@item.PartnerName</div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            }
+            @for (int i = 0; i < 17 - Model.FirstOrDefault().part.Count; i++)
+            {
+
                 <li class="hex">
                     <div class="hexIn">
                         <a class="hexLink" href="#">
-                            <img src="~/Content/A3G/images/work-7.jpg" alt="">
-                            <h1>This is a title</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
+                            <img src="~/Content/A3G/images/123.png" alt="" class="image-brand">
+                            <div class="overlay-brand">
+                                <div class="text-brand">Anonymous</div>
+                            </div>
                         </a>
                     </div>
                 </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-8.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-5.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-11.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-10.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-10.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-5.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-7.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-11.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-10.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-5.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-7.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-11.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
-            <li class="hex">
-                <div class="hexIn">
-                    <a class="hexLink" href="#">
-                        <img src="~/Content/A3G/images/work-12.jpg" alt="">
-                        <h1>This is a title</h1>
-                        <p>Some sample text about the article this hexagon leads to</p>
-                    </a>
-                </div>
-            </li>
+            }
+
+            @*<li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-8.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-5.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-12.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-11.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-10.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-12.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-10.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-5.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-7.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-11.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-10.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-12.jpg" alt="" class="image-brand" />
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-5.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-7.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-11.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink" href="#">
+                    <img src="~/Content/A3G/images/work-12.jpg" alt="" class="image-brand">
+                    <div class="overlay-brand">
+                        <div class="text-brand">Natural Lifr</div>
+                    </div>
+                </a>
+            </div>
+        </li>*@
         </ul>
     </div>
 </section>
@@ -796,39 +835,43 @@
 <section class="work-area sec-padding" data-scroll-index="5">
     <div class="container">
         <h1 class="title-h p-relative">
-            <span class="fw-200">Our</span> Work
+            <span class="fw-200">@Model.FirstOrDefault().work.MainTitle</span> @Model.FirstOrDefault().work.BoldText
             <span class="line p-absolute bg-orange"></span>
         </h1>
-        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="title-p">@Model.FirstOrDefault().work.MainDescription</p>
         <div class="row">
             <!-- filter links -->
-            <div class="filtering col-sm-12 text-center">
+            @*<div class="filtering col-sm-12 text-center">
                 <span data-filter='*' class="active bg-f4f4f4  mb-10px mr-15px fw-400 radius-25px">All</span>
                 <span data-filter='.Branding' class="bg-f4f4f4 mb-10px mr-15px fw-400 radius-25px">Branding</span>
                 <span data-filter='.Photoshop' class="bg-f4f4f4 mb-10px mr-15px fw-400 radius-25px">Photoshop</span>
                 <span data-filter='.Illustrator' class="bg-f4f4f4 mb-10px fw-400 radius-25px">Illustrator</span>
-            </div>
+            </div>*@
 
             <!-- grid -->
             <div class="grid  width-100">
                 <!-- gallery item -->
-                <div class="col-md-4 items Photoshop mt-30px">
+                @foreach(var item in Model.FirstOrDefault().pro)
+                {
+                      <div class="col-md-4 items mt-30px">
                     <div class="work-image p-relative o-hidden">
-                        <img src="~/Content/A3G/images/work-7.jpg" alt="image">
+                        <img src="~/Images/imageProject/@item.Image" alt="image">
                         <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
-                            <a href="images/work-7.jpg" data-lightbox="image">
+                            <a href="~/Images/imageProject/@item.Image" data-lightbox="image">
                                 <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
                             </a>
                             <div class="p-15px">
-                                <a class="transition-5 color-eee fw-600 mb-0px" href="/https://hoatuoixanh.com">Project Name</a>
-                                <p class="color-777">Photoshop</p>
+                                <a class="transition-5 color-eee fw-600 mb-0px" href="@item.URL">@item.ProjectName</a>
+                                <p class="color-777">@item.Type</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 items Branding mt-30px">
+                }
+              
+                @*<div class="col-md-4 items Branding mt-30px">
                     <div class="work-image p-relative o-hidden">
-                        <img src="~/Content/A3G/images/work-12.jpg" alt="image">
+                        <img src="" alt="image">
                         <div class="overlay-bg-85 p-absolute transition-5 flex-bottom">
                             <a href="images/work-12.jpg" data-lightbox="image">
                                 <i class="fa fa-image text-center p-absolute color-fff bg-orange-hvr radius-50"></i>
@@ -895,7 +938,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>
@@ -912,9 +955,9 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <i class="icon-quote mb-30px fs-35 color-orange"></i>
-                    <p class="color-ccc mb-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                    <h5 class="color-fff mb-0px">Daniel Edward</h5>
-                    <p class="color-orange">Manager</p>
+                    <p class="color-ccc mb-30px">@Model.FirstOrDefault().quotes.Quote</p>
+                    <h5 class="color-fff mb-0px">@Model.FirstOrDefault().quotes.Name</h5>
+                    <p class="color-orange">@Model.FirstOrDefault().quotes.Roles</p>
                 </div>
             </div>
         </div>
@@ -929,32 +972,32 @@
 <section class="blog-area sec-padding" data-scroll-index="7">
     <div class="container">
         <h1 class="title-h p-relative">
-            <span class="fw-200"> Our </span> Blog
+            <span class="fw-200"> @Model.FirstOrDefault().blogs.MainTitle </span> @Model.FirstOrDefault().blogs.BoldText
             <span class="line p-absolute bg-orange"></span>
         </h1>
-        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="title-p">@Model.FirstOrDefault().blogs.MainDescription</p>
         <div class="row">
-            <div class="col-md-4 mb-25px mt-25px">
+            @foreach(var item in Model.FirstOrDefault().blog)
+            {
+                 <div class="col-md-4 mb-25px mt-25px">
                 <div class="blog-item transition-4">
                     <div class="blog-image o-hidden">
-                        <img alt="blog" src="~/Content/A3G/images/blog-3.jpg" class="transition-4">
+                        <img alt="blog" src="~/Images/imageBlog/@item.Avatar" class="transition-4">
                     </div>
                     <div class="p-20px bg-fff">
-                        <p class="color-999 mb-10px">Design</p>
-                        <h5 class="fw-600 mb-20px"><a href="#" class="color-333 color-orange-hvr">Digital without data might as well not be digital.</a></h5>
+                        <p class="color-999 mb-10px">@item.Type</p>
+                        <h5 class="fw-600 mb-20px"><a href="#" class="color-333 color-orange-hvr">@item.Title</a></h5>
                         <a href="#0" class="color-aaa color-orange-hvr">
                             Read More
                             <i class="fa fa-angle-right transition-5 ml-5px"></i>
                             <i class="fa fa-angle-right transition-4"></i>
                         </a>
-                        <p class="mt-20px mb-50px">
-                            <span class="f-left"><i class="fa fa-heart-o"></i> 105</span>
-                            <span class="f-right"><i class="fa fa-comment-o"></i> 68</span>
-                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-25px mt-25px">
+            }
+           
+            @*<div class="col-md-4 mb-25px mt-25px">
                 <div class="blog-item transition-4">
                     <div class="blog-image o-hidden">
                         <img alt="blog" src="~/Content/A3G/images/blog-2.jpg" class="transition-4">
@@ -993,7 +1036,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>*@
         </div>
     </div>
 </section>
@@ -1036,25 +1079,25 @@
 <section class="contact-area sec-padding" data-scroll-index="8">
     <div class="container">
         <h1 class="title-h p-relative">
-            <span class="fw-200">Contact </span> Us
+            <span class="fw-200">@Model.FirstOrDefault().info.Title </span> @Model.FirstOrDefault().info.BoldText
             <span class="line p-absolute bg-orange"></span>
         </h1>
-        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="title-p">@Model.FirstOrDefault().info.Description</p>
         <div class="row">
             <div class="col-md-6">
                 <div class="address">
-                    <p class="mb-20px"><i class="bg-f6f6f6 color-orange radius-50 fs-25 mr-10px text-center icon-map"></i>78 st Merrick Boulevard,  New York.</p>
+                    <p class="mb-20px"><i class="bg-f6f6f6 color-orange radius-50 fs-25 mr-10px text-center icon-map"></i>@Model.FirstOrDefault().info.Address</p>
                 </div>
                 <div class="address">
-                    <p class="mb-20px"><i class="bg-f6f6f6 color-orange radius-50 fs-25 mr-10px text-center icon-phone"></i>+(07) 012345678</p>
+                    <p class="mb-20px"><i class="bg-f6f6f6 color-orange radius-50 fs-25 mr-10px text-center icon-phone"></i>@Model.FirstOrDefault().info.Phone</p>
                 </div>
                 <div class="address">
-                    <p class="mb-50px"><i class="bg-f6f6f6 color-orange radius-50 fs-25 mr-10px text-center icon-envelope"></i>support@info.com</p>
+                    <p class="mb-50px"><i class="bg-f6f6f6 color-orange radius-50 fs-25 mr-10px text-center icon-envelope"></i>@Model.FirstOrDefault().con.Email</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="contact-form">
-                    <form class="form" id="contact-form" method="post" action="https://A3 Solution-creative-one-page.netlify.com/contact.php">
+                    <form class="form" id="contact-form" action="#">
                         <div class="messages"></div>
                         <div class="controls">
                             <div class="row">

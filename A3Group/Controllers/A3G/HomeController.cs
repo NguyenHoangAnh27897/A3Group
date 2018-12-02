@@ -23,13 +23,15 @@ namespace A3Group.Controllers
             var mem = db.A3Group_Member.ToList();
             var pro = db.A3Group_Project.ToList();
             var info = db.A3Group_Information.Find(1);
-            var team = db.A3Group_Team.Find(1);
+            var team = db.A3Group_Team.Find(2);
             var quote = db.A3Group_Quotes.Find(1);
             var work = db.A3Group_Works.Find(1);
             var con = db.A3Group_Contact.Find(1);
             var partner = db.A3Group_Partner.ToList();
             var cus = db.A3Group_Customer.ToList();
             var blog = db.A3Group_Blog.ToList();
+            var blogs = db.A3Group_Blogs.Find(1);
+            var partinfo = db.A3Group_PartnerInfo.Find(1);
 			home.abo = about;
 			home.sli = slider;
 			home.diff = difference;
@@ -46,6 +48,8 @@ namespace A3Group.Controllers
             home.part = partner;
             home.cus = cus;
             home.blog = blog;
+            home.blogs = blogs;
+            home.partinfo = partinfo;
 			lst.Add(home);
             return View(lst);
         }

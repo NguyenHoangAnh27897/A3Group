@@ -22,5 +22,6 @@ namespace A3Group.Models
         public string Strengths { get; set; }
         public string Image { get; set; }
         public string BoldText { get; set; }
+        public string SubBoldText { get; set; }
     }
 }

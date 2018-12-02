@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="agr07063_A3GroupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="A3Group_PartnerInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="BoldText" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -21,7 +30,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MainTitle" Type="nvarchar" MaxLength="30" />
-          <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="MainDescription" Type="nvarchar(max)" />
           <Property Name="SubTitle1" Type="nvarchar" MaxLength="50" />
           <Property Name="SubDescription1" Type="nvarchar" MaxLength="500" />
           <Property Name="SubTitle2" Type="nvarchar" MaxLength="50" />
@@ -42,6 +51,7 @@
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="A3Group_Blogs">
           <Key>
@@ -69,6 +79,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerName" Type="nvarchar(max)" />
           <Property Name="Avatar" Type="nvarchar" MaxLength="100" />
+          <Property Name="URL" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="A3Group_Differences">
           <Key>
@@ -103,6 +114,7 @@
           <Property Name="Strengths" Type="nvarchar(max)" />
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubBoldText" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="A3Group_Information">
           <Key>
@@ -115,6 +127,12 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="200" />
           <Property Name="Email" Type="nvarchar" MaxLength="200" />
           <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info4" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageAbove" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageBelow" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="A3Group_Member">
           <Key>
@@ -165,6 +183,7 @@
           <Property Name="ProjectName" Type="nvarchar(max)" />
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="URL" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="A3Group_Quotes">
           <Key>
@@ -183,17 +202,17 @@
           <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
           <Property Name="SubTitle1" Type="nvarchar" MaxLength="30" />
-          <Property Name="SubDescription1" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubDescription1" Type="nvarchar(max)" />
           <Property Name="SubTitle2" Type="nvarchar" MaxLength="30" />
-          <Property Name="SubDescription2" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubDescription2" Type="nvarchar(max)" />
           <Property Name="SubTitle3" Type="nvarchar" MaxLength="30" />
-          <Property Name="SubDescription3" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubDescription3" Type="nvarchar(max)" />
           <Property Name="SubTitle4" Type="nvarchar" MaxLength="30" />
-          <Property Name="SubDescription4" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubDescription4" Type="nvarchar(max)" />
           <Property Name="SubTitle5" Type="nvarchar" MaxLength="30" />
-          <Property Name="SubDescription5" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubDescription5" Type="nvarchar(max)" />
           <Property Name="SubTitle6" Type="nvarchar" MaxLength="30" />
-          <Property Name="SubDescription6" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubDescription6" Type="nvarchar(max)" />
           <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="A3Group_Sliders">
@@ -203,7 +222,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="30" />
           <Property Name="Slogan" Type="nvarchar" MaxLength="30" />
-          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Video" Type="nvarchar" MaxLength="150" />
           <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -333,6 +352,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="agr07063_A3GroupModelStoreContainer">
+          <EntitySet Name="A3Group_PartnerInfo" EntityType="Self.A3Group_PartnerInfo" Schema="A3Group" store:Type="Tables" />
           <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="A3Group_Blog" EntityType="Self.A3Group_Blog" Schema="dbo" store:Type="Tables" />
@@ -383,7 +403,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MainTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MainDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SubDescription1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -404,6 +424,7 @@
           <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Blogs">
           <Key>
@@ -431,6 +452,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Differences">
           <Key>
@@ -465,6 +487,7 @@
           <Property Name="Strengths" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubBoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Information">
           <Key>
@@ -477,6 +500,12 @@
           <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageAbove" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageBelow" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Member">
           <Key>
@@ -506,6 +535,7 @@
           <Property Name="ProjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Quotes">
           <Key>
@@ -524,17 +554,17 @@
           <Property Name="MainTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle3" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle4" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle5" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle6" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="SubDescription6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="A3Group_Sliders">
@@ -544,7 +574,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Slogan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Video" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -601,6 +631,7 @@
             <End Role="AspNetRole" EntitySet="AspNetRoles" />
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <EntitySet Name="A3Group_PartnerInfo" EntityType="agr07063_A3GroupModel.A3Group_PartnerInfo" />
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
           <Key>
@@ -714,6 +745,15 @@
           <End Type="agr07063_A3GroupModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
           <End Type="agr07063_A3GroupModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
         </Association>
+        <EntityType Name="A3Group_PartnerInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BoldText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -741,6 +781,7 @@
           <EntitySetMapping Name="A3Group_Blog">
             <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blog">
               <MappingFragment StoreEntitySet="A3Group_Blog">
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ContentBlog" ColumnName="ContentBlog" />
@@ -774,6 +815,7 @@
           <EntitySetMapping Name="A3Group_Customer">
             <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Customer">
               <MappingFragment StoreEntitySet="A3Group_Customer">
+                <ScalarProperty Name="URL" ColumnName="URL" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />
@@ -805,6 +847,7 @@
           <EntitySetMapping Name="A3Group_Features">
             <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Features">
               <MappingFragment StoreEntitySet="A3Group_Features">
+                <ScalarProperty Name="SubBoldText" ColumnName="SubBoldText" />
                 <ScalarProperty Name="BoldText" ColumnName="BoldText" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
@@ -819,6 +862,12 @@
           <EntitySetMapping Name="A3Group_Information">
             <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Information">
               <MappingFragment StoreEntitySet="A3Group_Information">
+                <ScalarProperty Name="ImageBelow" ColumnName="ImageBelow" />
+                <ScalarProperty Name="ImageAbove" ColumnName="ImageAbove" />
+                <ScalarProperty Name="Info4" ColumnName="Info4" />
+                <ScalarProperty Name="Info3" ColumnName="Info3" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
                 <ScalarProperty Name="BoldText" ColumnName="BoldText" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -854,6 +903,7 @@
           <EntitySetMapping Name="A3Group_Project">
             <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Project">
               <MappingFragment StoreEntitySet="A3Group_Project">
+                <ScalarProperty Name="URL" ColumnName="URL" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
@@ -1010,6 +1060,16 @@
               <ScalarProperty Name="Id" ColumnName="RoleId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="A3Group_PartnerInfo">
+            <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_PartnerInfo">
+              <MappingFragment StoreEntitySet="A3Group_PartnerInfo">
+                <ScalarProperty Name="BoldText" ColumnName="BoldText" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

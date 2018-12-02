@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="agr07063_A3GroupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="A3Group_PartnerInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="BoldText" Type="nvarchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="__MigrationHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
@@ -16,7 +25,7 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MainTitle" Type="nvarchar" MaxLength="30" />
-    <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="MainDescription" Type="nvarchar(max)" />
     <Property Name="SubTitle1" Type="nvarchar" MaxLength="50" />
     <Property Name="SubDescription1" Type="nvarchar" MaxLength="500" />
     <Property Name="SubTitle2" Type="nvarchar" MaxLength="50" />
@@ -37,6 +46,7 @@
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="A3Group_Blogs">
     <Key>
@@ -64,6 +74,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CustomerName" Type="nvarchar(max)" />
     <Property Name="Avatar" Type="nvarchar" MaxLength="100" />
+    <Property Name="URL" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="A3Group_Differences">
     <Key>
@@ -160,6 +171,7 @@
     <Property Name="ProjectName" Type="nvarchar(max)" />
     <Property Name="Image" Type="nvarchar" MaxLength="100" />
     <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="URL" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="A3Group_Quotes">
     <Key>
@@ -178,17 +190,17 @@
     <Property Name="MainTitle" Type="nvarchar" MaxLength="50" />
     <Property Name="MainDescription" Type="nvarchar" MaxLength="500" />
     <Property Name="SubTitle1" Type="nvarchar" MaxLength="30" />
-    <Property Name="SubDescription1" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubDescription1" Type="nvarchar(max)" />
     <Property Name="SubTitle2" Type="nvarchar" MaxLength="30" />
-    <Property Name="SubDescription2" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubDescription2" Type="nvarchar(max)" />
     <Property Name="SubTitle3" Type="nvarchar" MaxLength="30" />
-    <Property Name="SubDescription3" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubDescription3" Type="nvarchar(max)" />
     <Property Name="SubTitle4" Type="nvarchar" MaxLength="30" />
-    <Property Name="SubDescription4" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubDescription4" Type="nvarchar(max)" />
     <Property Name="SubTitle5" Type="nvarchar" MaxLength="30" />
-    <Property Name="SubDescription5" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubDescription5" Type="nvarchar(max)" />
     <Property Name="SubTitle6" Type="nvarchar" MaxLength="30" />
-    <Property Name="SubDescription6" Type="nvarchar" MaxLength="200" />
+    <Property Name="SubDescription6" Type="nvarchar(max)" />
     <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="A3Group_Sliders">
@@ -198,7 +210,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="30" />
     <Property Name="Slogan" Type="nvarchar" MaxLength="30" />
-    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Video" Type="nvarchar" MaxLength="150" />
     <Property Name="BoldText" Type="nvarchar" MaxLength="50" />
   </EntityType>
@@ -328,6 +340,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="agr07063_A3GroupModelStoreContainer">
+    <EntitySet Name="A3Group_PartnerInfo" EntityType="Self.A3Group_PartnerInfo" Schema="A3Group" store:Type="Tables" />
     <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="A3Group_About" EntityType="Self.A3Group_About" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="A3Group_Blog" EntityType="Self.A3Group_Blog" Schema="dbo" store:Type="Tables" />

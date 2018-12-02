@@ -22,6 +22,7 @@
     <EntitySetMapping Name="A3Group_Blog">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Blog">
         <MappingFragment StoreEntitySet="A3Group_Blog">
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="ContentBlog" ColumnName="ContentBlog" />
@@ -55,6 +56,7 @@
     <EntitySetMapping Name="A3Group_Customer">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Customer">
         <MappingFragment StoreEntitySet="A3Group_Customer">
+          <ScalarProperty Name="URL" ColumnName="URL" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
           <ScalarProperty Name="Avatar" ColumnName="Avatar" />
@@ -135,6 +137,7 @@
     <EntitySetMapping Name="A3Group_Project">
       <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_Project">
         <MappingFragment StoreEntitySet="A3Group_Project">
+          <ScalarProperty Name="URL" ColumnName="URL" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
           <ScalarProperty Name="Image" ColumnName="Image" />
@@ -291,5 +294,15 @@
         <ScalarProperty Name="Id" ColumnName="RoleId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="A3Group_PartnerInfo">
+      <EntityTypeMapping TypeName="agr07063_A3GroupModel.A3Group_PartnerInfo">
+        <MappingFragment StoreEntitySet="A3Group_PartnerInfo">
+          <ScalarProperty Name="BoldText" ColumnName="BoldText" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

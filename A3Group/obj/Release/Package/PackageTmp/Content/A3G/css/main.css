@@ -1551,7 +1551,32 @@ h6{
 	transform: rotate3d(0,0,0,0deg);
 }
 
-.hex h1, .hex p {
+.text-brand {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	top:15%;
+	left: 42%;
+	background-color: #061323;
+	margin-top: 40%;
+	width: 100%;
+	margin-left: 15px;
+}
+.overlay-brand {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .6s ease;
+}
+
+/*.hex h1, .hex p {
 	width: 100%;
 	padding: 5%;
 	box-sizing: border-box;
@@ -1559,6 +1584,8 @@ h6{
 	font-weight: 300;
 	-webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
 	transition: transform .2s ease-out, opacity .3s ease-out;
+	opacity: 0;
+	transition: .5s ease;
 }
 
 .hex h1 {
@@ -1587,15 +1614,17 @@ h6{
 	-webkit-transform: translate3d(0,100%,0);
 	-ms-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
-}
+}*/
+/*/
 
 
 /*** HOVER EFFECT  **********************************************************************/
-.hexLink:hover h1, .hexLink:focus h1,
-.hexLink:hover p, .hexLink:focus p {
-	-webkit-transform: translate3d(0,0,0);
-	-ms-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+.hexLink:hover .overlay-brand {
+	opacity: 1;
+}
+.hexLink:hover .image-brand {
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
 }
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
@@ -1609,6 +1638,31 @@ h6{
 	.hex:nth-child(12n+7) { /* first hexagon of even rows */
 		grid-column-start: 2;
 	}
+	.text-brand {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		top: 15%;
+		left: 42%;
+		background-color: #061323;
+		margin-top: 40%;
+		width: 100%;
+		margin-left: 15px;
+	}
+
+	.overlay-brand {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .6s ease;
+	}
 }
 
 @media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
@@ -1620,6 +1674,31 @@ h6{
 	.hex:nth-child(12n+7) { /* first hexagon of even rows */
 		grid-column-start: 2;
 	}
+	.text-brand {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		top: 15%;
+		left: 42%;
+		background-color: #061323;
+		margin-top: 40%;
+		width: 100%;
+		margin-left: 15px;
+	}
+
+	.overlay-brand {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .6s ease;
+	}
 }
 
 @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
@@ -1630,6 +1709,31 @@ h6{
 
 	.hex:nth-child(5n+4) { /* first hexagon of even rows */
 		grid-column-start: 2;
+	}
+	.text-brand {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		top: 15%;
+		left: 42%;
+		background-color: #061323;
+		margin-top: 40%;
+		width: 100%;
+		margin-left: 15px;
+	}
+
+	.overlay-brand {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .6s ease;
 	}
 }
 
@@ -1643,11 +1747,61 @@ h6{
 	.hex:nth-child(4n+3) { /* first hexagon of even rows */
 		grid-column-start: 2;
 	}
+	.text-brand {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		top: 15%;
+		left: 42%;
+		background-color: #061323;
+		margin-top: 40%;
+		width: 100%;
+		margin-left: 15px;
+	}
+
+	.overlay-brand {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .6s ease;
+	}
 }
 
 @media (max-width: 400px) {
 	#hexGrid {
 		font-size: 13px;
+	}
+	.text-brand {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		top: 15%;
+		left: 42%;
+		background-color: #061323;
+		margin-top: 40%;
+		width: 100%;
+		margin-left: 15px;
+	}
+
+	.overlay-brand {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .6s ease;
 	}
 }
 

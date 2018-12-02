@@ -18,5 +18,6 @@ namespace A3Group.Models
         public string ProjectName { get; set; }
         public string Image { get; set; }
         public string Type { get; set; }
+        public string URL { get; set; }
     }
 }

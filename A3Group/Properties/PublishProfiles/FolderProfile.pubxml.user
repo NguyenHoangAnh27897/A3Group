@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="bin/A3Group.dll">
-      <publishTime>11/29/2018 13:54:26</publishTime>
+      <publishTime>12/01/2018 16:07:32</publishTime>
     </File>
     <File Include="bin/A3Group.pdb">
-      <publishTime>11/29/2018 13:54:26</publishTime>
+      <publishTime>12/01/2018 16:07:32</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/26/2018 10:11:56</publishTime>
@@ -283,7 +283,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/A3G/css/bootstrap.min.css">
-      <publishTime>11/26/2018 10:11:54</publishTime>
+      <publishTime>11/29/2018 14:34:39</publishTime>
     </File>
     <File Include="Content/A3G/css/et-line-icons.css">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -298,7 +298,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/A3G/css/main.css">
-      <publishTime>11/26/2018 23:01:53</publishTime>
+      <publishTime>11/29/2018 22:18:05</publishTime>
     </File>
     <File Include="Content/A3G/css/owl.carousel.min.css">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -344,6 +344,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/A3G/fonts/fontawesome-webfontd41d.eot">
       <publishTime>11/26/2018 10:11:54</publishTime>
+    </File>
+    <File Include="Content/A3G/images/123.png">
+      <publishTime>12/01/2018 15:50:52</publishTime>
     </File>
     <File Include="Content/A3G/images/270-niwat5652-chim-eye-id-380345-jpeg.jpg">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2335,7 +2338,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/js/pages/form-file-upload.js">
-      <publishTime>11/28/2018 22:59:12</publishTime>
+      <publishTime>11/30/2018 16:10:30</publishTime>
     </File>
     <File Include="Content/WebMaster/assets/js/pages/form-image-crop.js">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2686,7 +2689,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Models/A3.edmx.diagram">
-      <publishTime>11/26/2018 17:55:34</publishTime>
+      <publishTime>11/29/2018 23:05:52</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2731,7 +2734,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/AboutMaster/Edit.cshtml">
-      <publishTime>11/28/2018 16:16:39</publishTime>
+      <publishTime>11/30/2018 15:42:33</publishTime>
     </File>
     <File Include="Views/AboutMaster/EditIntroduce.cshtml">
       <publishTime>11/28/2018 22:31:59</publishTime>
@@ -2773,19 +2776,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/BlogMaster/Create.cshtml">
-      <publishTime>11/26/2018 23:34:31</publishTime>
+      <publishTime>11/30/2018 00:13:23</publishTime>
     </File>
     <File Include="Views/BlogMaster/Edit.cshtml">
-      <publishTime>11/27/2018 00:04:30</publishTime>
+      <publishTime>11/30/2018 00:13:11</publishTime>
+    </File>
+    <File Include="Views/BlogMaster/EditMain.cshtml">
+      <publishTime>11/29/2018 23:44:26</publishTime>
     </File>
     <File Include="Views/BlogMaster/List.cshtml">
-      <publishTime>11/26/2018 23:23:35</publishTime>
+      <publishTime>11/30/2018 00:10:51</publishTime>
     </File>
     <File Include="Views/ContactMaster/Edit.cshtml">
-      <publishTime>11/28/2018 16:23:43</publishTime>
+      <publishTime>11/29/2018 22:33:30</publishTime>
     </File>
     <File Include="Views/ContactMaster/EditSlogan.cshtml">
       <publishTime>11/26/2018 22:45:00</publishTime>
+    </File>
+    <File Include="Views/CustomerMaster/Create.cshtml">
+      <publishTime>11/30/2018 16:43:30</publishTime>
+    </File>
+    <File Include="Views/CustomerMaster/Edit.cshtml">
+      <publishTime>11/30/2018 16:45:42</publishTime>
+    </File>
+    <File Include="Views/CustomerMaster/List.cshtml">
+      <publishTime>11/30/2018 16:07:53</publishTime>
     </File>
     <File Include="Views/DifferenceMaster/Edit.cshtml">
       <publishTime>11/28/2018 23:02:36</publishTime>
@@ -2797,7 +2812,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/28/2018 16:54:20</publishTime>
+      <publishTime>12/01/2018 16:05:46</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
@@ -2823,29 +2838,38 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/MemberMaster/Edit.cshtml">
       <publishTime>11/27/2018 12:40:45</publishTime>
     </File>
+    <File Include="Views/MemberMaster/EditMain.cshtml">
+      <publishTime>11/29/2018 23:15:51</publishTime>
+    </File>
     <File Include="Views/MemberMaster/List.cshtml">
-      <publishTime>11/26/2018 17:22:28</publishTime>
+      <publishTime>11/29/2018 23:18:13</publishTime>
     </File>
     <File Include="Views/PartnerMaster/Create.cshtml">
-      <publishTime>11/26/2018 22:35:24</publishTime>
+      <publishTime>11/30/2018 00:14:02</publishTime>
     </File>
     <File Include="Views/PartnerMaster/Edit.cshtml">
-      <publishTime>11/26/2018 23:35:53</publishTime>
+      <publishTime>11/30/2018 00:14:05</publishTime>
+    </File>
+    <File Include="Views/PartnerMaster/EditMain.cshtml">
+      <publishTime>11/29/2018 23:36:51</publishTime>
     </File>
     <File Include="Views/PartnerMaster/List.cshtml">
-      <publishTime>11/26/2018 22:25:22</publishTime>
+      <publishTime>11/29/2018 23:37:56</publishTime>
     </File>
     <File Include="Views/PriceMaster/Edit.cshtml">
       <publishTime>11/28/2018 22:35:38</publishTime>
     </File>
     <File Include="Views/ProjectMaster/Create.cshtml">
-      <publishTime>11/27/2018 12:48:50</publishTime>
+      <publishTime>11/30/2018 00:14:40</publishTime>
     </File>
     <File Include="Views/ProjectMaster/Edit.cshtml">
       <publishTime>11/27/2018 23:21:05</publishTime>
     </File>
+    <File Include="Views/ProjectMaster/EditMain.cshtml">
+      <publishTime>11/29/2018 23:32:49</publishTime>
+    </File>
     <File Include="Views/ProjectMaster/List.cshtml">
-      <publishTime>11/26/2018 21:56:41</publishTime>
+      <publishTime>11/29/2018 23:33:16</publishTime>
     </File>
     <File Include="Views/ServiceMaster/Edit.cshtml">
       <publishTime>11/28/2018 22:36:10</publishTime>
@@ -2860,13 +2884,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/29/2018 13:45:16</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>11/29/2018 13:49:11</publishTime>
+      <publishTime>11/30/2018 16:32:25</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/26/2018 10:11:54</publishTime>
     </File>
     <File Include="Views/SliderMaster/Edit.cshtml">
-      <publishTime>11/28/2018 16:17:52</publishTime>
+      <publishTime>11/30/2018 15:43:09</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/26/2018 10:11:54</publishTime>

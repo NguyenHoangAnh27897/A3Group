@@ -47,5 +47,6 @@ namespace A3Group.Models
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<A3Group_PartnerInfo> A3Group_PartnerInfo { get; set; }
     }
 }

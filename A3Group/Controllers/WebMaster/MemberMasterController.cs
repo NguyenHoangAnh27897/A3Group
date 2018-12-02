@@ -139,5 +139,35 @@ namespace A3Group.Controllers.WebMaster
             }
             return Content("chunk uploaded", "text/plain");
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult EditMain()
+        {
+            var rs = db.A3Group_Team.Find(2);
+            return View(rs);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public JsonResult EditMain(A3Group_Team mem)
+        {
+            string msg = "";
+            try
+            {
+                var home = db.A3Group_Team.Find(2);
+                home.MainTitle = mem.MainTitle;
+                home.MainDescription = mem.MainDescription;
+                home.BoldText = mem.BoldText;
+                db.Entry(home).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                msg = "Chỉnh sửa thành công";
+                return Json(new { Message = msg });
+            }
+            catch (Exception ex)
+            {
+                msg = "Lưu không thành công, vui lòng kiểm tra lại";
+                return Json(new { Message = msg });
+            }
+        }
     }
 }

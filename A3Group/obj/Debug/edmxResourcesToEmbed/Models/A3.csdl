@@ -6,7 +6,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MainTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MainDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SubDescription1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -27,6 +27,7 @@
     <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="CreatedDate" Type="DateTime" Precision="3" />
     <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Blogs">
     <Key>
@@ -54,6 +55,7 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Differences">
     <Key>
@@ -129,6 +131,7 @@
     <Property Name="ProjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Quotes">
     <Key>
@@ -147,17 +150,17 @@
     <Property Name="MainTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MainDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle3" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle4" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle5" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SubTitle6" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SubDescription6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SubDescription6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="A3Group_Sliders">
@@ -167,7 +170,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Slogan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Video" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="BoldText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
@@ -224,6 +227,7 @@
       <End Role="AspNetRole" EntitySet="AspNetRoles" />
       <End Role="AspNetUser" EntitySet="AspNetUsers" />
     </AssociationSet>
+    <EntitySet Name="A3Group_PartnerInfo" EntityType="agr07063_A3GroupModel.A3Group_PartnerInfo" />
   </EntityContainer>
   <EntityType Name="C__MigrationHistory">
     <Key>
@@ -337,4 +341,13 @@
     <End Type="agr07063_A3GroupModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
     <End Type="agr07063_A3GroupModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
   </Association>
+  <EntityType Name="A3Group_PartnerInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BoldText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

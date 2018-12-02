@@ -21,5 +21,11 @@ namespace A3Group.Models
         public string Phone { get; set; }
         public string Email { get; set; }
         public string BoldText { get; set; }
+        public string Info1 { get; set; }
+        public string Info2 { get; set; }
+        public string Info3 { get; set; }
+        public string Info4 { get; set; }
+        public string ImageAbove { get; set; }
+        public string ImageBelow { get; set; }
     }
 }

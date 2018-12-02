@@ -1,0 +1,92 @@
+﻿@model A3Group.Models.A3Group_Blogs
+@{
+    ViewBag.Title = "EditMain";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="page-inner">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">Quản lý Đối tác</h3>
+    </div>
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="panel panel-white">
+                <div class="panel-heading clearfix">
+                    <h3>Chỉnh sửa Thông tin Đối tác</h3>
+                    <hr />
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="maintitle" id="maintitle" value="@Model.MainTitle" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="panel-title">Phần in đậm (VUI LÒNG NHẬP DƯỚI 30 KÍ TỰ)</label>
+                                    <input type="text" class="form-control" name="bold" id="bold" value="@Model.BoldText" maxlength="30">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="panel-title">Mô tả (VUI LÒNG NHẬP DƯỚI 500 KÍ TỰ)</label>
+                            <textarea maxlength="500" rows="20" cols="50" style="height: 200px" type="text" name="maindes" id="maindes" class="form-control" placeholder="">@Model.MainDescription</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-adon m-b-xxs" onclick="javascript:return ShowMessage();">LƯU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function ShowMessage() {
+        var result = confirm("Bạn có muốn lưu thông tin?");
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $(document).ready(function () {
+
+        $('.panel-body form').on('submit', function (event) {
+            event.preventDefault();
+            //Get data
+            const maintitle = ($('#maintitle').val());
+            const maindes = ($('#maindes').val());
+            const bold = ($('#bold').val());
+            //Json
+            const data = {
+                MainTitle: maintitle,
+                MainDescription: maindes,
+                BoldText: bold
+            };
+            if (maintitle != '' && maindes != '') {
+                $.ajax({
+                    async: true,
+                    data: JSON.stringify(data),
+                    type: 'POST',
+                    url: '/BlogMaster/EditMain',
+                    dataType: "json",
+                    contentType: "application/json",
+                    cache: false,
+                    error: function (data) {
+                        alert(data.Message);
+                    },
+                    success: function (data) {
+                        alert(data.Message);
+                        window.location.href = "/BlogMaster/EditMain"
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
+

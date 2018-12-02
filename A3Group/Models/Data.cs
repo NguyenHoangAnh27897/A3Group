@@ -25,6 +25,9 @@ namespace A3Group.Models
         public A3Group_Works work { get; set; }
         public A3Group_Contact con { get; set; }
         public List<A3Group_Customer> cus { get; set; }
+        public A3Group_Blogs blogs { get; set; }
+        public A3Group_PartnerInfo partinfo { get; set; }
+
     }
 
 }
