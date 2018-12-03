@@ -1703,7 +1703,7 @@ h6{
 
 @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
 	#hexGrid {
-		grid-template-columns: repeat(5,1fr);
+		grid-template-columns: repeat(6,2fr);
 		padding-bottom: 7.4%;
 	}
 
